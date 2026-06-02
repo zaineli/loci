@@ -1,0 +1,8 @@
+loci builds on Vector-HaSH (Vector Hippocampal Scaffolded Heteroassociative Memory):
+
+  Chandra, S., Sharma, S., Chaudhuri, R. & Fiete, I. Episodic and associative memory from spatial
+  scaffolds in the hippocampus. Nature 638 (2025). doi:10.1038/s41586-024-08392-y
+  Code: https://github.com/FieteLab/VectorHaSH - MIT License, Copyright (c) 2025 FieteLab.
+
+loci is a reimplementation; where it follows the upstream code closely it says so at the function,
+and the upstream MIT notice applies to those parts.

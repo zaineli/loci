@@ -1,0 +1,29 @@
+[project]
+name = "loci"
+version = "0.1.0"
+description = "Memory that learns where to put things: learned placement on a hippocampal grid scaffold (building on Vector-HaSH)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.5.3",
+    "scipy>=1.18.1",
+]
+
+[project.optional-dependencies]
+learn = ["torch>=2.14.0"]
+bench = ["sentence-transformers>=6.1.0", "matplotlib>=3.10"]
+
+[build-system]
+requires = ["uv_build>=0.12.7,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = ["pytest>=9.1.1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
