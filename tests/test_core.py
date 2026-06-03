@@ -7,7 +7,7 @@ from loci.memory import Memory, flip, mmse_alpha, overlap, theory_overlap
 from loci.scaffold import Scaffold
 
 # 4 x 9 = 36 addresses. Enough place cells matters: at the paper's periods (3, 4, 5), 100 place
-# cells leave only 62% of addresses as fixed points, 200 leave 95%, 400 all of them.
+# cells leave only 62% of addresses as fixed points, 200 leave 95%, 400 all but at most one.
 SMALL = {"periods": (2, 3), "place_cells": 400}
 
 

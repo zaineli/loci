@@ -89,7 +89,7 @@ def run(seeds: int, dims: tuple[int, ...], ratios: tuple[float, ...]) -> list[di
             most = min(scaffold.addresses, int(max(ratios) * dim))
             patterns = np.sign(rng.standard_normal((dim, most)))
             for ratio in ratios:
-                count = int(round(ratio * dim))
+                count = round(ratio * dim)
                 if count > scaffold.addresses:
                     continue
                 started = time.time()

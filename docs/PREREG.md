@@ -71,3 +71,43 @@ sparse place codes of the same size, same decode).
 - Equal-synapse worth: the fold-increase in Ns that random placement needs to match oracle.
 
 Collisions reading out prototypes follows from the algebra; it goes in an appendix, not a claim.
+
+## Amendments, before the confirmatory E2 run (2026-09-30)
+Logged before any E2 run beyond the seed-0 prototype and a 2-seed quick run of `bench/placement.py`.
+No threshold changed.
+1. **The learned optimiser.** The registered one (Sinkhorn-relaxed soft groups, module m + 1 on the
+   residual of module m) failed in the prototype: module 1 re-found module 0's partition (NMI 0.81
+   with factor A, 0.08 with B), because Gamma amplifies the low-variance directions a residual
+   leaves. A block-balanced Sinkhorn without residuals stalled in mixtures of factors (law -153 x
+   1e-3 against -235 for factor B's own partition). Replaced by pairwise-swap descent on the same
+   law, per module, from 20 random balanced labellings, keeping the lowest; no residual, nothing
+   coupling one module to another. Prototype: the learned groups have NMI 0.93 / 0.92 / 0.96 with
+   A / B / C, found without supervision.
+2. **Ambiguities, resolved.** P1 is evaluated at the headline condition (P/Ns = 0.8, 10% flips), for
+   the pseudo-inverse against Gamma(0) and the ridge against Gamma(alpha); it passes only if all six
+   rho <= -0.8. "Aligned placement" in P4 is the oracle. P2-P4 use ridge + stored decode, as
+   registered. Every criterion is evaluated separately on each kind of content.
+3. **The no-product control, as built.** A one-module scaffold of period 60: 3,600 phases, the same
+   400 place cells, random sparse place codes, and a snap that is the nearest of all 3,600 codes -
+   3,600 grid cells against the grid's 50. In the quick run it recovered 0.95 (pinv) and 0.998
+   (ridge) where the grid recovered 0.15 and 0.51, whatever the placement. Added as exploratory, on
+   both scaffolds: ridge + the nearest of all 3,600 place codes, no module snap - to tell the grid's
+   codebook from its decoder.
+4. **The error law, added after the life-log pilot, judged on fresh seeds.** In a 2-seed quick run on
+   the life-log, the learned placement lowered the noise law below random and recovered *less*
+   (ridge 0.29 against 0.33). The noise law counts only the variance cue noise adds; it leaves out
+   the ridge's bias, the share of a clean cue spread onto similar items, which dense content makes
+   large. Bias plus variance at the noise-matched ridge is Var(xi) q^T (G + alpha I)^-1 q on every
+   phase - the posterior covariance of the cue's coefficients over the stored items - so the
+   **error law** replaces Gamma with (G + alpha I)^-1; at alpha = 0 the two laws agree. A pilot on
+   seeds 0-1 (P/Ns = 0.8, 10% flips) had learned-on-the-error-law at ridge 0.69 / 0.71 on the
+   life-log (noise law 0.26 / 0.31, k-means 0.74 / 0.59) and 0.87 / 0.72 on factored content
+   (noise law 0.87 / 0.80). The added arm, **error**, is the same search as learned on the error
+   law, from 20 random starts and from the learned placement. It and these criteria are judged on
+   **seeds 10-19 only**, at the headline condition, ridge + stored decode unless stated:
+   - X1: per-module ridge accuracy against the measured error law, pooled over the six placements,
+     Spearman rho <= -0.8 in every module, on each kind of content.
+   - X2: on the life-log, error beats learned by >= 0.05 (paired CI excluding 0); on factored
+     content, error is not worse than learned by more than 0.02 (lower CI bound >= -0.02); on both,
+     error beats k-means (CI excluding 0).
+   The registered criteria stay on seeds 0-9 and the five registered placements.

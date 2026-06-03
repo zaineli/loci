@@ -8,7 +8,8 @@ m = erf(sqrt(Nh / (2 (P - Nh)))) - the paper's "no memory cliff", for clean cues
 The write rule for W_hs is where a noisy cue is won or lost, and it is a parameter here:
   pinv    H_a S^+, the paper's. Its noise gain grows as P / (Ns - P - 1), so near Ns a 10%-flipped
           cue lands on a valid but wrong address and nothing downstream corrects it.
-  ridge   H_a (S^T S + alpha I)^-1 S^T, the MMSE version at alpha ~ 4 f (1 - f) P for flip rate f.
+  ridge   H_a (S^T S + alpha I)^-1 S^T, the MMSE version at alpha = 4 f (1 - f) P / (1 - 2 f)^2
+          for flip rate f.
   hebb    H_a S^T / Ns: no noise gain, but crosstalk even for clean cues.
 What it is not: an address chooser. Where each pattern goes is `addresses`, given by the caller -
 the paper's fixed path, a random draw, or a learned placement (`place.py`).
@@ -34,6 +35,8 @@ def mmse_alpha(stored: int, flip_rate: float = 0.0, mask_rate: float = 0.0) -> f
     from such cues to place codes regularises by Var(xi) / a^2 per stored item. Zero for a clean
     cue, where it is the paper's pseudo-inverse.
     """
+    if flip_rate >= 0.5 or mask_rate >= 1.0:
+        raise ValueError("a cue with half its bits flipped, or all of them masked, carries nothing to recall from")
     a, noise = 1.0, 0.0
     if flip_rate > 0:
         a, noise = a * (1 - 2 * flip_rate), noise + 4 * flip_rate * (1 - flip_rate)

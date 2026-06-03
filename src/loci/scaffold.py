@@ -5,7 +5,9 @@ one-hot code over l_m = lambda_m^2 cells; an address is one phase per module, so
 prod(l_m) addresses from sum(l_m) grid cells (the Chinese remainder theorem makes every phase tuple
 reachable when the l_m are coprime). A fixed random projection turns an address into a sparse
 place code h = ReLU(W_hg g - theta); a Hebbian map W_gh back, and a per-module winner-take-all,
-make every address an exact fixed point with a maximal basin.
+make the addresses exact fixed points with large basins. Not quite every one at the defaults: at
+400 place cells, 14 of 20 seeds fix all 3,600 and each of the other 6 has one address that
+settles elsewhere (the paper's code needs 400-500 place cells to fix all of them).
 
 What it is not: content. Nothing here depends on what is stored - `memory.py` binds content to
 these addresses. Two addresses are "near" exactly when they share module phases: the place-code
