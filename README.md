@@ -1,17 +1,24 @@
 # loci
 
-Where a memory is put decides what survives: placement in scaffold memories, and the one matrix
-that predicts it.
+Where a memory is put decides what survives: placement in scaffold memories, and a quadratic
+form that ranks placements.
+
+> **Corrections, 2026-10-01.** An internal red-team pass found four errors in the first version.
+> They are fixed below and listed under [Corrections](#corrections): a decoder bias that overstated
+> how much the grid's codebook costs, a paper quote attributed to the wrong document and read too
+> strongly, a headline ("one matrix predicts it") the data do not support, and an undisclosed warm
+> start in the learned placement.
 
 Vector-HaSH (Chandra, Sharma, Chaudhuri & Fiete, *Nature* 2025) builds memory the way the
 hippocampus is thought to: a fixed **scaffold** of grid-cell addresses (three small modules, 3,600
 error-correcting fixed points), with content bound to addresses. A cue recalls by snapping to an
 address and reading out what is stored there. The paper puts each item at the next address along
-a fixed path, measures recall with clean cues, and reports that memory degrades gracefully: "no
-memory cliff".
+a fixed path. It says that for non-spatial content "the scaffold trajectory can be arbitrarily
+chosen". It measures its capacity curves with clean cues, and reports that the model "avoids the
+memory cliff of prior memory models".
 
-loci asks two questions the paper does not. What happens when the cue is noisy? And does it matter
-*where* each item goes? It reimplements the model, checks it against the upstream code bit for bit,
+The paper tests noisy cues at 500 stored items and in two SI figures. loci asks how noisy-cue
+recall scales as the store fills, and whether it matters *where* each item goes. It reimplements the model, checks it against the upstream code bit for bit,
 and runs pre-registered experiments. Every result is reported against a control, including the 8 of
 the 17 pre-stated checks that failed.
 
@@ -40,17 +47,20 @@ for name, where in placements.items():
 ## The result, stated plainly
 
 **The cliff is in the cue.** With the paper's write rule, a cue with 5% of its bits flipped finds
-its own address 0.1% of the time once the number of items stored, P, reaches the cue dimension
-Ns. That holds at every Ns tried, for flipped and masked cues alike. Clean cues are unaffected. The
-paper sets Ns equal to the number of addresses (3,600), which puts P = Ns at the right-hand edge of
-every plot. A write matched to the noise keeps 85%.
+its own address 0.1% of the time at P = Ns, where P is the number of items stored and Ns the cue
+dimension. It is a dip, not a floor: recovery is 1.00 at P/Ns 0.2, 0.72 at 0.8 and 0.001 at 1.0,
+and climbs back to 0.26–0.50 between P/Ns 1.1 and 1.5. That holds at every Ns tried, for flipped and masked
+cues alike. Clean cues are unaffected. The paper sets Ns equal to the number of addresses (3,600),
+the smallest value its clean-cue analysis allows, which puts P = Ns at the right-hand edge of every
+capacity plot. A write matched to the noise keeps 85%.
 
-**A grid code pools cue noise.** Two addresses that share a module phase have correlated place
-codes. So every item stored on a phase adds its share of a cue's noise to that phase. With the
-same 400 place cells, random place codes with a nearest-code snap recover **0.999**; the grid
-recovers **0.455**. At equal *weights* the two tie under noise (0.498 against 0.467), and the grid
-wins on clean cues (1.000 against 0.908). The product code buys compactness and pays for it in
-noise.
+**The grid's per-module snap is where noisy cues are lost.** Two addresses that share a module
+phase have correlated place codes, so every item stored on a phase adds its share of a cue's noise
+to that phase. With the same 400 place cells, random place codes with a nearest-code snap recover
+**0.999**; the grid's snap recovers **0.455**. But decode the grid's own cue-map output to the
+nearest grid code by *cosine* and it recovers 0.976 (10% flips). So at 10% flips almost all of the
+loss is in the snap, which decides each module on its own; the correlated codebook costs about
+0.03. At 20% flips the codebook's cost is real (0.58 against 0.99).
 
 **Placement decides whether the pooled noise cancels.** The table below uses the same weights and
 the same cues for every row; only the addresses change. Ridge write, P/Ns = 0.8, 10% flips,
@@ -64,19 +74,28 @@ the same cues for every row; only the addresses change. Ridge write, P/Ns = 0.8,
 | oracle (the true factors as the address) | 0.877 |
 
 Read off the P/Ns curves, random placement (the paper's does the same) would need a **2.4×** larger
-cue dimension to do as well as the oracle. The learned placement is told nothing about the content. It minimises one
-quadratic form, and that puts each hidden factor on its own grid module (normalised mutual
-information 0.92 / 0.93 / 0.93).
+cue dimension to do as well as the oracle. That is under the ridge read; under the registered read it is 1.3×. The learned placement is
+given no labels, only a group count per module, which we set to the factor cardinalities (the
+life-log's counts match too). It minimises one quadratic form, and that puts each hidden factor on
+its own grid module (normalised mutual information 0.92 / 0.93 / 0.93). Its search starts from 20
+random balanced labellings *and* from the noise-law placement. From random starts alone it recalls
+0.776 on factored content and 0.547 on sentences, below k-means (0.677); in every run the true
+factors score lower on the law than anything the search found. The law is right; searching it is
+hard.
 
-**One matrix predicts it.** The noise a placement puts on each module phase is σ² qᵀΓq, where q
+**One matrix ranks the placements.** The noise a placement puts on each module phase is σ² qᵀΓq, where q
 marks the items placed on that phase. Correlated items cancel each other's noise, so the best
 placement groups items by *partial* correlation, not by raw similarity. The first form of this
 law, which counts variance only, predicts the paper's write rule (ρ = −0.88 to −0.93). But on
 sentence embeddings, its minimiser recalls *worse than random* (0.240 against 0.293). The missing
 term is the ridge's bias. Bias plus variance collapses to **(SᵀS + αI)⁻¹**, the posterior covariance
 of the cue's coefficients over the stored items. On seeds held back for the purpose, that
-**error law** predicts per-module accuracy on the sentences (ρ ≤ −0.80), and its minimiser beats
-k-means on both kinds of content.
+**error law** ranks per-module accuracy on the sentences (ρ ≤ −0.80), and the error-law
+placement we found beats k-means on both kinds of content. Nearly all of that ρ is the difference
+between placement types: a proxy that knows only which placement was used scores the same, and
+within one placement the law predicts little. As an objective the error law is, up to group-size
+scaling, discriminative k-means (Ye, Zhao & Wu 2007): Σ_k q_kᵀ(SᵀS + αI)⁻¹q_k =
+(P − tr(Qᵀ G(G + αI)⁻¹ Q)) / α, with the ridge smoother as its kernel.
 
 **None of this makes a better memory.** kNN over the stored patterns keeps 800,000 bits, against the
 grid's 840,000 weights, and recovers 1.000. Given a cue that leaves out one factor, Vector-HaSH
@@ -107,9 +126,15 @@ is α = Var(ξ)·P / a² for a cue a·s + ξ; for flips, 4f(1 − f)P / (1 − 2
 mathematics: projection-rule memories lose their basins as P → N (Personnaz, Guyon & Dreyfus 1986;
 Kanter & Sompolinsky 1987), the peak at P = N and its removal by weight decay are Krogh & Hertz
 1992, and it is double descent (Belkin et al. 2019; Hastie et al. 2022; Nakkiran et al. 2021). What
-is new is where it sits. The paper's text and its review response say noisy cues are recovered
-exactly "even deep in the memory continuum". Its own Fig S8 shows the loss, and its choice of
-Ns = 3,600 put the peak just out of frame.
+is new is where it sits. The preprint says that from "a highly corrupted memory pattern" the
+scaffold dynamics "recover the exact scaffold state … even deep in the memory continuum" (bioRxiv
+v2, p. 9). The review response says noisy cues give "the correct grid and hippocampal states". The
+SI shows the qualification: exact recovery from 10%-flipped cues falls with load (Fig S8, whose
+caption attributes it to "overcrowding … within the sensory-to-hippocampal weights"), to 0.28 at
+3,000 items. What it does not show is where the fall ends: at P = Ns. The paper's choice of
+Ns = Npos = 3,600, the smallest its clean-cue analysis allows (SI D.1), puts that point at the
+right-hand edge of every capacity plot. This is a double-descent dip in the cue map, not the
+clean-cue memory cliff the paper's title claim is about.
 
 Against the paper's own figures, with the published curves parsed from the SI's vector graphics
 ([`bench/paper_figs.py`](bench/paper_figs.py), 10 seeds):
@@ -188,25 +213,28 @@ for it: Vector-HaSH answers 0.16–0.26 on factored content and 0.08–0.19 on s
 kNN's 1.00 and 0.88. Aligned placement is *worse* at this (oracle 0.16, random 0.22). When the
 address encodes the project, a cue without the project cannot find the address.
 
-## A grid code pools cue noise
+## Where the grid loses noisy cues
 
-The no-product control is the same model with one module of 3,600 phases. That gives random
-sparse place codes, the same 400 place cells, and a snap to the nearest of all 3,600 codes. It is
+The no-product control is the same model with one module of 3,600 phases. That gives random sparse
+place codes, the same 400 place cells, and a snap to the nearest of all 3,600 codes. It is
 exchangeable by construction, so placement cannot matter there, and it doesn't (oracle − random
-= 0.000). It also beats the grid outright, whatever the placement. The fair question is cost; the
-table is exploratory and not pre-registered ([`bench/budget.py`](bench/budget.py), random
-placement, P/Ns = 0.8, 10 seeds):
+= 0.000). Through the scaffold's snap it beats the grid outright.
 
-| code | weights | clean cue | 10% flipped |
-|---|---|---|---|
-| grid, 400 place cells (the paper's) | 840,000 | 1.000 | 0.467 |
-| no product, 91 place cells | 837,200 | 0.908 | 0.498 |
-| grid, 1,750 place cells | 3,675,000 | 1.000 | 0.731 |
-| no product, 400 place cells | 3,680,000 | 1.000 | 0.998 |
+Two reads of the same cue-map output separate the codebook from the decoder. The grid's snap
+decides each module on its own. The second read, which the grid does not have natively, takes the
+nearest of all 3,600 place codes by cosine. Exploratory, not pre-registered
+([`bench/budget.py`](bench/budget.py), random placement, P/Ns = 0.8, 10 seeds):
 
-Even decoding the grid's own ridge output to the nearest of all 3,600 grid codes, skipping the
-module snap, gets 0.695 against the control's 0.999. So the loss is in the correlated codebook,
-not only in the per-module decoder: codes that share residues are confusable, and the items behind
+| code | weights | clean | snap, 10% / 20% flipped | nearest code (cosine), 10% / 20% |
+|---|---|---|---|---|
+| grid, 400 place cells (the paper's) | 840,000 | 1.000 | 0.467 / 0.129 | 0.963 / 0.591 |
+| no product, 91 place cells | 837,200 | 0.908 | 0.498 / 0.245 | 0.970 / 0.743 |
+| grid, 1,750 place cells | 3,675,000 | 1.000 | 0.731 / 0.262 | 0.983 / 0.725 |
+| no product, 400 place cells | 3,680,000 | 1.000 | 0.998 / 0.940 | 1.000 / 1.000 |
+
+At 10% flips the grid's codebook is nearly as good as random codes (0.963 against 0.970 at equal
+weights). Almost everything the grid loses is lost in the module-by-module snap. At 20% flips the
+correlated codebook costs as well: codes that share residues are confusable, and the items behind
 them pool their noise. Placement is how the grid gets part of it back.
 
 ## What was registered, and what held
@@ -237,6 +265,32 @@ chosen by open addressing, not by content. **P4 could not have failed through it
 control sits at ceiling, so P4 reduces to P2 with a lower bar. It says nothing about whether any
 structured code would do as well as the grid.
 
+## Corrections
+
+Found by an internal red team after the first version was published (2026-09-30), and fixed here.
+
+- **A decoder bias inflated the codebook's cost.** The first version decoded the grid's cue-map
+  output to the nearest place code by raw dot product, found 0.695 against the control's 0.999,
+  and concluded that "the loss is in the correlated codebook". A noisy cue's place activity is
+  dominated by the component every code shares, so a dot product favours high-norm codes: wrong
+  picks sat at the 85th–98th percentile of code norm. By cosine the same read recovers 0.963–0.976.
+  The loss is in the snap. The registered "ridge + best stored address" read in the E2 tables
+  also uses a dot product; by cosine it recovers about 0.99 for every placement at 10% flips,
+  which is why placement matters much less on that read.
+- **The paper quote.** "Even deep in the memory continuum" is from the bioRxiv preprint, not the
+  review response. It concerns recovery of the *scaffold state* from a corrupted sensory cue, which
+  is what this repository measures. The first version also said the paper's choice of Ns "put the
+  peak just out of frame", which implied concealment. Ns ≥ P is the paper's stated condition, Ns =
+  3,600 is the smallest it allows, and its S8 caption names the mechanism.
+- **"One matrix predicts it."** The error law's rank correlation with accuracy is almost entirely
+  between placement types. Within a placement it predicts little, and P1 and X1 failed on some
+  content. It ranks placements. That is all the text now claims.
+- **The learned placement's warm start.** The error-law search also started from the noise-law
+  placement. The first version did not say so. From random starts alone, it falls below k-means on
+  sentences (0.547 against 0.677).
+- **The objective is known.** The error law is discriminative k-means (Ye, Zhao & Wu 2007), up to
+  group-size scaling. The swap search is Kernighan–Lin-style partitioning.
+
 ## What did not survive
 
 - **"Dense cues break at the embedding dimension."** A pilot claimed that the item count at which
@@ -262,7 +316,7 @@ content and cues across different seeds overlap (never within a paired compariso
 
 The port reproduces `FieteLab/VectorHaSH` at `c71317d` exactly. Its sensory error is identical to
 every printed digit (0.2076 / 0.3091 / 0.3478 at 1,001 / 2,001 / 3,001 patterns). The clean-cue
-overlap follows m = erf(√(Nh / (2(P − Nh)))) to three decimals (0.681 / 0.434 / 0.304 measured
+overlap follows m = erf(√(Nh / (2(P − Nh)))) to within 0.002 (0.681 / 0.434 / 0.304 measured
 against 0.683 / 0.436 / 0.305).
 
 [`docs/AUDIT.md`](docs/AUDIT.md) lists twelve things a reader of the paper would not expect from the
@@ -270,11 +324,14 @@ code, each with file:line and its measured effect. A few examples:
 
 - grid-to-place connectivity is 0.67, not the 0.60 its comment says;
 - one baseline alone gets an MI floor in the comparison plot;
-- the sequence plot's Vector-HaSH curve is loaded from the item-memory file;
-- the sequence demo resets to the true state at every step, and free-running recall with its
-  settings fails at step 8.
+- the sequence plot's Vector-HaSH curve is loaded from the item-memory file (the notebook states
+  this shortcut);
+- the sequence demo resets to the true state at every step. Free-running recall with its settings
+  fails at step 8, but runs all 1,001 steps without the clean-up step, or at 800 place cells.
 
-The authors released working code under MIT, and none of this study would exist without it.
+The authors released working code under MIT, and none of this study would exist without it. The
+placement question is one the paper itself leaves open ("the scaffold trajectory can be arbitrarily
+chosen"), and the paper already proposes routing novel inputs to fresh scaffold states.
 
 ## Reproduce
 
