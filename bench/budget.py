@@ -54,7 +54,7 @@ def main() -> None:
     print(f"{'':26} {'weights':>9}  {'clean':>5}  snap 10% / 20%   nearest (cosine) 10% / 20%")
     for name in CODES:
         picked = [r for r in rows if r["code"] == name]
-        mean = lambda key, f: np.mean([r[key] for r in picked if r["flip"] == f])  # noqa: E731
+        mean = lambda key, f: np.mean([r[key] for r in picked if r["flip"] == f])
         print(f"{name:26} {picked[0]['weights']:>9,}  {mean('recovery', 0.0):.3f}  "
               f"{mean('recovery', 0.1):.3f} / {mean('recovery', 0.2):.3f}    "
               f"{mean('nearest', 0.1):.3f} / {mean('nearest', 0.2):.3f}")
