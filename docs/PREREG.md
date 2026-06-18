@@ -111,3 +111,70 @@ No threshold changed.
      content, error is not worse than learned by more than 0.02 (lower CI bound >= -0.02); on both,
      error beats k-means (CI excluding 0).
    The registered criteria stay on seeds 0-9 and the five registered placements.
+
+---
+
+# Round 2 (2026-10-01)
+
+*Written after round 2's pilots (seeds 0–2, in the lead's and agents' scratch folders) and before
+any confirmatory run. Round 2 uses seeds 40–49, which no pilot has touched. This section's git
+commit precedes every result file it governs.*
+
+## E3 — a theory that predicts recall, tested out of sample
+The theory (`src/loci/theory.py`, level "relu") predicts per-module and address recovery from the
+stored patterns, the scaffold and the placement, with no fitted parameter and without simulating a
+cue. In development it reached MAE 0.010 on 180 factored-content conditions (seeds 0–2), which is
+the sampling floor of one cue per item. The out-of-sample test is run from a frozen copy of the
+development code, whose sha256 hashes are recorded. Every prediction is written, hashed and
+timestamped before any measurement of the new conditions:
+- content: life-log, cards (7, 12, 4);
+- scaffold: Nh 200 and 800, periods (5, 6, 7) and (3, 4, 5, 7);
+- cue dimension: Ns 500 and 2,000;
+- cues: 25% and 50% masks;
+- read: the pseudo-inverse;
+- loads 0.3, 0.5, 0.7;
+- placements: the round-1 set;
+- seeds 30–32.
+
+- **T1:** over all out-of-sample conditions, MAE ≤ 0.02 and ≥ 90% within 0.05 of measured address
+  recovery.
+- **T2:** no condition family (as listed above) has MAE > 0.04. Any family that does is reported by
+  name as where the theory breaks.
+
+E4 below is a second out-of-sample test. None of its placements (encode, replay) or content kinds
+other than factored were in the theory's development set:
+- **T3:** over all E4 rows, MAE ≤ 0.02 and max |err| ≤ 0.06.
+
+## E4 — a memory that files itself
+`bench/consolidate.py`. Encoding stores each arriving item at the free address its own recall
+prefers: argmax over free addresses of Σ_m (Q_mᵀ c)_{φ_m(a)}, with c its ridge coefficients over the
+items stored so far. Capacity grows with the count so far, so the final P is never used. Replay moves
+each item to where its trace-free recall prefers, which is exact coordinate descent on the error law
+over realized addresses. Every module keeps its full phase count (9, 16, 25). No labels, and no group
+counts matched to the content.
+
+- **Content kinds:**
+  - factored (9, 16, 5);
+  - cards (7, 12, 4);
+  - four factors (6, 10, 4, 8) on three modules;
+  - a 5 × 4 hierarchy with no product structure;
+  - the life-log.
+- **Loads and noise:** P/Ns 0.4 and 0.8; 10% and 20% flips.
+- **Headline condition:** P/Ns 0.8, 10% flips, the scaffold's own snap.
+- **Statistics:** paired bootstrap 95% intervals over seeds 40–49.
+
+- **S1:** encode + replay beats k-means by ≥ 0.05 on every content kind (CI excluding 0).
+- **S2:** where an oracle exists (factored, cards, life-log), encode + replay is not worse than the
+  oracle by more than 0.03 (CI lower bound ≥ −0.03).
+- **S3:** encoding alone, one pass with no replay, beats random by ≥ 0.15 on every content kind.
+- **Reported without a threshold:**
+  - the ablation replay-from-random. In the pilots it came close to encode + replay, so replay does
+    most of the optimising, and the encoding's value is that the memory is organised from the first
+    item on;
+  - oracle + replay;
+  - the NMI of each module with each factor;
+  - the secondary loads and noise levels.
+
+## E5 — the price of imagination
+Criteria to be added in an amendment after the composition, replay and theory pilots report, and
+before the E5 confirmatory run on seeds 40–49.

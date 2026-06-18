@@ -27,14 +27,10 @@ from loci.scaffold import Scaffold, relu
 RULES = ("pinv", "ridge", "hebb")
 
 
-def mmse_alpha(stored: int, flip_rate: float = 0.0, mask_rate: float = 0.0) -> float:
-    """The ridge strength that makes the cue map the MMSE estimate for this kind of cue.
-
-    A cue is a s + xi per bit: flipped with probability f, a = 1 - 2f and Var(xi) = 4 f (1 - f);
-    masked (set to 0) with probability r, a = 1 - r and Var(xi) = r (1 - r). The least-squares map
-    from such cues to place codes regularises by Var(xi) / a^2 per stored item. Zero for a clean
-    cue, where it is the paper's pseudo-inverse.
-    """
+def cue_moments(flip_rate: float = 0.0, mask_rate: float = 0.0) -> tuple[float, float]:
+    """(a, Var(xi)) for a cue a s + xi per bit. Flipped with probability f: a = 1 - 2f and
+    Var(xi) = 4 f (1 - f). Masked (set to 0) with probability r, on top of any flips: a scales by
+    1 - r and Var(xi) = (1 - r)(1 - (1 - r) a_f^2)."""
     if flip_rate >= 0.5 or mask_rate >= 1.0:
         raise ValueError("a cue with half its bits flipped, or all of them masked, carries nothing to recall from")
     a, noise = 1.0, 0.0
@@ -43,6 +39,17 @@ def mmse_alpha(stored: int, flip_rate: float = 0.0, mask_rate: float = 0.0) -> f
     if mask_rate > 0:
         noise = a * a * mask_rate * (1 - mask_rate) + (1 - mask_rate) * noise
         a *= 1 - mask_rate
+    return a, noise
+
+
+def mmse_alpha(stored: int, flip_rate: float = 0.0, mask_rate: float = 0.0) -> float:
+    """The ridge strength that makes the cue map the MMSE estimate for this kind of cue.
+
+    For a cue a s + xi (`cue_moments`), the least-squares map from such cues to place codes
+    regularises by Var(xi) / a^2 per stored item. Zero for a clean cue, where it is the paper's
+    pseudo-inverse.
+    """
+    a, noise = cue_moments(flip_rate, mask_rate)
     return noise * stored / (a * a) if noise else 0.0
 
 
