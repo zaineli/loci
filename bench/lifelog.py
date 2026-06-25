@@ -75,10 +75,15 @@ class Lifelog:
         return (means.T @ recalled).argmax(axis=0)
 
 
-def lifelog(dim: int, count: int, rng: np.random.Generator) -> Lifelog:
+def lifelog(dim: int, count: int, rng: np.random.Generator,
+            exclude: frozenset[tuple[int, int]] = frozenset()) -> Lifelog:
     """`count` entries in `dim` bits. Factor order matches `loci.content`: A = person (9),
-    B = project (16), C = activity (5), so the same placements and oracle apply."""
+    B = project (16), C = activity (5), so the same placements and oracle apply. No entry pairs a
+    person with a project in `exclude`."""
+    from loci.content import allowed_pairs
+
     factors = np.stack([rng.integers(0, card, count) for card in CARDS], axis=1)
+    factors[:, :2] = allowed_pairs(factors[:, :2], CARDS[:2], exclude, rng)
     details = np.stack([rng.integers(0, len(x), count) for x in (PLACES, TIMES, WITH)], axis=1)
     texts = [sentence(a, b, c, tuple(d)) for (a, b, c), d in zip(factors, details, strict=True)]
     cues = [sentence(a, b, c, tuple(d), named=False) for (a, b, c), d in zip(factors, details, strict=True)]
@@ -86,3 +91,41 @@ def lifelog(dim: int, count: int, rng: np.random.Generator) -> Lifelog:
     patterns = np.sign(projection @ embed(texts))
     unnamed = np.sign(projection @ embed(cues))
     return Lifelog(patterns, factors, tuple(texts), projection, unnamed)
+
+
+# ---- probes for E5: what a held-out combination, a recombination and an unrelated event sound like --
+
+NEW_PLACES = ("in the old barn", "at the harbour station", "on the rooftop terrace", "in a hotel lobby",
+              "at the ferry terminal", "in the basement workshop")
+NEW_TIMES = ("at midnight", "on a snowy morning", "during the power cut", "on the last day of June",
+             "before sunrise", "during the fire drill")
+NEW_WITH = ("with a borrowed bicycle", "with a broken umbrella", "with a stack of sticky notes",
+            "with the visiting auditor", "with a flask of tea", "with a cracked phone")
+ANIMALS = ("fox", "otter", "sparrow", "badger", "moose", "lizard", "owl", "goat")
+DEEDS = ("crossed the frozen river", "ate the ripe apples", "slept under the bridge", "chased a paper kite",
+         "built a nest of twigs", "hid from the storm")
+WHERE = ("near the lighthouse", "behind the old mill", "in the vineyard", "on the mountain pass",
+         "beside the canal")
+WHEN = ("at dawn", "in late autumn", "during the eclipse", "after the flood")
+
+
+def gist(log: Lifelog, queries: np.ndarray) -> np.ndarray:
+    """The combination alone, no details: "Maya drafted the budget for the Heron project." """
+    texts = [f"{PEOPLE[a]} {ACTIVITIES[c].format(f'the {PROJECTS[b]} project')}." for a, b, c in queries]
+    return np.sign(log.projection @ embed(texts))
+
+
+def recombinations(log: Lifelog, queries: np.ndarray, rng: np.random.Generator) -> np.ndarray:
+    """A new event for each combination: its person, project and activity, with a place, a time and
+    an object that no stored entry uses."""
+    texts = [f"{PEOPLE[a]} {ACTIVITIES[c].format(f'the {PROJECTS[b]} project')} "
+             f"{NEW_PLACES[rng.integers(6)]} {NEW_TIMES[rng.integers(6)]}, {NEW_WITH[rng.integers(6)]}."
+             for a, b, c in queries]
+    return np.sign(log.projection @ embed(texts))
+
+
+def unrelated(log: Lifelog, count: int, rng: np.random.Generator) -> np.ndarray:
+    """Events that share nothing with the life-log: "The otter crossed the frozen river at dawn." """
+    texts = [f"The {ANIMALS[rng.integers(8)]} {DEEDS[rng.integers(6)]} {WHERE[rng.integers(5)]} "
+             f"{WHEN[rng.integers(4)]}." for _ in range(count)]
+    return np.sign(log.projection @ embed(texts))

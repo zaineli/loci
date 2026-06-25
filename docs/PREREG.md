@@ -176,5 +176,85 @@ counts matched to the content.
   - the secondary loads and noise levels.
 
 ## E5 — the price of imagination
-Criteria to be added in an amendment after the composition, replay and theory pilots report, and
-before the E5 confirmatory run on seeds 40–49.
+*Added 2026-10-01, after the composition and theory pilots (seeds 0–2) and E4's confirmatory
+results, before any E5 run on seeds 40–49.*
+
+`bench/imagine.py`, via `loci.imagine`. For every value of the second factor, one partner of the
+first is never experienced with it. The probes, all with the condition's flipped bits:
+- a **gist** cue: the factors of a never-experienced combination, alone;
+- a **recombined** event: those factors with new detail, 4 per combination;
+- an **unrelated** event.
+
+The design:
+- **Placements:**
+  - random;
+  - oracle;
+  - encode + replay, the memory filed for recall with greedy replay, as in E4;
+  - encode + anneal, the same with annealed replay: Gibbs moves over free addresses, cooling from
+    the median |ΔJ| of a move to 1/300 of it over 120 sweeps;
+  - oracle + replay, an aligned memory then consolidated for recall.
+- **Decoders:**
+  - snap, the paper's;
+  - nearest, the nearest of all 3,600 place codes by cosine, so every tuple is valid. It needs one
+    unit per address, which the paper's scaffold does not have;
+  - stored, the nearest *stored* code, so no empty state is valid.
+- **Content:** factored (9, 16, 5); cards (7, 12, 4); the life-log, with real sentences for gists
+  and recombined events.
+- **Noise:** 10% and 20% flips.
+- **Measures:** construction is a gist landing on an empty address whose read-out decodes all its
+  factors; false recall is the same for a recombined event.
+- **Statistics:** paired bootstrap 95% intervals over seeds.
+
+- **I1: construction needs aligned structure.** At 10% flips with the nearest decoder:
+  - oracle construction ≥ 0.90 on factored and cards, and ≥ 0.80 on the life-log;
+  - random placement ≤ 0.05 on all three.
+- **I2: imagination is free in recall.** Under oracle placement, recall with the nearest decoder
+  minus recall with the stored decoder ≥ −0.01 (CI lower bound ≥ −0.02), at 10% and 20% flips, on
+  each content.
+- **I3: accuracy is silent about structure.** At 10% flips with the nearest decoder, on factored
+  and cards:
+  - encode + replay recalls within 0.02 of the oracle (|mean difference| ≤ 0.02);
+  - its construction is below the oracle's by ≥ 0.4 (CI upper bound of the difference ≤ −0.4).
+  - The life-log is reported.
+- **Reported for encode + anneal, without a threshold** (pilot: 1 of 3 seeds aligned every module
+  with a factor, and that seed constructed 0.85):
+  - the fraction of seeds where every module's NMI with its factor is ≥ 0.8;
+  - construction on those seeds and on the others.
+
+  The replay engineer's pilot found the error law preferring the factor-aligned mode by only 4–7%.
+  The question is whether imagination is decided by the path consolidation takes rather than by
+  the accuracy it reaches.
+- **I4: consolidating for recall erodes imagination.** On cards, oracle + replay constructs less
+  than the oracle (CI excluding 0); factored and the life-log are reported.
+- **I5: construction and false recall are one event.**
+  - Over every cell (content × placement × decoder × flip rate), Pearson r(construction, false
+    recall) ≥ 0.9.
+  - Under oracle placement with the nearest decoder, false recall ≥ 0.8 at 10% flips on each
+    content.
+- **I6: recollection rejects what familiarity accepts.** Oracle, nearest decoder, 10% flips, on
+  factored and cards:
+  - recollection d′ (the cue–read-out overlap) for recombined events ≥ 5;
+  - familiarity d′ (the h0–place-code cosine) ≤ 4.
+  - The life-log is reported.
+- **I7: the read-out's interpolation peak.** Factored content, oracle, P = 800, 10% flips, the
+  snap (`--nh`):
+  - construction ≤ 0.05 at Nh = 800 with the pseudo-inverse read-out;
+  - ≥ 0.8 at Nh = 400 and 1,200;
+  - ≥ 0.9 at Nh = 800 with a 1% ridge on the read-out.
+
+**Positioning, fixed before the run** (from the novelty scout). Constructive memory is an old idea:
+- Schacter & Addis 2007;
+- Hassabis & Maguire 2007;
+- REMERGE (Kumaran & McClelland 2012);
+- the generative model of Spens & Burgess (2024), in which replay trains a separate network that
+  imagines and distorts;
+- Amit, Gutfreund & Sompolinsky (1985): attractor mixtures;
+- Kalaj et al. (2025): attractors for unseen feature combinations.
+
+The claim here is narrower. In a grid-scaffold memory, a never-experienced combination is one of
+the memory's own designed, equally deep fixed points: a valid word of a distance-1 product code. So
+the same decoding that constructs it from a gist cue also recalls a recombined event as experienced.
+Placement, and the set of states the decoder admits, fix both rates together.
+- The human data are mixed. Hippocampal damage raises conjunction false alarms but lowers DRM
+  errors, and sleep's effect on false memory is inconsistent across studies. So no claim about them
+  is made from this model.

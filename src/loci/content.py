@@ -36,16 +36,37 @@ class Factored:
 
 
 def factored(dim: int, count: int, rng: np.random.Generator, detail: float = 1.0,
-             cards: tuple[int, ...] = CARDS) -> Factored:
+             cards: tuple[int, ...] = CARDS, exclude: frozenset[tuple[int, int]] = frozenset()) -> Factored:
     """`count` items in `dim` bits; `detail` is the weight of each item's own part against the
     unit-variance factors (1.0 with three factors: an item is a quarter itself, three quarters its
     factors). `cards` sets how many factors there are and how many values each takes; the default
-    matches the scaffold's module group counts, other values un-rig that match."""
+    matches the scaffold's module group counts, other values un-rig that match. No item's first two
+    factors form a pair in `exclude`: those combinations are never experienced."""
     codes = tuple(rng.standard_normal((dim, card)) for card in cards)
     factors = np.stack([rng.integers(0, card, count) for card in cards], axis=1)
+    factors[:, :2] = allowed_pairs(factors[:, :2], cards[:2], exclude, rng)
     own = detail * rng.standard_normal((dim, count))
     signal = sum(c[:, factors[:, i]] for i, c in enumerate(codes))
     return Factored(np.sign(signal + own), factors, codes, own)
+
+
+def allowed_pairs(pairs: np.ndarray, cards: tuple[int, ...], exclude: frozenset[tuple[int, int]],
+                  rng: np.random.Generator) -> np.ndarray:
+    """Redraw every row of `pairs` that falls in `exclude`, uniformly over the allowed pairs."""
+    if not exclude:
+        return pairs
+    allowed = np.array([(a, b) for a in range(cards[0]) for b in range(cards[1]) if (a, b) not in exclude])
+    out = pairs.copy()
+    bad = np.array([tuple(row) in exclude for row in out])
+    out[bad] = allowed[rng.integers(0, len(allowed), int(bad.sum()))]
+    return out
+
+
+def holdout(cards: tuple[int, ...], rng: np.random.Generator) -> frozenset[tuple[int, int]]:
+    """One never-experienced partner per value of the second factor: (perm[b mod |A|], b). Every value
+    of each factor is still experienced, just never in these combinations."""
+    perm = rng.permutation(cards[0])
+    return frozenset((int(perm[b % cards[0]]), b) for b in range(cards[1]))
 
 
 def hierarchical(dim: int, count: int, rng: np.random.Generator, branches: tuple[int, int] = (5, 4),

@@ -127,6 +127,28 @@ def replay(precision: np.ndarray, scaffold: Scaffold, where: np.ndarray, rng: np
     return scaffold.index(phases)
 
 
+def typical_change(precision: np.ndarray, scaffold: Scaffold, where: np.ndarray, rng: np.random.Generator,
+                   items: int = 50) -> float:
+    """The median |Delta J| of moving an item to another free address: the natural temperature at
+    which replay starts to discriminate between addresses (a scale for annealed replay)."""
+    sizes = scaffold.sizes
+    phases = scaffold.phases[where]
+    coupling = [precision @ np.eye(size)[phases[:, m]] for m, size in enumerate(sizes)]
+    taken = np.zeros(sizes, dtype=bool)
+    taken[tuple(phases.T)] = True
+    diagonal = np.diag(precision)
+    changes = []
+    for i in rng.choice(len(where), min(items, len(where)), replace=False):
+        here = tuple(phases[i])
+        change = np.zeros(sizes)
+        for m, size in enumerate(sizes):
+            step = 2 * (coupling[m][i] - (coupling[m][i, here[m]] - diagonal[i]))
+            step[here[m]] = 0.0
+            change = change + _broadcast(step, m, sizes)
+        changes.append(np.abs(change[~taken]))
+    return float(np.median(np.concatenate(changes)))
+
+
 def law(precision: np.ndarray, scaffold: Scaffold, where: np.ndarray) -> float:
     """The error law on realized phases: sum over modules and phases of q^T K q."""
     phases = scaffold.phases[where]
