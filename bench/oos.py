@@ -32,7 +32,7 @@ def recorded() -> dict[str, str]:
     """The last hash each protocol file records for each file it names."""
     out = {}
     for name in ("FROZEN.txt", "PREDICTIONS.txt"):
-        for digest, file in re.findall(r"^([0-9a-f]{64})\s+(\S+)$", (OOS / name).read_text(), re.M):
+        for digest, file in re.findall(r"^([0-9a-f]{64})\s+(\S+)$", (OOS / name).read_text(), re.MULTILINE):
             out[file] = digest
     return out
 

@@ -73,3 +73,12 @@ to the variance law at alpha = 0.
 
 Every experiment states its pass and kill criteria before it runs (`docs/PREREG.md`), uses
 multiple seeds, and reports against its control.
+
+## Round 2 (2026-10-01)
+The thesis moved in round 2, and this document records round 1's design as it was. Round 2 asked:
+- whether placement's effect can be predicted: a zero-fit theory, tested out of sample;
+- whether the memory can place its items itself: encoding where recall points, then replay;
+- whether filing for accuracy yields imagination.
+
+Its design and criteria are in PREREG.md (round 2 and its E5 amendment), its derivations in
+THEORY.md, and its results in the README.

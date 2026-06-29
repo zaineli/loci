@@ -102,7 +102,140 @@ def placement() -> None:
     fig.savefig(RESULTS / "placement.png", dpi=160)
 
 
+GREY = "#555555"
+ARMS = {  # recall-by-arm marks: identity carried by marker shape as well as ink, never shade alone
+    "random": (MUTED, "o", "none", "random (the paper's order is the same)"),
+    "k-means": (GREY, "s", GREY, "k-means on the patterns"),
+    "encode": (GREY, "^", "none", "stored where its own recall points"),
+    "encode+replay": (ACCENT, "o", ACCENT, "... then replayed: the memory files itself"),
+    "oracle": (INK, "D", INK, "oracle: the true factors as the address"),
+}
+
+
+def theory() -> None:
+    """Predicted against measured recall: the out-of-sample test, and E4's rows."""
+    oos = json.loads((RESULTS / "oos" / "results.json").read_text())["rows"]
+    e4 = json.loads((RESULTS / "consolidate.json").read_text())
+    fig, axes = plt.subplots(1, 2, figsize=(9.6, 4.4))
+    ax = axes[0]
+    measured = [r["measured"] for r in oos]
+    ax.scatter([r["E"]["address"] for r in oos], measured, s=16, facecolors="none", edgecolors=MUTED, lw=0.8,
+               label="the error law alone (phase indicators)")
+    ax.scatter([r["T-relu"]["address"] for r in oos], measured, s=12, color=INK, lw=0,
+               label="the theory (through the scaffold's templates)")
+    ax.set_title("out of sample: 156 conditions, predictions hashed first", fontsize=9.5)
+    errors = np.abs([r["T-relu"]["address"] - r["measured"] for r in oos])
+    ax.text(0.03, 0.97, f"theory: mean |error| {errors.mean():.3f}\n100% within 0.05, r = 0.999",
+            transform=ax.transAxes, va="top", fontsize=8.5, color=INK)
+    ax.legend(frameon=False, fontsize=7.8, loc="lower right")
+    ax = axes[1]
+    ax.scatter([r["theory"] for r in e4], [r["recall"] for r in e4], s=5, color=INK, lw=0, alpha=0.5)
+    errors = np.abs([r["theory"] - r["recall"] for r in e4])
+    ax.set_title("self-filing memories (E4): 1,240 rows, 5 kinds of content", fontsize=9.5)
+    ax.text(0.03, 0.97, f"mean |error| {errors.mean():.3f}\n{np.mean(errors <= 0.05):.1%} within 0.05",
+            transform=ax.transAxes, va="top", fontsize=8.5, color=INK)
+    for ax in axes:
+        ax.plot([0, 1], [0, 1], color=MUTED, lw=0.7, ls=":", zorder=0)
+        ax.set_xlim(0, 1.02)
+        ax.set_ylim(0, 1.02)
+        ax.set_xlabel("predicted, before any cue is drawn")
+        ax.set_aspect("equal")
+    axes[0].set_ylabel("measured: noisy cues that find their own address")
+    fig.tight_layout()
+    fig.savefig(RESULTS / "theory.png", dpi=160)
+
+
+def consolidation() -> None:
+    """E4: recall by arm, per kind of content (P/Ns 0.8, 10% flips, seeds 40-49)."""
+    rows = [r for r in json.loads((RESULTS / "consolidate.json").read_text()) if r["load"] == 0.8 and r["flip"] == 0.1]
+    kinds = [("factored", "factored: 3 factors, 9 / 16 / 5 values"), ("cards", "3 factors, 7 / 12 / 4"),
+             ("four", "4 factors on 3 modules"), ("hierarchy", "a hierarchy: no product structure"),
+             ("lifelog", "life-log sentences (MiniLM)")]
+    fig, ax = plt.subplots(figsize=(8.6, 3.4))
+    for y, (kind, label) in enumerate(kinds):
+        ax.axhline(y, color="#e6e6e6", lw=0.6, zorder=0)
+        for name, (color, marker, face, legend) in ARMS.items():
+            values = [r["recall"] for r in rows if r["content"] == kind and r["placement"] == name]
+            if values:
+                ax.scatter(np.mean(values), y, s=46, marker=marker, facecolors=face, edgecolors=color, lw=1.3,
+                           label=legend if y == 0 else None, zorder=3)
+    ax.set_yticks(range(len(kinds)), [label for _, label in kinds], fontsize=8.5)
+    ax.invert_yaxis()
+    ax.set_xlim(0.2, 0.95)
+    ax.set_xlabel("noisy cues (10% of bits flipped) that find their own address")
+    ax.legend(frameon=False, fontsize=7.8, loc="upper left", bbox_to_anchor=(1.0, 1.0))
+    for side in ("top", "right", "left"):
+        ax.spines[side].set_visible(False)
+    ax.tick_params(axis="y", length=0)
+    fig.tight_layout()
+    fig.savefig(RESULTS / "consolidate.png", dpi=160)
+
+
+def imagination() -> None:
+    """E5: the dissociation, the one event, and the read-out peak (seeds 40-49)."""
+    rows = json.loads((RESULTS / "imagine.json").read_text())
+    peak = json.loads((RESULTS / "imagine-nh.json").read_text())
+    fig, axes = plt.subplots(1, 3, figsize=(13, 4.0))
+
+    def mean(key: str, **match) -> float:
+        return float(np.mean([r[key] for r in rows if all(r[k] == v for k, v in match.items())]))
+
+    ax = axes[0]
+    names = {"random": "random", "oracle": "oracle-filed", "encode+replay": "self-filed (replay)",
+             "encode+anneal": "self-filed (annealed)", "oracle+replay": "oracle-filed, then replayed"}
+    offsets = {"random": (6, 4), "oracle": (-62, -12), "encode+replay": (6, 6), "encode+anneal": (6, -10),
+               "oracle+replay": (-120, -2)}
+    for name, label in names.items():
+        for kind, marker in (("factored", "o"), ("cards", "s")):
+            x = mean("recall", content=kind, placement=name, decoder="nearest", flip=0.1)
+            y = mean("construction", content=kind, placement=name, decoder="nearest", flip=0.1)
+            color = ACCENT if name.startswith("oracle") else INK if name.startswith("encode") else MUTED
+            ax.scatter(x, y, s=40, marker=marker, color=color, zorder=3)
+            if kind == "factored":
+                ax.annotate(label, (x, y), textcoords="offset points", xytext=offsets[name], fontsize=7.8,
+                            color=INK)
+    ax.set_xlim(0.94, 1.004)
+    ax.set_ylim(-0.03, 1.05)
+    ax.set_xlabel("recall of studied events (10% flips)")
+    ax.set_ylabel("never-experienced combinations constructed")
+    ax.set_title("same recall, different imagination\n(circles factored, squares cards)", fontsize=9.5)
+
+    ax = axes[1]
+    cells = collections.defaultdict(list)
+    for r in rows:
+        if r["placement"] != "knn":
+            cells[(r["content"], r["placement"], r["decoder"], r["flip"])].append((r["construction"], r["false recall"]))
+    points = np.array([np.mean(v, axis=0) for v in cells.values()])
+    ax.plot([0, 1], [0, 1], color=MUTED, lw=0.7, ls=":", zorder=0)
+    ax.scatter(points[:, 0], points[:, 1], s=14, color=INK, lw=0)
+    ax.set_xlabel("construction (a gist cue lands on an empty state)")
+    ax.set_ylabel("false recall of a recombined new event")
+    ax.set_title(f"imagination and false memory are one event\n(90 cells, r = {np.corrcoef(points.T)[0, 1]:.3f})",
+                 fontsize=9.5)
+    ax.set_aspect("equal")
+
+    ax = axes[2]
+    cells_nh = sorted({r["Nh"] for r in peak})
+    for ridge, color, dash, label in ((0.0, ACCENT, "-", "pseudo-inverse (the paper)"),
+                                      (0.01, INK, "--", "1% ridge")):
+        y = [np.mean([r["construction"] for r in peak if r["Nh"] == n and r["readout_ridge"] == ridge
+                      and r["decoder"] == "snap"]) for n in cells_nh]
+        ax.plot(cells_nh, y, dash, color=color, lw=1.8, marker="o", ms=4, label=label)
+    ax.axvline(800, color=MUTED, lw=0.6, ls=":")
+    ax.set_xlabel("place cells, Nh (800 items stored)")
+    ax.set_ylabel("construction")
+    ax.set_ylim(-0.03, 1.05)
+    ax.set_title("a second interpolation peak, at P = Nh", fontsize=9.5)
+    ax.legend(frameon=False, fontsize=7.8, loc="lower left", bbox_to_anchor=(0.0, 0.22), title="read-out",
+              title_fontsize=7.8)
+    fig.tight_layout()
+    fig.savefig(RESULTS / "imagine.png", dpi=160)
+
+
 if __name__ == "__main__":
     cliff()
     placement()
+    theory()
+    consolidation()
+    imagination()
     print(f"figures -> {RESULTS}")

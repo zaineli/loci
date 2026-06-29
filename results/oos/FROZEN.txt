@@ -1,0 +1,37 @@
+Frozen 2026-09-30T20:54:34Z from gold2/theorist/ (verbatim copies):
+a035aaf068d4b2393d967218166c17fb1ec4e7341a1948c4c6b0736c5239017a  frozen/t4_theory.py
+41965db62a8cfcab6469da8281ab48859853d531bd093b983c98b43ade36ceed  frozen/common.py
+
+Patch 2026-09-30T20:54:46Z, the one permitted kind (a bug that stops the theory running):
+the frozen code hard-codes 3 modules and 50 grid cells, so it cannot run on periods (5,6,7) (110 grid cells) or (3,4,5,7) (4 modules).
+Only those literals change; nothing about the model or its approximations:
+32c32
+<     acc = np.zeros(3); joint = 0.0
+---
+>     acc = np.zeros(len(sc.sizes)); joint = 0.0
+71,72c71,72
+<         acc = np.zeros(3); joint = 0.0
+<         Zs = rng.standard_normal((draws, 50))
+---
+>         acc = np.zeros(len(sc.sizes)); joint = 0.0
+>         Zs = rng.standard_normal((draws, sc.grid_cells))
+87c87
+<         acc = np.zeros(3); joint = 0.0
+---
+>         acc = np.zeros(len(sc.sizes)); joint = 0.0
+After the patch:
+52d35ce5f0f7db88c2318e5e072f2a175ad497fc85692b28e95711b56b9137eb  frozen/t4_theory.py
+
+Protocol frozen 2026-09-30T21:02:13Z, before measure.py was run:
+ae5052035cf53b52bfef6c0554817aea78ea19f2010f5272f385778e22363106  grid.py
+8377fe0b773f256ae2c687345118d2c4eff3d0be8e0dafc1ca046062b5977fe7  predict.py
+d29d36e64d37a222cea5d0871fd7989d641106f5915a5137fc06e6d7b3afc44c  measure.py
+2a3038ade2a9c5f73c59bbe1d141a42a745ae89cc79ea7bb35520849e7c0b792  report.py
+8905282c12bc07d690b0f22d3518bbe244df2744776748ac861a87a6bbc95b75  PREDICTIONS.txt
+
+Bug fix 2026-09-30T21:03:18Z, after the protocol freeze, before any measurement was seen (measure.py crashed and wrote nothing):
+row ids omitted the load, so the three 'load' settings (0.3, 0.5, 0.7) shared ids and predictions_where.npz kept only load 0.7's arrays.
+predictions.json is untouched (hash still checked by measure.py). measure.py now keys rows by (family, load, seed, placement), rebuilds
+every placement deterministically, and asserts it equals the saved array wherever an uncorrupted one exists. report.py keys the same way.
+ada93b41f2a69b5e0ace9c82b1fe9deab0e9d326c081181c9a85250daccc5640  measure.py
+733ff7d9d39c721c9500131222f441f87cededf3b8073016f81dd4513fdd8cf7  report.py

@@ -26,4 +26,6 @@ addopts = "-q"
 
 [tool.ruff]
 line-length = 100
+# the round-2 development scripts, kept as they ran
+extend-exclude = ["docs/theory", "results/oos"]
 target-version = "py312"

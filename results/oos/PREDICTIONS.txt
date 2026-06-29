@@ -1,0 +1,36 @@
+Out-of-sample test of the theorist's zero-fit T-relu theory. Pre-registration.
+
+What is tested
+- The theory frozen in frozen/ (hashes and the one logged literal patch in FROZEN.txt), called as
+  t4_theory.theory(scaffold, patterns, where, alpha, rate, rng, draws=400, levels=("E", "T-relu")).
+  It sees only K = (S^T S + alpha I)^-1, the placement, H_a, W_gh and the cue's a and sigma^2. It
+  never simulates a cue.
+- 156 conditions in grid.py: 14 settings x their placements x fresh seeds 30-32. Every setting
+  changes at least one parameter from the 180 development conditions:
+  loads 0.3 / 0.5 / 0.7; life-log content; factor cardinalities (7, 12, 4); Nh 200 and 800; periods
+  (5, 6, 7) and (3, 4, 5, 7); Ns 500 and 2,000 at load 0.8; masked cues at 25% and 50%; the
+  pseudo-inverse read (alpha = 0).
+  Placements: the repo's place.py (sequential, random, k-means, oracle, error-law learned), where
+  they are defined for the scaffold.
+- Conditions outside the derivation as written, still predicted, with how they are handled: see
+  grid.NOTES. In short: masks are passed as the flip rate with the same sigma^2/a^2; 4 modules
+  needed the literal patch; Nh 200 has non-fixed-point addresses.
+
+How it is measured (measure.py, written before any measurement)
+- The repo's own read: CueMaps(S).map(H_a, alpha) @ cue, ReLU, Scaffold.settle, compared with the
+  predicted addresses; address accuracy and per-module accuracy.
+- Each condition is measured on 3 independent cue draws, and the mean is compared with the
+  prediction, which is an expectation over cues. measure.py refuses to run unless
+  predictions.json matches the hash below.
+
+Pre-stated bars (primary metric: T-relu address accuracy vs measured)
+- PASS if the overall MAE <= 0.03 AND >= 90% of the 156 rows are within 0.05.
+- Any family with MAE > 0.05 is reported as a named failure of the theory in that regime.
+- Also reported, without bars: bias, max |err|, module-level MAE, the error-law-only level (E)
+  for comparison (it had MAE 0.132 in development), the sampling floor, the Kendall tau of the
+  placement order within each (family, seed), and the worst 10 conditions.
+
+Predictions file (hash recorded after predict.py finished, before measure.py was run):
+fec200465c552ddf5491788042f1c1a1d2cdec83d42cf5119986c908e6fcc3e9  predictions.json
+02655a323dd94111a07b4710f3544f7813a50cb4f7ad9dfa796815309b12c482  predictions_where.npz
+recorded 2026-09-30T21:02:06Z, before measure.py was run

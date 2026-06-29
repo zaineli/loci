@@ -1,0 +1,7958 @@
+[
+ {
+  "id": "load|seed 30|random",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.3,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "random",
+  "P": 300,
+  "alpha_read": 168.75,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9968083333333334,
+   "modules": [
+    0.997025,
+    0.9997583333333334,
+    1.0
+   ]
+  },
+  "T-relu": {
+   "address": 0.926108333333334,
+   "modules": [
+    0.9540000000000021,
+    0.9871833333333342,
+    0.9838666666666669
+   ]
+  }
+ },
+ {
+  "id": "load|seed 30|kmeans",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.3,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "kmeans",
+  "P": 300,
+  "alpha_read": 168.75,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9990166666666668,
+   "modules": [
+    1.0,
+    1.0,
+    0.9990166666666668
+   ]
+  },
+  "T-relu": {
+   "address": 0.9824750000000008,
+   "modules": [
+    0.997591666666667,
+    0.9999250000000001,
+    0.9849333333333341
+   ]
+  }
+ },
+ {
+  "id": "load|seed 30|oracle",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.3,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "oracle",
+  "P": 300,
+  "alpha_read": 168.75,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9996499999999999,
+   "modules": [
+    1.0,
+    1.0,
+    0.9996499999999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.9912916666666667,
+   "modules": [
+    0.9991416666666667,
+    1.0,
+    0.99215
+   ]
+  }
+ },
+ {
+  "id": "load|seed 30|error",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.3,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "error",
+  "P": 300,
+  "alpha_read": 168.75,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9999833333333333,
+   "modules": [
+    1.0,
+    1.0,
+    0.9999833333333333
+   ]
+  },
+  "T-relu": {
+   "address": 0.9881,
+   "modules": [
+    0.9998500000000001,
+    0.9999750000000001,
+    0.988275
+   ]
+  }
+ },
+ {
+  "id": "load|seed 31|random",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.3,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "random",
+  "P": 300,
+  "alpha_read": 168.75,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9978083333333333,
+   "modules": [
+    0.9981749999999999,
+    0.9996416666666668,
+    0.9999916666666667
+   ]
+  },
+  "T-relu": {
+   "address": 0.9090916666666675,
+   "modules": [
+    0.9592083333333334,
+    0.9765666666666681,
+    0.9718083333333342
+   ]
+  }
+ },
+ {
+  "id": "load|seed 31|kmeans",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.3,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "kmeans",
+  "P": 300,
+  "alpha_read": 168.75,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9990166666666668,
+   "modules": [
+    1.0,
+    1.0,
+    0.9990166666666668
+   ]
+  },
+  "T-relu": {
+   "address": 0.9852750000000011,
+   "modules": [
+    0.9985500000000002,
+    0.9995833333333335,
+    0.9871250000000009
+   ]
+  }
+ },
+ {
+  "id": "load|seed 31|oracle",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.3,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "oracle",
+  "P": 300,
+  "alpha_read": 168.75,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9998833333333335,
+   "modules": [
+    1.0,
+    1.0,
+    0.9998833333333335
+   ]
+  },
+  "T-relu": {
+   "address": 0.9970750000000004,
+   "modules": [
+    0.999575,
+    0.9997250000000001,
+    0.9977750000000003
+   ]
+  }
+ },
+ {
+  "id": "load|seed 31|error",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.3,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "error",
+  "P": 300,
+  "alpha_read": 168.75,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9999750000000001,
+   "modules": [
+    1.0,
+    1.0,
+    0.9999750000000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.996241666666667,
+   "modules": [
+    0.9998333333333335,
+    0.9987333333333334,
+    0.9976750000000002
+   ]
+  }
+ },
+ {
+  "id": "load|seed 32|random",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.3,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "random",
+  "P": 300,
+  "alpha_read": 168.75,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9971250000000002,
+   "modules": [
+    0.9974250000000001,
+    0.9996666666666666,
+    1.0
+   ]
+  },
+  "T-relu": {
+   "address": 0.9047166666666673,
+   "modules": [
+    0.9295666666666674,
+    0.990508333333334,
+    0.9824666666666669
+   ]
+  }
+ },
+ {
+  "id": "load|seed 32|kmeans",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.3,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "kmeans",
+  "P": 300,
+  "alpha_read": 168.75,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9931416666666667,
+   "modules": [
+    1.0,
+    1.0,
+    0.9931416666666667
+   ]
+  },
+  "T-relu": {
+   "address": 0.9603083333333344,
+   "modules": [
+    0.9859250000000003,
+    0.9982666666666667,
+    0.9759000000000012
+   ]
+  }
+ },
+ {
+  "id": "load|seed 32|oracle",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.3,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "oracle",
+  "P": 300,
+  "alpha_read": 168.75,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9996499999999999,
+   "modules": [
+    1.0,
+    1.0,
+    0.9996499999999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.9917250000000003,
+   "modules": [
+    0.9993500000000001,
+    1.0,
+    0.9923750000000003
+   ]
+  }
+ },
+ {
+  "id": "load|seed 32|error",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.3,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "error",
+  "P": 300,
+  "alpha_read": 168.75,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9998083333333333,
+   "modules": [
+    1.0,
+    1.0,
+    0.9998083333333333
+   ]
+  },
+  "T-relu": {
+   "address": 0.9833250000000003,
+   "modules": [
+    0.9953083333333336,
+    0.9999666666666667,
+    0.9880500000000001
+   ]
+  }
+ },
+ {
+  "id": "load|seed 30|random",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.5,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "random",
+  "P": 500,
+  "alpha_read": 281.25,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9556249999999998,
+   "modules": [
+    0.9634400000000001,
+    0.9926200000000001,
+    0.9991700000000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.7610800000000001,
+   "modules": [
+    0.8898200000000018,
+    0.9332500000000019,
+    0.9150150000000011
+   ]
+  }
+ },
+ {
+  "id": "load|seed 30|kmeans",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.5,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "kmeans",
+  "P": 500,
+  "alpha_read": 281.25,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9856900000000002,
+   "modules": [
+    0.9997,
+    0.999965,
+    0.98599
+   ]
+  },
+  "T-relu": {
+   "address": 0.906945000000001,
+   "modules": [
+    0.9975800000000006,
+    0.9945900000000005,
+    0.9145950000000013
+   ]
+  }
+ },
+ {
+  "id": "load|seed 30|oracle",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.5,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "oracle",
+  "P": 500,
+  "alpha_read": 281.25,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9929850000000001,
+   "modules": [
+    1.0,
+    1.0,
+    0.9929850000000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.9489450000000004,
+   "modules": [
+    0.9996800000000001,
+    0.999995,
+    0.9492400000000004
+   ]
+  }
+ },
+ {
+  "id": "load|seed 30|error",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.5,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "error",
+  "P": 500,
+  "alpha_read": 281.25,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9946900000000001,
+   "modules": [
+    1.0,
+    0.9999750000000001,
+    0.994715
+   ]
+  },
+  "T-relu": {
+   "address": 0.9418300000000014,
+   "modules": [
+    0.99916,
+    0.9952550000000002,
+    0.9473450000000013
+   ]
+  }
+ },
+ {
+  "id": "load|seed 31|random",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.5,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "random",
+  "P": 500,
+  "alpha_read": 281.25,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.955145,
+   "modules": [
+    0.963955,
+    0.991365,
+    0.9993050000000002
+   ]
+  },
+  "T-relu": {
+   "address": 0.7210050000000005,
+   "modules": [
+    0.8734150000000018,
+    0.8992950000000008,
+    0.916515000000001
+   ]
+  }
+ },
+ {
+  "id": "load|seed 31|kmeans",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.5,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "kmeans",
+  "P": 500,
+  "alpha_read": 281.25,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.979935,
+   "modules": [
+    1.0,
+    0.9999450000000001,
+    0.97999
+   ]
+  },
+  "T-relu": {
+   "address": 0.9133050000000019,
+   "modules": [
+    0.9933000000000001,
+    0.9944950000000007,
+    0.9245150000000018
+   ]
+  }
+ },
+ {
+  "id": "load|seed 31|oracle",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.5,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "oracle",
+  "P": 500,
+  "alpha_read": 281.25,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.99089,
+   "modules": [
+    1.0,
+    1.0,
+    0.99089
+   ]
+  },
+  "T-relu": {
+   "address": 0.9726050000000006,
+   "modules": [
+    0.9997950000000001,
+    0.9997950000000002,
+    0.9730100000000006
+   ]
+  }
+ },
+ {
+  "id": "load|seed 31|error",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.5,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "error",
+  "P": 500,
+  "alpha_read": 281.25,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.99302,
+   "modules": [
+    0.99999,
+    0.999995,
+    0.993035
+   ]
+  },
+  "T-relu": {
+   "address": 0.9699100000000008,
+   "modules": [
+    0.994175,
+    0.9973150000000002,
+    0.9780850000000008
+   ]
+  }
+ },
+ {
+  "id": "load|seed 32|random",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.5,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "random",
+  "P": 500,
+  "alpha_read": 281.25,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9549300000000001,
+   "modules": [
+    0.9614700000000002,
+    0.9943250000000001,
+    0.998895
+   ]
+  },
+  "T-relu": {
+   "address": 0.6916600000000004,
+   "modules": [
+    0.8126550000000002,
+    0.9323300000000013,
+    0.9116350000000011
+   ]
+  }
+ },
+ {
+  "id": "load|seed 32|kmeans",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.5,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "kmeans",
+  "P": 500,
+  "alpha_read": 281.25,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9652549999999999,
+   "modules": [
+    0.99998,
+    0.999995,
+    0.9652749999999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.8993750000000014,
+   "modules": [
+    0.9927500000000002,
+    0.9936950000000003,
+    0.911650000000002
+   ]
+  }
+ },
+ {
+  "id": "load|seed 32|oracle",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.5,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "oracle",
+  "P": 500,
+  "alpha_read": 281.25,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9911599999999999,
+   "modules": [
+    1.0,
+    1.0,
+    0.9911599999999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.9543900000000016,
+   "modules": [
+    0.99985,
+    0.9999549999999999,
+    0.9545850000000015
+   ]
+  }
+ },
+ {
+  "id": "load|seed 32|error",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.5,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "error",
+  "P": 500,
+  "alpha_read": 281.25,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9926600000000001,
+   "modules": [
+    1.0,
+    1.0,
+    0.9926600000000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.9319500000000009,
+   "modules": [
+    0.9938350000000002,
+    0.99919,
+    0.9384400000000008
+   ]
+  }
+ },
+ {
+  "id": "load|seed 30|random",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.7,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "random",
+  "P": 700,
+  "alpha_read": 393.74999999999994,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.8495964285714286,
+   "modules": [
+    0.8843214285714284,
+    0.9673107142857144,
+    0.9914535714285716
+   ]
+  },
+  "T-relu": {
+   "address": 0.5615214285714277,
+   "modules": [
+    0.7938571428571425,
+    0.8531428571428574,
+    0.8218142857142866
+   ]
+  }
+ },
+ {
+  "id": "load|seed 30|kmeans",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.7,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "kmeans",
+  "P": 700,
+  "alpha_read": 393.74999999999994,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9571464285714285,
+   "modules": [
+    0.9993357142857144,
+    0.9997821428571428,
+    0.9579928571428572
+   ]
+  },
+  "T-relu": {
+   "address": 0.8562321428571439,
+   "modules": [
+    0.9929428571428561,
+    0.9976285714285706,
+    0.8647035714285722
+   ]
+  }
+ },
+ {
+  "id": "load|seed 30|oracle",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.7,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "oracle",
+  "P": 700,
+  "alpha_read": 393.74999999999994,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9626285714285715,
+   "modules": [
+    1.0,
+    1.0,
+    0.9626285714285715
+   ]
+  },
+  "T-relu": {
+   "address": 0.9002464285714288,
+   "modules": [
+    0.9997714285714286,
+    0.9999928571428571,
+    0.9004750000000001
+   ]
+  }
+ },
+ {
+  "id": "load|seed 30|error",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.7,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "error",
+  "P": 700,
+  "alpha_read": 393.74999999999994,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9669964285714284,
+   "modules": [
+    0.9986750000000002,
+    0.9991785714285715,
+    0.9690357142857143
+   ]
+  },
+  "T-relu": {
+   "address": 0.8858035714285715,
+   "modules": [
+    0.9973249999999996,
+    0.990714285714286,
+    0.8960357142857137
+   ]
+  }
+ },
+ {
+  "id": "load|seed 31|random",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.7,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "random",
+  "P": 700,
+  "alpha_read": 393.74999999999994,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.8468107142857142,
+   "modules": [
+    0.8938749999999998,
+    0.9563249999999999,
+    0.990532142857143
+   ]
+  },
+  "T-relu": {
+   "address": 0.517678571428571,
+   "modules": [
+    0.7747750000000007,
+    0.7992964285714288,
+    0.8357000000000002
+   ]
+  }
+ },
+ {
+  "id": "load|seed 31|kmeans",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.7,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "kmeans",
+  "P": 700,
+  "alpha_read": 393.74999999999994,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9544964285714286,
+   "modules": [
+    0.999932142857143,
+    0.9999821428571428,
+    0.9545750000000002
+   ]
+  },
+  "T-relu": {
+   "address": 0.8174000000000005,
+   "modules": [
+    0.9928214285714281,
+    0.9870678571428568,
+    0.835103571428572
+   ]
+  }
+ },
+ {
+  "id": "load|seed 31|oracle",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.7,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "oracle",
+  "P": 700,
+  "alpha_read": 393.74999999999994,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9605500000000001,
+   "modules": [
+    1.0,
+    1.0,
+    0.9605500000000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.9317821428571429,
+   "modules": [
+    0.9991321428571426,
+    0.9992857142857143,
+    0.9333500000000002
+   ]
+  }
+ },
+ {
+  "id": "load|seed 31|error",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.7,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "error",
+  "P": 700,
+  "alpha_read": 393.74999999999994,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9679857142857143,
+   "modules": [
+    0.998842857142857,
+    0.9994928571428571,
+    0.9696071428571429
+   ]
+  },
+  "T-relu": {
+   "address": 0.8954571428571416,
+   "modules": [
+    0.9908250000000002,
+    0.9886928571428568,
+    0.913242857142856
+   ]
+  }
+ },
+ {
+  "id": "load|seed 32|random",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.7,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "random",
+  "P": 700,
+  "alpha_read": 393.74999999999994,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.8411214285714286,
+   "modules": [
+    0.8807035714285715,
+    0.9638607142857143,
+    0.9910357142857144
+   ]
+  },
+  "T-relu": {
+   "address": 0.48165714285714256,
+   "modules": [
+    0.6951178571428573,
+    0.8572999999999998,
+    0.7995571428571426
+   ]
+  }
+ },
+ {
+  "id": "load|seed 32|kmeans",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.7,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "kmeans",
+  "P": 700,
+  "alpha_read": 393.74999999999994,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9526250000000002,
+   "modules": [
+    0.9994714285714286,
+    0.9996285714285714,
+    0.9534750000000002
+   ]
+  },
+  "T-relu": {
+   "address": 0.8326321428571438,
+   "modules": [
+    0.9958607142857138,
+    0.9914571428571425,
+    0.8431678571428582
+   ]
+  }
+ },
+ {
+  "id": "load|seed 32|oracle",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.7,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "oracle",
+  "P": 700,
+  "alpha_read": 393.74999999999994,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9651214285714286,
+   "modules": [
+    1.0,
+    1.0,
+    0.9651214285714286
+   ]
+  },
+  "T-relu": {
+   "address": 0.8862392857142848,
+   "modules": [
+    0.9996964285714288,
+    0.999975,
+    0.8865607142857131
+   ]
+  }
+ },
+ {
+  "id": "load|seed 32|error",
+  "family": "load",
+  "setting": {
+   "family": "load",
+   "load": 0.7,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "error",
+  "P": 700,
+  "alpha_read": 393.74999999999994,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9663642857142858,
+   "modules": [
+    0.9993107142857142,
+    0.9992642857142856,
+    0.9677714285714286
+   ]
+  },
+  "T-relu": {
+   "address": 0.8741249999999989,
+   "modules": [
+    0.986939285714286,
+    0.988642857142857,
+    0.8954392857142844
+   ]
+  }
+ },
+ {
+  "id": "lifelog|seed 30|sequential",
+  "family": "lifelog",
+  "setting": {
+   "family": "lifelog",
+   "load": 0.8,
+   "content": "lifelog",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "sequential",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.5921875,
+   "modules": [
+    0.73458125,
+    0.853796875,
+    0.94141875
+   ]
+  },
+  "T-relu": {
+   "address": 0.28649375000000005,
+   "modules": [
+    0.6461937499999999,
+    0.6653062500000008,
+    0.6481031250000006
+   ]
+  }
+ },
+ {
+  "id": "lifelog|seed 30|random",
+  "family": "lifelog",
+  "setting": {
+   "family": "lifelog",
+   "load": 0.8,
+   "content": "lifelog",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.6044125,
+   "modules": [
+    0.751159375,
+    0.857525,
+    0.9326062500000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.2959249999999996,
+   "modules": [
+    0.6573312500000001,
+    0.6734781250000005,
+    0.6415625000000007
+   ]
+  }
+ },
+ {
+  "id": "lifelog|seed 30|kmeans",
+  "family": "lifelog",
+  "setting": {
+   "family": "lifelog",
+   "load": 0.8,
+   "content": "lifelog",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.86535625,
+   "modules": [
+    0.9948999999999999,
+    0.9837156250000001,
+    0.8846593749999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.6410499999999998,
+   "modules": [
+    0.9792843749999982,
+    0.9533187499999991,
+    0.6923343750000001
+   ]
+  }
+ },
+ {
+  "id": "lifelog|seed 30|oracle",
+  "family": "lifelog",
+  "setting": {
+   "family": "lifelog",
+   "load": 0.8,
+   "content": "lifelog",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.8621749999999999,
+   "modules": [
+    1.0,
+    1.0,
+    0.8621749999999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.7852312500000004,
+   "modules": [
+    0.9989062499999994,
+    0.9991781249999999,
+    0.7867593749999999
+   ]
+  }
+ },
+ {
+  "id": "lifelog|seed 30|error",
+  "family": "lifelog",
+  "setting": {
+   "family": "lifelog",
+   "load": 0.8,
+   "content": "lifelog",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.8488062500000001,
+   "modules": [
+    0.9943781249999999,
+    0.9960437499999999,
+    0.8565437499999998
+   ]
+  },
+  "T-relu": {
+   "address": 0.7476249999999994,
+   "modules": [
+    0.9912281250000001,
+    0.9836468749999996,
+    0.7640781249999992
+   ]
+  }
+ },
+ {
+  "id": "lifelog|seed 31|sequential",
+  "family": "lifelog",
+  "setting": {
+   "family": "lifelog",
+   "load": 0.8,
+   "content": "lifelog",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "sequential",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.59649375,
+   "modules": [
+    0.7517500000000001,
+    0.8535062500000001,
+    0.925046875
+   ]
+  },
+  "T-relu": {
+   "address": 0.27305937499999994,
+   "modules": [
+    0.627996875,
+    0.6472406250000007,
+    0.661971875
+   ]
+  }
+ },
+ {
+  "id": "lifelog|seed 31|random",
+  "family": "lifelog",
+  "setting": {
+   "family": "lifelog",
+   "load": 0.8,
+   "content": "lifelog",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.6065687500000001,
+   "modules": [
+    0.759965625,
+    0.8514375,
+    0.925865625
+   ]
+  },
+  "T-relu": {
+   "address": 0.27673437499999953,
+   "modules": [
+    0.629809375,
+    0.6282562500000011,
+    0.679040625
+   ]
+  }
+ },
+ {
+  "id": "lifelog|seed 31|kmeans",
+  "family": "lifelog",
+  "setting": {
+   "family": "lifelog",
+   "load": 0.8,
+   "content": "lifelog",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.8563375000000001,
+   "modules": [
+    0.997303125,
+    0.9928937499999999,
+    0.8647906249999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.7298593750000006,
+   "modules": [
+    0.9869718749999987,
+    0.9793593749999987,
+    0.7548500000000001
+   ]
+  }
+ },
+ {
+  "id": "lifelog|seed 31|oracle",
+  "family": "lifelog",
+  "setting": {
+   "family": "lifelog",
+   "load": 0.8,
+   "content": "lifelog",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.8545156249999999,
+   "modules": [
+    1.0,
+    1.0,
+    0.8545156249999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.8461749999999995,
+   "modules": [
+    0.9949343750000001,
+    0.9963312499999998,
+    0.8532937499999994
+   ]
+  }
+ },
+ {
+  "id": "lifelog|seed 31|error",
+  "family": "lifelog",
+  "setting": {
+   "family": "lifelog",
+   "load": 0.8,
+   "content": "lifelog",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.866384375,
+   "modules": [
+    0.99569375,
+    0.9975125,
+    0.8723468750000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.8219593750000009,
+   "modules": [
+    0.9895437499999997,
+    0.9911187499999994,
+    0.8392687500000008
+   ]
+  }
+ },
+ {
+  "id": "lifelog|seed 32|sequential",
+  "family": "lifelog",
+  "setting": {
+   "family": "lifelog",
+   "load": 0.8,
+   "content": "lifelog",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "sequential",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.6007031250000001,
+   "modules": [
+    0.7512718749999999,
+    0.85335,
+    0.935553125
+   ]
+  },
+  "T-relu": {
+   "address": 0.24839374999999983,
+   "modules": [
+    0.5478250000000002,
+    0.6879843750000003,
+    0.6383437500000007
+   ]
+  }
+ },
+ {
+  "id": "lifelog|seed 32|random",
+  "family": "lifelog",
+  "setting": {
+   "family": "lifelog",
+   "load": 0.8,
+   "content": "lifelog",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.6002125,
+   "modules": [
+    0.748228125,
+    0.85518125,
+    0.931996875
+   ]
+  },
+  "T-relu": {
+   "address": 0.24723749999999992,
+   "modules": [
+    0.5458718750000001,
+    0.697903125,
+    0.6338968750000007
+   ]
+  }
+ },
+ {
+  "id": "lifelog|seed 32|kmeans",
+  "family": "lifelog",
+  "setting": {
+   "family": "lifelog",
+   "load": 0.8,
+   "content": "lifelog",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.8751437500000001,
+   "modules": [
+    0.9956156250000001,
+    0.99525,
+    0.8830687500000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.6170343750000002,
+   "modules": [
+    0.9752687499999992,
+    0.9697312499999993,
+    0.6535187499999998
+   ]
+  }
+ },
+ {
+  "id": "lifelog|seed 32|oracle",
+  "family": "lifelog",
+  "setting": {
+   "family": "lifelog",
+   "load": 0.8,
+   "content": "lifelog",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.8509406249999999,
+   "modules": [
+    1.0,
+    1.0,
+    0.8509406249999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.7777124999999997,
+   "modules": [
+    0.9979093749999994,
+    0.9997687499999998,
+    0.7797468749999994
+   ]
+  }
+ },
+ {
+  "id": "lifelog|seed 32|error",
+  "family": "lifelog",
+  "setting": {
+   "family": "lifelog",
+   "load": 0.8,
+   "content": "lifelog",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.8600937500000001,
+   "modules": [
+    0.9956437499999999,
+    0.9980375000000001,
+    0.8655968749999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.7571968750000009,
+   "modules": [
+    0.9881406249999997,
+    0.9947124999999994,
+    0.7717062500000006
+   ]
+  }
+ },
+ {
+  "id": "cards 7/12/4|seed 30|sequential",
+  "family": "cards 7/12/4",
+  "setting": {
+   "family": "cards 7/12/4",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    7,
+    12,
+    4
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "sequential",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.7855531250000002,
+   "modules": [
+    0.8447781249999999,
+    0.9455843750000001,
+    0.9835875000000002
+   ]
+  },
+  "T-relu": {
+   "address": 0.4589343749999998,
+   "modules": [
+    0.7495906250000008,
+    0.7966312500000008,
+    0.7601375000000006
+   ]
+  }
+ },
+ {
+  "id": "cards 7/12/4|seed 30|random",
+  "family": "cards 7/12/4",
+  "setting": {
+   "family": "cards 7/12/4",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    7,
+    12,
+    4
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.7781718750000002,
+   "modules": [
+    0.84221875,
+    0.93608125,
+    0.9848343750000003
+   ]
+  },
+  "T-relu": {
+   "address": 0.46016874999999985,
+   "modules": [
+    0.7472468750000005,
+    0.7811093749999998,
+    0.7677124999999998
+   ]
+  }
+ },
+ {
+  "id": "cards 7/12/4|seed 30|kmeans",
+  "family": "cards 7/12/4",
+  "setting": {
+   "family": "cards 7/12/4",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    7,
+    12,
+    4
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9678781250000001,
+   "modules": [
+    0.9994437500000001,
+    0.9974156250000001,
+    0.9709187499999998
+   ]
+  },
+  "T-relu": {
+   "address": 0.7335593750000006,
+   "modules": [
+    0.9632343749999985,
+    0.9755624999999997,
+    0.7820374999999993
+   ]
+  }
+ },
+ {
+  "id": "cards 7/12/4|seed 30|oracle",
+  "family": "cards 7/12/4",
+  "setting": {
+   "family": "cards 7/12/4",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    7,
+    12,
+    4
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9574000000000001,
+   "modules": [
+    1.0,
+    1.0,
+    0.9574000000000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.7885875000000004,
+   "modules": [
+    0.9997718749999998,
+    0.999903125,
+    0.7888781250000007
+   ]
+  }
+ },
+ {
+  "id": "cards 7/12/4|seed 30|error",
+  "family": "cards 7/12/4",
+  "setting": {
+   "family": "cards 7/12/4",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    7,
+    12,
+    4
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9535375,
+   "modules": [
+    0.9998968750000001,
+    0.9745781250000001,
+    0.9784406250000002
+   ]
+  },
+  "T-relu": {
+   "address": 0.6613593750000011,
+   "modules": [
+    0.9878718749999996,
+    0.9228625000000008,
+    0.7251968750000001
+   ]
+  }
+ },
+ {
+  "id": "cards 7/12/4|seed 31|sequential",
+  "family": "cards 7/12/4",
+  "setting": {
+   "family": "cards 7/12/4",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    7,
+    12,
+    4
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "sequential",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.7731875000000001,
+   "modules": [
+    0.845475,
+    0.9308,
+    0.9824687499999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.43085624999999994,
+   "modules": [
+    0.7179343749999991,
+    0.7542718750000001,
+    0.7875281249999994
+   ]
+  }
+ },
+ {
+  "id": "cards 7/12/4|seed 31|random",
+  "family": "cards 7/12/4",
+  "setting": {
+   "family": "cards 7/12/4",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    7,
+    12,
+    4
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.7825593750000001,
+   "modules": [
+    0.8500281249999999,
+    0.9385124999999997,
+    0.9802249999999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.43133750000000015,
+   "modules": [
+    0.7228156249999997,
+    0.7534562500000002,
+    0.7842812499999997
+   ]
+  }
+ },
+ {
+  "id": "cards 7/12/4|seed 31|kmeans",
+  "family": "cards 7/12/4",
+  "setting": {
+   "family": "cards 7/12/4",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    7,
+    12,
+    4
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9477062500000001,
+   "modules": [
+    0.999571875,
+    0.9977781250000001,
+    0.950165625
+   ]
+  },
+  "T-relu": {
+   "address": 0.7817468750000001,
+   "modules": [
+    0.9890562499999994,
+    0.9779437499999998,
+    0.80789375
+   ]
+  }
+ },
+ {
+  "id": "cards 7/12/4|seed 31|oracle",
+  "family": "cards 7/12/4",
+  "setting": {
+   "family": "cards 7/12/4",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    7,
+    12,
+    4
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.958096875,
+   "modules": [
+    1.0,
+    1.0,
+    0.958096875
+   ]
+  },
+  "T-relu": {
+   "address": 0.8429062499999996,
+   "modules": [
+    0.9992812499999999,
+    0.99974375,
+    0.8436781249999998
+   ]
+  }
+ },
+ {
+  "id": "cards 7/12/4|seed 31|error",
+  "family": "cards 7/12/4",
+  "setting": {
+   "family": "cards 7/12/4",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    7,
+    12,
+    4
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.94810625,
+   "modules": [
+    0.9999843749999999,
+    0.9693593749999999,
+    0.9780093750000002
+   ]
+  },
+  "T-relu": {
+   "address": 0.6914750000000016,
+   "modules": [
+    0.9972312499999992,
+    0.9395343749999996,
+    0.7354281250000015
+   ]
+  }
+ },
+ {
+  "id": "cards 7/12/4|seed 32|sequential",
+  "family": "cards 7/12/4",
+  "setting": {
+   "family": "cards 7/12/4",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    7,
+    12,
+    4
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "sequential",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.7820625000000001,
+   "modules": [
+    0.844796875,
+    0.9389906249999999,
+    0.9859625
+   ]
+  },
+  "T-relu": {
+   "address": 0.4120500000000005,
+   "modules": [
+    0.6440093750000006,
+    0.8209000000000003,
+    0.7637843750000008
+   ]
+  }
+ },
+ {
+  "id": "cards 7/12/4|seed 32|random",
+  "family": "cards 7/12/4",
+  "setting": {
+   "family": "cards 7/12/4",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    7,
+    12,
+    4
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.78525,
+   "modules": [
+    0.8491312499999999,
+    0.9408093750000001,
+    0.9814218750000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.4051218750000002,
+   "modules": [
+    0.65455,
+    0.8139656250000009,
+    0.7518468749999997
+   ]
+  }
+ },
+ {
+  "id": "cards 7/12/4|seed 32|kmeans",
+  "family": "cards 7/12/4",
+  "setting": {
+   "family": "cards 7/12/4",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    7,
+    12,
+    4
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9391937500000002,
+   "modules": [
+    0.9982999999999999,
+    0.9990437500000001,
+    0.9417218749999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.6840343749999999,
+   "modules": [
+    0.9864156249999984,
+    0.9886218749999993,
+    0.7021187500000005
+   ]
+  }
+ },
+ {
+  "id": "cards 7/12/4|seed 32|oracle",
+  "family": "cards 7/12/4",
+  "setting": {
+   "family": "cards 7/12/4",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    7,
+    12,
+    4
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.956975,
+   "modules": [
+    1.0,
+    1.0,
+    0.956975
+   ]
+  },
+  "T-relu": {
+   "address": 0.7950656250000001,
+   "modules": [
+    0.9995031249999999,
+    1.0,
+    0.7954875000000001
+   ]
+  }
+ },
+ {
+  "id": "cards 7/12/4|seed 32|error",
+  "family": "cards 7/12/4",
+  "setting": {
+   "family": "cards 7/12/4",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    7,
+    12,
+    4
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9362843750000001,
+   "modules": [
+    0.9999624999999999,
+    0.9551781249999999,
+    0.9803750000000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.6743468750000009,
+   "modules": [
+    0.9901468749999993,
+    0.9242406249999988,
+    0.7366281250000002
+   ]
+  }
+ },
+ {
+  "id": "Nh 200|seed 30|random",
+  "family": "Nh 200",
+  "setting": {
+   "family": "Nh 200",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 200,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.78486875,
+   "modules": [
+    0.8502906249999999,
+    0.939634375,
+    0.9816499999999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.2398812499999997,
+   "modules": [
+    0.6256156250000016,
+    0.608078125,
+    0.6117031250000007
+   ]
+  }
+ },
+ {
+  "id": "Nh 200|seed 30|oracle",
+  "family": "Nh 200",
+  "setting": {
+   "family": "Nh 200",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 200,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.950275,
+   "modules": [
+    1.0,
+    1.0,
+    0.950275
+   ]
+  },
+  "T-relu": {
+   "address": 0.728259375000001,
+   "modules": [
+    0.9813999999999994,
+    0.9737093750000002,
+    0.763746875000001
+   ]
+  }
+ },
+ {
+  "id": "Nh 200|seed 30|error",
+  "family": "Nh 200",
+  "setting": {
+   "family": "Nh 200",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 200,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.944609375,
+   "modules": [
+    0.9975562500000001,
+    0.998253125,
+    0.9486
+   ]
+  },
+  "T-relu": {
+   "address": 0.6878906249999995,
+   "modules": [
+    0.9684624999999994,
+    0.9552687499999993,
+    0.7467499999999997
+   ]
+  }
+ },
+ {
+  "id": "Nh 200|seed 31|random",
+  "family": "Nh 200",
+  "setting": {
+   "family": "Nh 200",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 200,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.7887125,
+   "modules": [
+    0.859496875,
+    0.9353437500000003,
+    0.980325
+   ]
+  },
+  "T-relu": {
+   "address": 0.18907499999999977,
+   "modules": [
+    0.6550125000000002,
+    0.5415312500000006,
+    0.5243250000000002
+   ]
+  }
+ },
+ {
+  "id": "Nh 200|seed 31|oracle",
+  "family": "Nh 200",
+  "setting": {
+   "family": "Nh 200",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 200,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.942321875,
+   "modules": [
+    1.0,
+    1.0,
+    0.942321875
+   ]
+  },
+  "T-relu": {
+   "address": 0.6501468750000003,
+   "modules": [
+    0.9968874999999994,
+    0.9132906249999998,
+    0.7151406250000001
+   ]
+  }
+ },
+ {
+  "id": "Nh 200|seed 31|error",
+  "family": "Nh 200",
+  "setting": {
+   "family": "Nh 200",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 200,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.945853125,
+   "modules": [
+    0.9979375,
+    0.9975687500000001,
+    0.94989375
+   ]
+  },
+  "T-relu": {
+   "address": 0.5937000000000002,
+   "modules": [
+    0.9778249999999999,
+    0.8860656249999996,
+    0.6762937499999997
+   ]
+  }
+ },
+ {
+  "id": "Nh 200|seed 32|random",
+  "family": "Nh 200",
+  "setting": {
+   "family": "Nh 200",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 200,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.7873749999999999,
+   "modules": [
+    0.84918125,
+    0.9429124999999999,
+    0.982359375
+   ]
+  },
+  "T-relu": {
+   "address": 0.24396874999999985,
+   "modules": [
+    0.6671656249999991,
+    0.5616687500000002,
+    0.6216500000000005
+   ]
+  }
+ },
+ {
+  "id": "Nh 200|seed 32|oracle",
+  "family": "Nh 200",
+  "setting": {
+   "family": "Nh 200",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 200,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9416187500000001,
+   "modules": [
+    1.0,
+    1.0,
+    0.9416187500000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.7250750000000002,
+   "modules": [
+    0.9993218749999998,
+    0.9762999999999995,
+    0.7435875
+   ]
+  }
+ },
+ {
+  "id": "Nh 200|seed 32|error",
+  "family": "Nh 200",
+  "setting": {
+   "family": "Nh 200",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 200,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9427031249999999,
+   "modules": [
+    0.9964656250000001,
+    0.9964687500000002,
+    0.9494093749999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.6901531249999995,
+   "modules": [
+    0.9810281249999997,
+    0.95168125,
+    0.7376562499999999
+   ]
+  }
+ },
+ {
+  "id": "Nh 800|seed 30|random",
+  "family": "Nh 800",
+  "setting": {
+   "family": "Nh 800",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 800,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.78486875,
+   "modules": [
+    0.8502906249999999,
+    0.939634375,
+    0.9816499999999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.5944687499999993,
+   "modules": [
+    0.7690656249999995,
+    0.8810374999999999,
+    0.866443749999999
+   ]
+  }
+ },
+ {
+  "id": "Nh 800|seed 30|oracle",
+  "family": "Nh 800",
+  "setting": {
+   "family": "Nh 800",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 800,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.950275,
+   "modules": [
+    1.0,
+    1.0,
+    0.950275
+   ]
+  },
+  "T-relu": {
+   "address": 0.9095499999999989,
+   "modules": [
+    1.0,
+    1.0,
+    0.9095499999999989
+   ]
+  }
+ },
+ {
+  "id": "Nh 800|seed 30|error",
+  "family": "Nh 800",
+  "setting": {
+   "family": "Nh 800",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 800,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.944609375,
+   "modules": [
+    0.9975562500000001,
+    0.998253125,
+    0.9486
+   ]
+  },
+  "T-relu": {
+   "address": 0.8907312499999998,
+   "modules": [
+    0.99491875,
+    0.9965281250000001,
+    0.8986124999999996
+   ]
+  }
+ },
+ {
+  "id": "Nh 800|seed 31|random",
+  "family": "Nh 800",
+  "setting": {
+   "family": "Nh 800",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 800,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.7887125,
+   "modules": [
+    0.859496875,
+    0.9353437500000003,
+    0.980325
+   ]
+  },
+  "T-relu": {
+   "address": 0.5757156249999997,
+   "modules": [
+    0.8158531250000004,
+    0.7883312500000001,
+    0.8867937499999995
+   ]
+  }
+ },
+ {
+  "id": "Nh 800|seed 31|oracle",
+  "family": "Nh 800",
+  "setting": {
+   "family": "Nh 800",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 800,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.942321875,
+   "modules": [
+    1.0,
+    1.0,
+    0.942321875
+   ]
+  },
+  "T-relu": {
+   "address": 0.9443156249999984,
+   "modules": [
+    1.0,
+    0.9999875,
+    0.9443281249999984
+   ]
+  }
+ },
+ {
+  "id": "Nh 800|seed 31|error",
+  "family": "Nh 800",
+  "setting": {
+   "family": "Nh 800",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 800,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.945853125,
+   "modules": [
+    0.9979375,
+    0.9975687500000001,
+    0.94989375
+   ]
+  },
+  "T-relu": {
+   "address": 0.9289874999999985,
+   "modules": [
+    0.9989218750000001,
+    0.9918531249999998,
+    0.937237499999998
+   ]
+  }
+ },
+ {
+  "id": "Nh 800|seed 32|random",
+  "family": "Nh 800",
+  "setting": {
+   "family": "Nh 800",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 800,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.7873749999999999,
+   "modules": [
+    0.84918125,
+    0.9429124999999999,
+    0.982359375
+   ]
+  },
+  "T-relu": {
+   "address": 0.5700843749999998,
+   "modules": [
+    0.7612531249999995,
+    0.8786906249999997,
+    0.8437093749999999
+   ]
+  }
+ },
+ {
+  "id": "Nh 800|seed 32|oracle",
+  "family": "Nh 800",
+  "setting": {
+   "family": "Nh 800",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 800,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9416187500000001,
+   "modules": [
+    1.0,
+    1.0,
+    0.9416187500000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.9083624999999996,
+   "modules": [
+    1.0,
+    1.0,
+    0.9083624999999996
+   ]
+  }
+ },
+ {
+  "id": "Nh 800|seed 32|error",
+  "family": "Nh 800",
+  "setting": {
+   "family": "Nh 800",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 800,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9427031249999999,
+   "modules": [
+    0.9964656250000001,
+    0.9964687500000002,
+    0.9494093749999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.8900218749999996,
+   "modules": [
+    0.98560625,
+    0.9866781249999999,
+    0.91204375
+   ]
+  }
+ },
+ {
+  "id": "periods 5,6,7|seed 30|random",
+  "family": "periods 5,6,7",
+  "setting": {
+   "family": "periods 5,6,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    5,
+    6,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.977925,
+   "modules": [
+    0.9822593750000002,
+    0.9962031250000003,
+    0.9993343750000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.49740000000000045,
+   "modules": [
+    0.8384656249999992,
+    0.7094031250000004,
+    0.8224812500000007
+   ]
+  }
+ },
+ {
+  "id": "periods 5,6,7|seed 30|kmeans",
+  "family": "periods 5,6,7",
+  "setting": {
+   "family": "periods 5,6,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    5,
+    6,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9344968750000001,
+   "modules": [
+    0.99895625,
+    0.9989062499999999,
+    0.9365125000000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.7719656250000004,
+   "modules": [
+    0.9847687499999991,
+    0.9822218749999989,
+    0.7988374999999999
+   ]
+  }
+ },
+ {
+  "id": "periods 5,6,7|seed 30|oracle",
+  "family": "periods 5,6,7",
+  "setting": {
+   "family": "periods 5,6,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    5,
+    6,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9494250000000001,
+   "modules": [
+    1.0,
+    1.0,
+    0.9494250000000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.8593031250000006,
+   "modules": [
+    0.9999968749999999,
+    0.9994624999999999,
+    0.8597125000000004
+   ]
+  }
+ },
+ {
+  "id": "periods 5,6,7|seed 30|error",
+  "family": "periods 5,6,7",
+  "setting": {
+   "family": "periods 5,6,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    5,
+    6,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9452062500000001,
+   "modules": [
+    0.997434375,
+    0.9979499999999999,
+    0.9496093750000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.8238437499999983,
+   "modules": [
+    0.9888249999999998,
+    0.9933843750000002,
+    0.8404906249999986
+   ]
+  }
+ },
+ {
+  "id": "periods 5,6,7|seed 31|random",
+  "family": "periods 5,6,7",
+  "setting": {
+   "family": "periods 5,6,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    5,
+    6,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.97670625,
+   "modules": [
+    0.98074375,
+    0.9968593750000001,
+    0.999015625
+   ]
+  },
+  "T-relu": {
+   "address": 0.48623124999999995,
+   "modules": [
+    0.7988843749999998,
+    0.7701687500000003,
+    0.7831218750000004
+   ]
+  }
+ },
+ {
+  "id": "periods 5,6,7|seed 31|kmeans",
+  "family": "periods 5,6,7",
+  "setting": {
+   "family": "periods 5,6,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    5,
+    6,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9538906250000002,
+   "modules": [
+    0.9989062500000001,
+    0.9984468750000001,
+    0.9564781250000002
+   ]
+  },
+  "T-relu": {
+   "address": 0.7653749999999997,
+   "modules": [
+    0.9810562499999993,
+    0.9721624999999999,
+    0.800934375
+   ]
+  }
+ },
+ {
+  "id": "periods 5,6,7|seed 31|oracle",
+  "family": "periods 5,6,7",
+  "setting": {
+   "family": "periods 5,6,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    5,
+    6,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9446499999999999,
+   "modules": [
+    1.0,
+    1.0,
+    0.9446499999999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.8951187499999985,
+   "modules": [
+    0.9995874999999999,
+    0.9918343749999997,
+    0.9032999999999987
+   ]
+  }
+ },
+ {
+  "id": "periods 5,6,7|seed 31|error",
+  "family": "periods 5,6,7",
+  "setting": {
+   "family": "periods 5,6,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    5,
+    6,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9448093750000001,
+   "modules": [
+    0.997771875,
+    0.997359375,
+    0.9492906250000002
+   ]
+  },
+  "T-relu": {
+   "address": 0.8463500000000005,
+   "modules": [
+    0.9958031249999995,
+    0.9681718749999999,
+    0.87881875
+   ]
+  }
+ },
+ {
+  "id": "periods 5,6,7|seed 32|random",
+  "family": "periods 5,6,7",
+  "setting": {
+   "family": "periods 5,6,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    5,
+    6,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.97575,
+   "modules": [
+    0.9793718749999999,
+    0.9967750000000001,
+    0.9994843750000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.6079218750000004,
+   "modules": [
+    0.854006249999999,
+    0.8420937499999984,
+    0.8403062500000003
+   ]
+  }
+ },
+ {
+  "id": "periods 5,6,7|seed 32|kmeans",
+  "family": "periods 5,6,7",
+  "setting": {
+   "family": "periods 5,6,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    5,
+    6,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.941240625,
+   "modules": [
+    0.999703125,
+    0.9964437500000001,
+    0.9449031250000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.7183468749999997,
+   "modules": [
+    0.9980687499999994,
+    0.9651062499999995,
+    0.7479281250000009
+   ]
+  }
+ },
+ {
+  "id": "periods 5,6,7|seed 32|oracle",
+  "family": "periods 5,6,7",
+  "setting": {
+   "family": "periods 5,6,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    5,
+    6,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.947871875,
+   "modules": [
+    1.0,
+    1.0,
+    0.947871875
+   ]
+  },
+  "T-relu": {
+   "address": 0.9032624999999989,
+   "modules": [
+    1.0,
+    0.9998218749999999,
+    0.903415624999999
+   ]
+  }
+ },
+ {
+  "id": "periods 5,6,7|seed 32|error",
+  "family": "periods 5,6,7",
+  "setting": {
+   "family": "periods 5,6,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    5,
+    6,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9456625,
+   "modules": [
+    0.996478125,
+    0.9965281250000001,
+    0.952265625
+   ]
+  },
+  "T-relu": {
+   "address": 0.8755249999999987,
+   "modules": [
+    0.9895781249999999,
+    0.9984499999999998,
+    0.887074999999999
+   ]
+  }
+ },
+ {
+  "id": "Ns 500|seed 30|random",
+  "family": "Ns 500",
+  "setting": {
+   "family": "Ns 500",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 500,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "random",
+  "P": 400,
+  "alpha_read": 225.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.8019250000000001,
+   "modules": [
+    0.8555812500000001,
+    0.95030625,
+    0.984025
+   ]
+  },
+  "T-relu": {
+   "address": 0.5060499999999997,
+   "modules": [
+    0.7768999999999999,
+    0.8151562500000012,
+    0.7891000000000014
+   ]
+  }
+ },
+ {
+  "id": "Ns 500|seed 30|oracle",
+  "family": "Ns 500",
+  "setting": {
+   "family": "Ns 500",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 500,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "oracle",
+  "P": 400,
+  "alpha_read": 225.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9301062499999999,
+   "modules": [
+    1.0,
+    1.0,
+    0.9301062499999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.9077000000000001,
+   "modules": [
+    0.9969750000000001,
+    0.9993250000000002,
+    0.9113937500000001
+   ]
+  }
+ },
+ {
+  "id": "Ns 500|seed 30|error",
+  "family": "Ns 500",
+  "setting": {
+   "family": "Ns 500",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 500,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "error",
+  "P": 400,
+  "alpha_read": 225.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.940475,
+   "modules": [
+    0.9982625,
+    0.9985500000000002,
+    0.9434062499999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.8829812500000008,
+   "modules": [
+    0.9903687500000004,
+    0.9919125000000001,
+    0.8996312500000008
+   ]
+  }
+ },
+ {
+  "id": "Ns 500|seed 31|random",
+  "family": "Ns 500",
+  "setting": {
+   "family": "Ns 500",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 500,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "random",
+  "P": 400,
+  "alpha_read": 225.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.7972062499999999,
+   "modules": [
+    0.8670750000000002,
+    0.93620625,
+    0.98073125
+   ]
+  },
+  "T-relu": {
+   "address": 0.45617500000000044,
+   "modules": [
+    0.7524312499999999,
+    0.7614875000000001,
+    0.7941187500000004
+   ]
+  }
+ },
+ {
+  "id": "Ns 500|seed 31|oracle",
+  "family": "Ns 500",
+  "setting": {
+   "family": "Ns 500",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 500,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "oracle",
+  "P": 400,
+  "alpha_read": 225.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9355875,
+   "modules": [
+    1.0,
+    1.0,
+    0.9355875
+   ]
+  },
+  "T-relu": {
+   "address": 0.9330875000000006,
+   "modules": [
+    0.9967562500000001,
+    0.9979375000000001,
+    0.9382750000000005
+   ]
+  }
+ },
+ {
+  "id": "Ns 500|seed 31|error",
+  "family": "Ns 500",
+  "setting": {
+   "family": "Ns 500",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 500,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "error",
+  "P": 400,
+  "alpha_read": 225.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9423312500000001,
+   "modules": [
+    0.9973875000000001,
+    0.99829375,
+    0.9464375000000002
+   ]
+  },
+  "T-relu": {
+   "address": 0.9296500000000008,
+   "modules": [
+    0.9963625000000004,
+    0.9958000000000002,
+    0.9370062500000012
+   ]
+  }
+ },
+ {
+  "id": "Ns 500|seed 32|random",
+  "family": "Ns 500",
+  "setting": {
+   "family": "Ns 500",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 500,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "random",
+  "P": 400,
+  "alpha_read": 225.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.79124375,
+   "modules": [
+    0.8519374999999999,
+    0.9420812500000001,
+    0.9849250000000002
+   ]
+  },
+  "T-relu": {
+   "address": 0.42833124999999966,
+   "modules": [
+    0.6521437500000001,
+    0.8251875000000005,
+    0.7888125000000002
+   ]
+  }
+ },
+ {
+  "id": "Ns 500|seed 32|oracle",
+  "family": "Ns 500",
+  "setting": {
+   "family": "Ns 500",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 500,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "oracle",
+  "P": 400,
+  "alpha_read": 225.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9385062500000001,
+   "modules": [
+    1.0,
+    1.0,
+    0.9385062500000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.9122062500000007,
+   "modules": [
+    0.9979125000000003,
+    0.9997999999999999,
+    0.9143500000000008
+   ]
+  }
+ },
+ {
+  "id": "Ns 500|seed 32|error",
+  "family": "Ns 500",
+  "setting": {
+   "family": "Ns 500",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 500,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "error",
+  "P": 400,
+  "alpha_read": 225.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.94318125,
+   "modules": [
+    0.9979375,
+    0.9981874999999999,
+    0.9468375
+   ]
+  },
+  "T-relu": {
+   "address": 0.8494312500000002,
+   "modules": [
+    0.9864937500000004,
+    0.9936062500000005,
+    0.8684312499999998
+   ]
+  }
+ },
+ {
+  "id": "Ns 2000|seed 30|random",
+  "family": "Ns 2000",
+  "setting": {
+   "family": "Ns 2000",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 2000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle"
+   ]
+  },
+  "seed": 30,
+  "placement": "random",
+  "P": 1600,
+  "alpha_read": 900.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.77753125,
+   "modules": [
+    0.8423265624999999,
+    0.93915,
+    0.9822734375000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.4559515624999993,
+   "modules": [
+    0.7451687499999988,
+    0.7922249999999985,
+    0.7643765624999971
+   ]
+  }
+ },
+ {
+  "id": "Ns 2000|seed 30|kmeans",
+  "family": "Ns 2000",
+  "setting": {
+   "family": "Ns 2000",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 2000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle"
+   ]
+  },
+  "seed": 30,
+  "placement": "kmeans",
+  "P": 1600,
+  "alpha_read": 900.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.967665625,
+   "modules": [
+    0.9998203125,
+    0.9963875,
+    0.9713625
+   ]
+  },
+  "T-relu": {
+   "address": 0.7251703124999973,
+   "modules": [
+    0.9879406249999992,
+    0.9750812499999987,
+    0.7523437499999972
+   ]
+  }
+ },
+ {
+  "id": "Ns 2000|seed 30|oracle",
+  "family": "Ns 2000",
+  "setting": {
+   "family": "Ns 2000",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 2000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle"
+   ]
+  },
+  "seed": 30,
+  "placement": "oracle",
+  "P": 1600,
+  "alpha_read": 900.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9745656250000002,
+   "modules": [
+    1.0,
+    1.0,
+    0.9745656250000002
+   ]
+  },
+  "T-relu": {
+   "address": 0.8084515624999986,
+   "modules": [
+    0.9999765624999999,
+    0.9999968749999999,
+    0.8084781249999986
+   ]
+  }
+ },
+ {
+  "id": "Ns 2000|seed 31|random",
+  "family": "Ns 2000",
+  "setting": {
+   "family": "Ns 2000",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 2000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle"
+   ]
+  },
+  "seed": 31,
+  "placement": "random",
+  "P": 1600,
+  "alpha_read": 900.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.7740546875,
+   "modules": [
+    0.8441,
+    0.9341312500000001,
+    0.9808312499999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.43379531249999986,
+   "modules": [
+    0.7232703124999992,
+    0.7537890624999983,
+    0.7862984374999984
+   ]
+  }
+ },
+ {
+  "id": "Ns 2000|seed 31|kmeans",
+  "family": "Ns 2000",
+  "setting": {
+   "family": "Ns 2000",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 2000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle"
+   ]
+  },
+  "seed": 31,
+  "placement": "kmeans",
+  "P": 1600,
+  "alpha_read": 900.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9562640625000002,
+   "modules": [
+    0.9999734375,
+    0.9927796875,
+    0.9633140625
+   ]
+  },
+  "T-relu": {
+   "address": 0.7537859374999983,
+   "modules": [
+    0.9978890624999984,
+    0.9813828124999976,
+    0.770148437499998
+   ]
+  }
+ },
+ {
+  "id": "Ns 2000|seed 31|oracle",
+  "family": "Ns 2000",
+  "setting": {
+   "family": "Ns 2000",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 2000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle"
+   ]
+  },
+  "seed": 31,
+  "placement": "oracle",
+  "P": 1600,
+  "alpha_read": 900.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9712109375,
+   "modules": [
+    1.0,
+    1.0,
+    0.9712109375
+   ]
+  },
+  "T-relu": {
+   "address": 0.878384374999996,
+   "modules": [
+    0.9999390625000001,
+    0.9999374999999998,
+    0.878503124999996
+   ]
+  }
+ },
+ {
+  "id": "Ns 2000|seed 32|random",
+  "family": "Ns 2000",
+  "setting": {
+   "family": "Ns 2000",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 2000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle"
+   ]
+  },
+  "seed": 32,
+  "placement": "random",
+  "P": 1600,
+  "alpha_read": 900.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.7746749999999999,
+   "modules": [
+    0.8414734374999999,
+    0.9373515624999998,
+    0.9824656250000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.3922703125000001,
+   "modules": [
+    0.6445265624999992,
+    0.8070234374999992,
+    0.7493390624999986
+   ]
+  }
+ },
+ {
+  "id": "Ns 2000|seed 32|kmeans",
+  "family": "Ns 2000",
+  "setting": {
+   "family": "Ns 2000",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 2000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle"
+   ]
+  },
+  "seed": 32,
+  "placement": "kmeans",
+  "P": 1600,
+  "alpha_read": 900.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9488093750000001,
+   "modules": [
+    0.9999906250000001,
+    0.9789984375,
+    0.9692921875
+   ]
+  },
+  "T-relu": {
+   "address": 0.7083812500000001,
+   "modules": [
+    0.9814624999999992,
+    0.9618078124999969,
+    0.751871874999998
+   ]
+  }
+ },
+ {
+  "id": "Ns 2000|seed 32|oracle",
+  "family": "Ns 2000",
+  "setting": {
+   "family": "Ns 2000",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 2000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle"
+   ]
+  },
+  "seed": 32,
+  "placement": "oracle",
+  "P": 1600,
+  "alpha_read": 900.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.9741515625000002,
+   "modules": [
+    1.0,
+    1.0,
+    0.9741515625000002
+   ]
+  },
+  "T-relu": {
+   "address": 0.8155656249999973,
+   "modules": [
+    0.9999671874999998,
+    1.0,
+    0.8155953124999972
+   ]
+  }
+ },
+ {
+  "id": "mask 0.25|seed 30|random",
+  "family": "mask 0.25",
+  "setting": {
+   "family": "mask 0.25",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.25,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 266.6666666666667,
+  "theory_rate": 0.06698729810778065,
+  "E": {
+   "address": 0.9119750000000001,
+   "modules": [
+    0.93003125,
+    0.9821718749999999,
+    0.9980593750000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.6653937500000009,
+   "modules": [
+    0.8357562499999988,
+    0.8920437499999998,
+    0.8828281249999987
+   ]
+  }
+ },
+ {
+  "id": "mask 0.25|seed 30|kmeans",
+  "family": "mask 0.25",
+  "setting": {
+   "family": "mask 0.25",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.25,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 266.6666666666667,
+  "theory_rate": 0.06698729810778065,
+  "E": {
+   "address": 0.9785312500000001,
+   "modules": [
+    0.9999750000000001,
+    0.9992593750000001,
+    0.9792968750000002
+   ]
+  },
+  "T-relu": {
+   "address": 0.849259375,
+   "modules": [
+    0.995928124999999,
+    0.996903124999999,
+    0.8556875000000003
+   ]
+  }
+ },
+ {
+  "id": "mask 0.25|seed 30|oracle",
+  "family": "mask 0.25",
+  "setting": {
+   "family": "mask 0.25",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.25,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 266.6666666666667,
+  "theory_rate": 0.06698729810778065,
+  "E": {
+   "address": 0.989571875,
+   "modules": [
+    1.0,
+    1.0,
+    0.989571875
+   ]
+  },
+  "T-relu": {
+   "address": 0.9215687499999992,
+   "modules": [
+    0.9998749999999997,
+    0.9999750000000001,
+    0.9217156249999993
+   ]
+  }
+ },
+ {
+  "id": "mask 0.25|seed 30|error",
+  "family": "mask 0.25",
+  "setting": {
+   "family": "mask 0.25",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.25,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 266.6666666666667,
+  "theory_rate": 0.06698729810778065,
+  "E": {
+   "address": 0.9894124999999999,
+   "modules": [
+    0.9999937499999999,
+    0.9999843749999999,
+    0.989434375
+   ]
+  },
+  "T-relu": {
+   "address": 0.9183999999999987,
+   "modules": [
+    0.9982124999999995,
+    0.996465625,
+    0.9229437499999987
+   ]
+  }
+ },
+ {
+  "id": "mask 0.25|seed 31|random",
+  "family": "mask 0.25",
+  "setting": {
+   "family": "mask 0.25",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.25,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 266.6666666666667,
+  "theory_rate": 0.06698729810778065,
+  "E": {
+   "address": 0.926703125,
+   "modules": [
+    0.943690625,
+    0.9837812500000002,
+    0.998
+   ]
+  },
+  "T-relu": {
+   "address": 0.6322312499999999,
+   "modules": [
+    0.83105625,
+    0.8619843749999997,
+    0.8804624999999995
+   ]
+  }
+ },
+ {
+  "id": "mask 0.25|seed 31|kmeans",
+  "family": "mask 0.25",
+  "setting": {
+   "family": "mask 0.25",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.25,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 266.6666666666667,
+  "theory_rate": 0.06698729810778065,
+  "E": {
+   "address": 0.989659375,
+   "modules": [
+    0.999959375,
+    0.999759375,
+    0.9899343750000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.8736187499999996,
+   "modules": [
+    0.9958374999999999,
+    0.9892968749999994,
+    0.8880281249999997
+   ]
+  }
+ },
+ {
+  "id": "mask 0.25|seed 31|oracle",
+  "family": "mask 0.25",
+  "setting": {
+   "family": "mask 0.25",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.25,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 266.6666666666667,
+  "theory_rate": 0.06698729810778065,
+  "E": {
+   "address": 0.9878656250000002,
+   "modules": [
+    1.0,
+    1.0,
+    0.9878656250000002
+   ]
+  },
+  "T-relu": {
+   "address": 0.9576031249999989,
+   "modules": [
+    0.9999437499999999,
+    0.999903125,
+    0.9577531249999987
+   ]
+  }
+ },
+ {
+  "id": "mask 0.25|seed 31|error",
+  "family": "mask 0.25",
+  "setting": {
+   "family": "mask 0.25",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.25,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 266.6666666666667,
+  "theory_rate": 0.06698729810778065,
+  "E": {
+   "address": 0.9863968750000001,
+   "modules": [
+    0.9999875,
+    0.9999906249999999,
+    0.98641875
+   ]
+  },
+  "T-relu": {
+   "address": 0.9414718749999991,
+   "modules": [
+    0.9899687500000001,
+    0.9964562499999997,
+    0.9539812499999993
+   ]
+  }
+ },
+ {
+  "id": "mask 0.25|seed 32|random",
+  "family": "mask 0.25",
+  "setting": {
+   "family": "mask 0.25",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.25,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 266.6666666666667,
+  "theory_rate": 0.06698729810778065,
+  "E": {
+   "address": 0.912465625,
+   "modules": [
+    0.9276750000000001,
+    0.9860562500000001,
+    0.997371875
+   ]
+  },
+  "T-relu": {
+   "address": 0.5953468749999996,
+   "modules": [
+    0.7585812499999993,
+    0.9037031249999992,
+    0.863778124999999
+   ]
+  }
+ },
+ {
+  "id": "mask 0.25|seed 32|kmeans",
+  "family": "mask 0.25",
+  "setting": {
+   "family": "mask 0.25",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.25,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 266.6666666666667,
+  "theory_rate": 0.06698729810778065,
+  "E": {
+   "address": 0.9771781249999999,
+   "modules": [
+    1.0,
+    0.9984031250000001,
+    0.97875
+   ]
+  },
+  "T-relu": {
+   "address": 0.8045156250000012,
+   "modules": [
+    0.9968624999999989,
+    0.9954156249999994,
+    0.8107593750000008
+   ]
+  }
+ },
+ {
+  "id": "mask 0.25|seed 32|oracle",
+  "family": "mask 0.25",
+  "setting": {
+   "family": "mask 0.25",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.25,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 266.6666666666667,
+  "theory_rate": 0.06698729810778065,
+  "E": {
+   "address": 0.98566875,
+   "modules": [
+    1.0,
+    1.0,
+    0.98566875
+   ]
+  },
+  "T-relu": {
+   "address": 0.910112499999999,
+   "modules": [
+    0.9994624999999999,
+    1.0,
+    0.910643749999999
+   ]
+  }
+ },
+ {
+  "id": "mask 0.25|seed 32|error",
+  "family": "mask 0.25",
+  "setting": {
+   "family": "mask 0.25",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.25,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 266.6666666666667,
+  "theory_rate": 0.06698729810778065,
+  "E": {
+   "address": 0.98884375,
+   "modules": [
+    0.9999843749999999,
+    0.999978125,
+    0.98888125
+   ]
+  },
+  "T-relu": {
+   "address": 0.9019718749999983,
+   "modules": [
+    0.9918031249999997,
+    0.9981749999999999,
+    0.9110499999999984
+   ]
+  }
+ },
+ {
+  "id": "mask 0.5|seed 30|random",
+  "family": "mask 0.5",
+  "setting": {
+   "family": "mask 0.5",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.5,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 800.0,
+  "theory_rate": 0.14644660940672627,
+  "E": {
+   "address": 0.556903125,
+   "modules": [
+    0.7274468749999999,
+    0.83170625,
+    0.9178468750000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.26316562499999974,
+   "modules": [
+    0.6295843749999999,
+    0.6512031249999997,
+    0.6157843750000003
+   ]
+  }
+ },
+ {
+  "id": "mask 0.5|seed 30|kmeans",
+  "family": "mask 0.5",
+  "setting": {
+   "family": "mask 0.5",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.5,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 800.0,
+  "theory_rate": 0.14644660940672627,
+  "E": {
+   "address": 0.8452031249999998,
+   "modules": [
+    0.99425625,
+    0.9909937500000001,
+    0.8583593749999998
+   ]
+  },
+  "T-relu": {
+   "address": 0.6209781250000006,
+   "modules": [
+    0.9828593749999986,
+    0.9778312499999978,
+    0.6471593749999996
+   ]
+  }
+ },
+ {
+  "id": "mask 0.5|seed 30|oracle",
+  "family": "mask 0.5",
+  "setting": {
+   "family": "mask 0.5",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.5,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 800.0,
+  "theory_rate": 0.14644660940672627,
+  "E": {
+   "address": 0.8530625000000001,
+   "modules": [
+    1.0,
+    1.0,
+    0.8530625000000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.7739406250000005,
+   "modules": [
+    0.9988281249999996,
+    0.9997218749999999,
+    0.7751750000000003
+   ]
+  }
+ },
+ {
+  "id": "mask 0.5|seed 30|error",
+  "family": "mask 0.5",
+  "setting": {
+   "family": "mask 0.5",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.5,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 800.0,
+  "theory_rate": 0.14644660940672627,
+  "E": {
+   "address": 0.895,
+   "modules": [
+    0.9865343750000001,
+    0.98419375,
+    0.9218843749999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.6149218749999996,
+   "modules": [
+    0.9909249999999993,
+    0.9855781249999999,
+    0.6309593749999997
+   ]
+  }
+ },
+ {
+  "id": "mask 0.5|seed 31|random",
+  "family": "mask 0.5",
+  "setting": {
+   "family": "mask 0.5",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.5,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 800.0,
+  "theory_rate": 0.14644660940672627,
+  "E": {
+   "address": 0.557496875,
+   "modules": [
+    0.7335187500000001,
+    0.830159375,
+    0.9127937500000002
+   ]
+  },
+  "T-relu": {
+   "address": 0.2470812499999998,
+   "modules": [
+    0.6061187500000008,
+    0.6086968750000006,
+    0.6552937500000007
+   ]
+  }
+ },
+ {
+  "id": "mask 0.5|seed 31|kmeans",
+  "family": "mask 0.5",
+  "setting": {
+   "family": "mask 0.5",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.5,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 800.0,
+  "theory_rate": 0.14644660940672627,
+  "E": {
+   "address": 0.8535718749999998,
+   "modules": [
+    0.9939218750000001,
+    0.9887531249999999,
+    0.8680718749999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.6626593750000002,
+   "modules": [
+    0.9681124999999998,
+    0.9703906249999996,
+    0.7098875000000001
+   ]
+  }
+ },
+ {
+  "id": "mask 0.5|seed 31|oracle",
+  "family": "mask 0.5",
+  "setting": {
+   "family": "mask 0.5",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.5,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 800.0,
+  "theory_rate": 0.14644660940672627,
+  "E": {
+   "address": 0.8599562500000001,
+   "modules": [
+    1.0,
+    1.0,
+    0.8599562500000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.8451843749999992,
+   "modules": [
+    0.9994624999999999,
+    0.9988000000000001,
+    0.8466249999999989
+   ]
+  }
+ },
+ {
+  "id": "mask 0.5|seed 31|error",
+  "family": "mask 0.5",
+  "setting": {
+   "family": "mask 0.5",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.5,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 800.0,
+  "theory_rate": 0.14644660940672627,
+  "E": {
+   "address": 0.81948125,
+   "modules": [
+    0.98911875,
+    0.9798874999999999,
+    0.843034375
+   ]
+  },
+  "T-relu": {
+   "address": 0.8040718750000003,
+   "modules": [
+    0.9908999999999999,
+    0.9780968749999995,
+    0.828915625
+   ]
+  }
+ },
+ {
+  "id": "mask 0.5|seed 32|random",
+  "family": "mask 0.5",
+  "setting": {
+   "family": "mask 0.5",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.5,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 800.0,
+  "theory_rate": 0.14644660940672627,
+  "E": {
+   "address": 0.552375,
+   "modules": [
+    0.7195562500000001,
+    0.8376187500000002,
+    0.9157281250000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.22457499999999997,
+   "modules": [
+    0.5253375000000002,
+    0.6830062499999999,
+    0.6014187500000003
+   ]
+  }
+ },
+ {
+  "id": "mask 0.5|seed 32|kmeans",
+  "family": "mask 0.5",
+  "setting": {
+   "family": "mask 0.5",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.5,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 800.0,
+  "theory_rate": 0.14644660940672627,
+  "E": {
+   "address": 0.8215125000000001,
+   "modules": [
+    0.9966843750000001,
+    0.9751843749999999,
+    0.8448843750000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.5426062500000002,
+   "modules": [
+    0.9839499999999988,
+    0.9655843749999998,
+    0.56981875
+   ]
+  }
+ },
+ {
+  "id": "mask 0.5|seed 32|oracle",
+  "family": "mask 0.5",
+  "setting": {
+   "family": "mask 0.5",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.5,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 800.0,
+  "theory_rate": 0.14644660940672627,
+  "E": {
+   "address": 0.847678125,
+   "modules": [
+    1.0,
+    1.0,
+    0.847678125
+   ]
+  },
+  "T-relu": {
+   "address": 0.777625000000001,
+   "modules": [
+    0.9978624999999997,
+    0.9999562499999999,
+    0.7794500000000008
+   ]
+  }
+ },
+ {
+  "id": "mask 0.5|seed 32|error",
+  "family": "mask 0.5",
+  "setting": {
+   "family": "mask 0.5",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "mask",
+   "rate": 0.5,
+   "read": "ridge",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 800.0,
+  "theory_rate": 0.14644660940672627,
+  "E": {
+   "address": 0.7904187500000001,
+   "modules": [
+    0.989153125,
+    0.8636875,
+    0.92469375
+   ]
+  },
+  "T-relu": {
+   "address": 0.47419062500000053,
+   "modules": [
+    0.9849437499999977,
+    0.8364656250000005,
+    0.5781156250000007
+   ]
+  }
+ },
+ {
+  "id": "pinv read|seed 30|random",
+  "family": "pinv read",
+  "setting": {
+   "family": "pinv read",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "pinv",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 0.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.19707187499999995,
+   "modules": [
+    0.49780624999999984,
+    0.59196875,
+    0.648834375
+   ]
+  },
+  "T-relu": {
+   "address": 0.14838437500000007,
+   "modules": [
+    0.5179906250000004,
+    0.539734375,
+    0.5003812499999999
+   ]
+  }
+ },
+ {
+  "id": "pinv read|seed 30|kmeans",
+  "family": "pinv read",
+  "setting": {
+   "family": "pinv read",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "pinv",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 0.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.52685,
+   "modules": [
+    0.9199124999999999,
+    0.918725,
+    0.6229125
+   ]
+  },
+  "T-relu": {
+   "address": 0.3944281250000001,
+   "modules": [
+    0.8355124999999997,
+    0.8109593749999999,
+    0.577515625
+   ]
+  }
+ },
+ {
+  "id": "pinv read|seed 30|oracle",
+  "family": "pinv read",
+  "setting": {
+   "family": "pinv read",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "pinv",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 0.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.74114375,
+   "modules": [
+    1.0,
+    1.0,
+    0.74114375
+   ]
+  },
+  "T-relu": {
+   "address": 0.6599468750000002,
+   "modules": [
+    0.9577874999999978,
+    0.9765499999999977,
+    0.708284375000001
+   ]
+  }
+ },
+ {
+  "id": "pinv read|seed 30|error",
+  "family": "pinv read",
+  "setting": {
+   "family": "pinv read",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "pinv",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 30,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 0.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.712796875,
+   "modules": [
+    0.99639375,
+    0.99796875,
+    0.7164625
+   ]
+  },
+  "T-relu": {
+   "address": 0.5864687499999994,
+   "modules": [
+    0.9245656249999982,
+    0.9415874999999977,
+    0.6763406249999993
+   ]
+  }
+ },
+ {
+  "id": "pinv read|seed 31|random",
+  "family": "pinv read",
+  "setting": {
+   "family": "pinv read",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "pinv",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 0.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.19427812499999997,
+   "modules": [
+    0.54074375,
+    0.551034375,
+    0.64361875
+   ]
+  },
+  "T-relu": {
+   "address": 0.14620625,
+   "modules": [
+    0.5035187500000005,
+    0.5098968749999999,
+    0.5427593750000004
+   ]
+  }
+ },
+ {
+  "id": "pinv read|seed 31|kmeans",
+  "family": "pinv read",
+  "setting": {
+   "family": "pinv read",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "pinv",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 0.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.5279281250000001,
+   "modules": [
+    0.931546875,
+    0.9278843749999999,
+    0.6089218750000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.3935250000000003,
+   "modules": [
+    0.7956749999999988,
+    0.8242812500000002,
+    0.596509375
+   ]
+  }
+ },
+ {
+  "id": "pinv read|seed 31|oracle",
+  "family": "pinv read",
+  "setting": {
+   "family": "pinv read",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "pinv",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 0.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.7351093749999998,
+   "modules": [
+    1.0,
+    0.9998937499999999,
+    0.7352
+   ]
+  },
+  "T-relu": {
+   "address": 0.6666781250000001,
+   "modules": [
+    0.9607968749999993,
+    0.9563062499999984,
+    0.727634375
+   ]
+  }
+ },
+ {
+  "id": "pinv read|seed 31|error",
+  "family": "pinv read",
+  "setting": {
+   "family": "pinv read",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "pinv",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 31,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 0.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.700025,
+   "modules": [
+    0.9938874999999999,
+    0.9959375,
+    0.7076437499999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.57525,
+   "modules": [
+    0.9083468749999988,
+    0.9202374999999984,
+    0.6924687500000004
+   ]
+  }
+ },
+ {
+  "id": "pinv read|seed 32|random",
+  "family": "pinv read",
+  "setting": {
+   "family": "pinv read",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "pinv",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 0.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.20175625,
+   "modules": [
+    0.5022000000000001,
+    0.600521875,
+    0.6621406249999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.14330000000000012,
+   "modules": [
+    0.45810625,
+    0.565821875,
+    0.541859375
+   ]
+  }
+ },
+ {
+  "id": "pinv read|seed 32|kmeans",
+  "family": "pinv read",
+  "setting": {
+   "family": "pinv read",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "pinv",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "kmeans",
+  "P": 800,
+  "alpha_read": 0.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.49952187499999995,
+   "modules": [
+    0.9617687500000001,
+    0.8602749999999999,
+    0.602996875
+   ]
+  },
+  "T-relu": {
+   "address": 0.33366562499999985,
+   "modules": [
+    0.7775531249999994,
+    0.7811812500000006,
+    0.5396031249999996
+   ]
+  }
+ },
+ {
+  "id": "pinv read|seed 32|oracle",
+  "family": "pinv read",
+  "setting": {
+   "family": "pinv read",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "pinv",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "oracle",
+  "P": 800,
+  "alpha_read": 0.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.6999718750000001,
+   "modules": [
+    1.0,
+    1.0,
+    0.6999718750000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.6368437499999997,
+   "modules": [
+    0.9459156249999987,
+    0.9772656249999983,
+    0.6906437499999992
+   ]
+  }
+ },
+ {
+  "id": "pinv read|seed 32|error",
+  "family": "pinv read",
+  "setting": {
+   "family": "pinv read",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "pinv",
+   "placements": [
+    "random",
+    "kmeans",
+    "oracle",
+    "error"
+   ]
+  },
+  "seed": 32,
+  "placement": "error",
+  "P": 800,
+  "alpha_read": 0.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.6999562500000001,
+   "modules": [
+    0.9972218749999999,
+    0.9971875000000001,
+    0.7038062499999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.577765625,
+   "modules": [
+    0.9028749999999994,
+    0.9503718749999984,
+    0.6759593749999994
+   ]
+  }
+ },
+ {
+  "id": "periods 3,4,5,7|seed 30|sequential",
+  "family": "periods 3,4,5,7",
+  "setting": {
+   "family": "periods 3,4,5,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random"
+   ]
+  },
+  "seed": 30,
+  "placement": "sequential",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.7807718750000001,
+   "modules": [
+    0.843709375,
+    0.94095,
+    0.984534375,
+    0.9997437499999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.2726843749999995,
+   "modules": [
+    0.7779687499999994,
+    0.7193499999999997,
+    0.6652000000000007,
+    0.7243906250000001
+   ]
+  }
+ },
+ {
+  "id": "periods 3,4,5,7|seed 30|random",
+  "family": "periods 3,4,5,7",
+  "setting": {
+   "family": "periods 3,4,5,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random"
+   ]
+  },
+  "seed": 30,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.771978125,
+   "modules": [
+    0.83920625,
+    0.9374062500000001,
+    0.9818937500000001,
+    0.999375
+   ]
+  },
+  "T-relu": {
+   "address": 0.2796812500000002,
+   "modules": [
+    0.7732249999999994,
+    0.7307374999999994,
+    0.6794218750000003,
+    0.7264625000000001
+   ]
+  }
+ },
+ {
+  "id": "periods 3,4,5,7|seed 31|sequential",
+  "family": "periods 3,4,5,7",
+  "setting": {
+   "family": "periods 3,4,5,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random"
+   ]
+  },
+  "seed": 31,
+  "placement": "sequential",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.781078125,
+   "modules": [
+    0.843384375,
+    0.9433000000000001,
+    0.9828749999999999,
+    0.9996843750000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.342809375,
+   "modules": [
+    0.7370593750000005,
+    0.8354812499999998,
+    0.7477218749999995,
+    0.7326124999999998
+   ]
+  }
+ },
+ {
+  "id": "periods 3,4,5,7|seed 31|random",
+  "family": "periods 3,4,5,7",
+  "setting": {
+   "family": "periods 3,4,5,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random"
+   ]
+  },
+  "seed": 31,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.783334375,
+   "modules": [
+    0.8443468749999999,
+    0.944425,
+    0.9827156250000002,
+    0.9993843749999999
+   ]
+  },
+  "T-relu": {
+   "address": 0.36304687500000016,
+   "modules": [
+    0.7549750000000007,
+    0.8499906250000001,
+    0.7531468750000001,
+    0.7377687500000014
+   ]
+  }
+ },
+ {
+  "id": "periods 3,4,5,7|seed 32|sequential",
+  "family": "periods 3,4,5,7",
+  "setting": {
+   "family": "periods 3,4,5,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random"
+   ]
+  },
+  "seed": 32,
+  "placement": "sequential",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.7878125,
+   "modules": [
+    0.8485906249999999,
+    0.9438562500000001,
+    0.9838375,
+    0.999753125
+   ]
+  },
+  "T-relu": {
+   "address": 0.35797500000000015,
+   "modules": [
+    0.7221468749999996,
+    0.8112749999999999,
+    0.8157500000000003,
+    0.7227812500000007
+   ]
+  }
+ },
+ {
+  "id": "periods 3,4,5,7|seed 32|random",
+  "family": "periods 3,4,5,7",
+  "setting": {
+   "family": "periods 3,4,5,7",
+   "load": 0.8,
+   "content": "factored",
+   "cards": [
+    9,
+    16,
+    5
+   ],
+   "Ns": 1000,
+   "Nh": 400,
+   "periods": [
+    3,
+    4,
+    5,
+    7
+   ],
+   "cue": "flip",
+   "rate": 0.1,
+   "read": "ridge",
+   "placements": [
+    "sequential",
+    "random"
+   ]
+  },
+  "seed": 32,
+  "placement": "random",
+  "P": 800,
+  "alpha_read": 450.0,
+  "theory_rate": 0.1,
+  "E": {
+   "address": 0.788990625,
+   "modules": [
+    0.850990625,
+    0.9434656249999999,
+    0.9832406250000001,
+    0.9994437500000001
+   ]
+  },
+  "T-relu": {
+   "address": 0.37762499999999977,
+   "modules": [
+    0.7269406250000005,
+    0.82921875,
+    0.8285812500000002,
+    0.7257937500000002
+   ]
+  }
+ }
+]

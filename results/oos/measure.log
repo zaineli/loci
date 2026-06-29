@@ -1,0 +1,47 @@
+load             load 0.3 seed 30  placements checked against saved 0/4  (7s)
+load             load 0.3 seed 31  placements checked against saved 0/4  (7s)
+load             load 0.3 seed 32  placements checked against saved 0/4  (8s)
+load             load 0.5 seed 31  placements checked against saved 0/4  (15s)
+load             load 0.5 seed 30  placements checked against saved 0/4  (16s)
+load             load 0.5 seed 32  placements checked against saved 0/4  (15s)
+load             load 0.7 seed 30  placements checked against saved 4/4  (29s)
+load             load 0.7 seed 32  placements checked against saved 4/4  (29s)
+load             load 0.7 seed 31  placements checked against saved 4/4  (31s)
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 13192.86it/s]
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 27075.29it/s]
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 28965.02it/s]
+lifelog          load 0.8 seed 30  placements checked against saved 5/5  (50s)
+lifelog          load 0.8 seed 31  placements checked against saved 5/5  (50s)
+lifelog          load 0.8 seed 32  placements checked against saved 5/5  (48s)
+cards 7/12/4     load 0.8 seed 30  placements checked against saved 5/5  (32s)
+cards 7/12/4     load 0.8 seed 32  placements checked against saved 5/5  (32s)
+cards 7/12/4     load 0.8 seed 31  placements checked against saved 5/5  (33s)
+Nh 200           load 0.8 seed 30  placements checked against saved 3/3  (27s)
+Nh 200           load 0.8 seed 31  placements checked against saved 3/3  (29s)
+Nh 200           load 0.8 seed 32  placements checked against saved 3/3  (28s)
+Nh 800           load 0.8 seed 30  placements checked against saved 3/3  (32s)
+Nh 800           load 0.8 seed 32  placements checked against saved 3/3  (34s)
+Nh 800           load 0.8 seed 31  placements checked against saved 3/3  (34s)
+periods 5,6,7    load 0.8 seed 30  placements checked against saved 4/4  (47s)
+periods 5,6,7    load 0.8 seed 32  placements checked against saved 4/4  (49s)
+periods 5,6,7    load 0.8 seed 31  placements checked against saved 4/4  (50s)
+Ns 500           load 0.8 seed 30  placements checked against saved 3/3  (14s)
+Ns 500           load 0.8 seed 31  placements checked against saved 3/3  (13s)
+Ns 500           load 0.8 seed 32  placements checked against saved 3/3  (14s)
+Ns 2000          load 0.8 seed 30  placements checked against saved 3/3  (9s)
+Ns 2000          load 0.8 seed 31  placements checked against saved 3/3  (9s)
+Ns 2000          load 0.8 seed 32  placements checked against saved 3/3  (9s)
+mask 0.25        load 0.8 seed 30  placements checked against saved 4/4  (36s)
+mask 0.25        load 0.8 seed 31  placements checked against saved 4/4  (36s)
+mask 0.25        load 0.8 seed 32  placements checked against saved 4/4  (35s)
+mask 0.5         load 0.8 seed 30  placements checked against saved 4/4  (39s)
+mask 0.5         load 0.8 seed 31  placements checked against saved 4/4  (38s)
+mask 0.5         load 0.8 seed 32  placements checked against saved 4/4  (39s)
+pinv read        load 0.8 seed 30  placements checked against saved 4/4  (40s)
+pinv read        load 0.8 seed 31  placements checked against saved 4/4  (41s)
+pinv read        load 0.8 seed 32  placements checked against saved 4/4  (40s)
+periods 3,4,5,7  load 0.8 seed 30  placements checked against saved 2/2  (1s)
+periods 3,4,5,7  load 0.8 seed 31  placements checked against saved 2/2  (1s)
+periods 3,4,5,7  load 0.8 seed 32  placements checked against saved 2/2  (1s)
+156 measurements written
+exit 0

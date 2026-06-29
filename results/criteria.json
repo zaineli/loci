@@ -169,5 +169,532 @@
    "hierarchy": 0.01253615625000015,
    "lifelog": 0.011526350446428676
   }
+ },
+ "E5": {
+  "I1": {
+   "construction": {
+    "factored": {
+     "oracle": 0.99875,
+     "random": 0.0037500000000000007
+    },
+    "cards": {
+     "oracle": 0.9604166666666666,
+     "random": 0.0020833333333333333
+    },
+    "lifelog": {
+     "oracle": 0.9099999999999999,
+     "random": 0.0
+    }
+   },
+   "pass": true
+  },
+  "I2": {
+   "oracle recall, nearest - stored": {
+    "factored 0.1": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "factored 0.2": [
+     -0.000374999999999992,
+     -0.000749999999999984,
+     0.0
+    ],
+    "cards 0.1": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "cards 0.2": [
+     -0.002750000000000008,
+     -0.004250000000000009,
+     -0.001375000000000015
+    ],
+    "lifelog 0.1": [
+     -0.00012499999999999735,
+     -0.000374999999999992,
+     0.0
+    ],
+    "lifelog 0.2": [
+     -0.001374999999999993,
+     -0.0023749999999999826,
+     -0.0004999999999999894
+    ]
+   },
+   "pass": true
+  },
+  "I3": {
+   "factored": {
+    "recall, encode+replay - oracle": [
+     0.006125000000000003,
+     0.0023750000000000047,
+     0.009250000000000013
+    ],
+    "construction, encode+replay - oracle": [
+     -0.69125,
+     -0.79375,
+     -0.58125
+    ]
+   },
+   "cards": {
+    "recall, encode+replay - oracle": [
+     0.000250000000000028,
+     -0.000749999999999984,
+     0.0013750000000000372
+    ],
+    "construction, encode+replay - oracle": [
+     -0.7270833333333334,
+     -0.7854166666666668,
+     -0.6666666666666666
+    ]
+   },
+   "lifelog": {
+    "recall, encode+replay - oracle": [
+     0.038625,
+     0.03137500000000001,
+     0.04662499999999999
+    ],
+    "construction, encode+replay - oracle": [
+     -0.805,
+     -0.85375,
+     -0.745
+    ]
+   },
+   "pass": true
+  },
+  "encode+anneal (reported)": {
+   "factored": {
+    "seeds aligned": "0 of 10",
+    "construction when aligned": null,
+    "construction otherwise": 0.26249999999999996,
+    "recall": 0.996875
+   },
+   "cards": {
+    "seeds aligned": "0 of 10",
+    "construction when aligned": null,
+    "construction otherwise": 0.25,
+    "recall": 0.9977499999999999
+   },
+   "lifelog": {
+    "seeds aligned": "0 of 10",
+    "construction when aligned": null,
+    "construction otherwise": 0.10875000000000001,
+    "recall": 0.982
+   }
+  },
+  "I4": {
+   "construction, oracle+replay - oracle": {
+    "factored": [
+     -0.008750000000000003,
+     -0.017500000000000005,
+     -1.1102230246251566e-17
+    ],
+    "cards": [
+     -0.10208333333333335,
+     -0.13546874999999997,
+     -0.06875000000000002
+    ],
+    "lifelog": [
+     -0.03875000000000002,
+     -0.057500000000000016,
+     -0.017500000000000005
+    ]
+   },
+   "pass": true
+  },
+  "I5": {
+   "cells": 90,
+   "r": 0.9979374125912516,
+   "oracle false recall": {
+    "factored": 0.9834375,
+    "cards": 0.903125,
+    "lifelog": 0.8553124999999999
+   },
+   "pass": true
+  },
+  "I6": {
+   "d' for recombined events": {
+    "factored": {
+     "recollection": 10.213015656277822,
+     "familiarity": 3.085212778779293,
+     "familiarity, stored decoder": 7.501964660665446
+    },
+    "cards": {
+     "recollection": 10.30786330509169,
+     "familiarity": 3.791459031426675,
+     "familiarity, stored decoder": 8.988346033361491
+    },
+    "lifelog": {
+     "recollection": 7.020369457916347,
+     "familiarity": 3.0222725571682645,
+     "familiarity, stored decoder": 5.77183267016361
+    }
+   },
+   "pass": true
+  },
+  "table, 10% flips": {
+   "factored | random | snap": {
+    "recall": 0.43,
+    "construction": 0.001,
+    "false recall": 0.002,
+    "familiarity d' recombined": 1.9,
+    "recollection d' recombined": 1.456
+   },
+   "factored | random | nearest": {
+    "recall": 0.961,
+    "construction": 0.004,
+    "false recall": 0.002,
+    "familiarity d' recombined": 3.486,
+    "recollection d' recombined": 5.365
+   },
+   "factored | random | stored": {
+    "recall": 0.987,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 3.776,
+    "recollection d' recombined": 6.242
+   },
+   "factored | oracle | snap": {
+    "recall": 0.878,
+    "construction": 0.948,
+    "false recall": 0.895,
+    "familiarity d' recombined": 2.068,
+    "recollection d' recombined": 4.564
+   },
+   "factored | oracle | nearest": {
+    "recall": 0.991,
+    "construction": 0.999,
+    "false recall": 0.983,
+    "familiarity d' recombined": 3.085,
+    "recollection d' recombined": 10.213
+   },
+   "factored | oracle | stored": {
+    "recall": 0.991,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 7.502,
+    "recollection d' recombined": 10.885
+   },
+   "factored | encode+replay | snap": {
+    "recall": 0.832,
+    "construction": 0.241,
+    "false recall": 0.204,
+    "familiarity d' recombined": 2.79,
+    "recollection d' recombined": 3.542
+   },
+   "factored | encode+replay | nearest": {
+    "recall": 0.997,
+    "construction": 0.307,
+    "false recall": 0.267,
+    "familiarity d' recombined": 4.037,
+    "recollection d' recombined": 7.898
+   },
+   "factored | encode+replay | stored": {
+    "recall": 0.997,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 4.967,
+    "recollection d' recombined": 7.755
+   },
+   "factored | encode+anneal | snap": {
+    "recall": 0.841,
+    "construction": 0.19,
+    "false recall": 0.153,
+    "familiarity d' recombined": 2.962,
+    "recollection d' recombined": 3.623
+   },
+   "factored | encode+anneal | nearest": {
+    "recall": 0.997,
+    "construction": 0.262,
+    "false recall": 0.195,
+    "familiarity d' recombined": 4.42,
+    "recollection d' recombined": 7.974
+   },
+   "factored | encode+anneal | stored": {
+    "recall": 0.998,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 4.861,
+    "recollection d' recombined": 7.633
+   },
+   "factored | oracle+replay | snap": {
+    "recall": 0.892,
+    "construction": 0.92,
+    "false recall": 0.856,
+    "familiarity d' recombined": 2.148,
+    "recollection d' recombined": 4.828
+   },
+   "factored | oracle+replay | nearest": {
+    "recall": 0.995,
+    "construction": 0.99,
+    "false recall": 0.965,
+    "familiarity d' recombined": 3.171,
+    "recollection d' recombined": 10.538
+   },
+   "factored | oracle+replay | stored": {
+    "recall": 0.995,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 7.673,
+    "recollection d' recombined": 11.218
+   },
+   "factored | knn | knn": {
+    "recall": 1.0,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 25.057
+   },
+   "cards | random | snap": {
+    "recall": 0.419,
+    "construction": 0.0,
+    "false recall": 0.004,
+    "familiarity d' recombined": 1.844,
+    "recollection d' recombined": 1.406
+   },
+   "cards | random | nearest": {
+    "recall": 0.955,
+    "construction": 0.002,
+    "false recall": 0.002,
+    "familiarity d' recombined": 3.361,
+    "recollection d' recombined": 5.036
+   },
+   "cards | random | stored": {
+    "recall": 0.982,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 3.607,
+    "recollection d' recombined": 5.649
+   },
+   "cards | oracle | snap": {
+    "recall": 0.813,
+    "construction": 0.817,
+    "false recall": 0.793,
+    "familiarity d' recombined": 2.239,
+    "recollection d' recombined": 3.751
+   },
+   "cards | oracle | nearest": {
+    "recall": 0.996,
+    "construction": 0.96,
+    "false recall": 0.903,
+    "familiarity d' recombined": 3.791,
+    "recollection d' recombined": 10.308
+   },
+   "cards | oracle | stored": {
+    "recall": 0.996,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 8.988,
+    "recollection d' recombined": 9.786
+   },
+   "cards | encode+replay | snap": {
+    "recall": 0.818,
+    "construction": 0.183,
+    "false recall": 0.147,
+    "familiarity d' recombined": 3.107,
+    "recollection d' recombined": 3.485
+   },
+   "cards | encode+replay | nearest": {
+    "recall": 0.996,
+    "construction": 0.233,
+    "false recall": 0.19,
+    "familiarity d' recombined": 4.552,
+    "recollection d' recombined": 7.767
+   },
+   "cards | encode+replay | stored": {
+    "recall": 0.996,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 5.247,
+    "recollection d' recombined": 7.374
+   },
+   "cards | encode+anneal | snap": {
+    "recall": 0.834,
+    "construction": 0.194,
+    "false recall": 0.17,
+    "familiarity d' recombined": 3.141,
+    "recollection d' recombined": 3.624
+   },
+   "cards | encode+anneal | nearest": {
+    "recall": 0.998,
+    "construction": 0.25,
+    "false recall": 0.193,
+    "familiarity d' recombined": 4.768,
+    "recollection d' recombined": 7.882
+   },
+   "cards | encode+anneal | stored": {
+    "recall": 0.998,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 5.492,
+    "recollection d' recombined": 7.644
+   },
+   "cards | oracle+replay | snap": {
+    "recall": 0.851,
+    "construction": 0.688,
+    "false recall": 0.647,
+    "familiarity d' recombined": 2.647,
+    "recollection d' recombined": 4.012
+   },
+   "cards | oracle+replay | nearest": {
+    "recall": 0.999,
+    "construction": 0.858,
+    "false recall": 0.769,
+    "familiarity d' recombined": 4.401,
+    "recollection d' recombined": 9.644
+   },
+   "cards | oracle+replay | stored": {
+    "recall": 0.999,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 10.086,
+    "recollection d' recombined": 9.026
+   },
+   "cards | knn | knn": {
+    "recall": 1.0,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 25.269
+   },
+   "lifelog | random | snap": {
+    "recall": 0.277,
+    "construction": 0.001,
+    "false recall": 0.0,
+    "familiarity d' recombined": 1.329,
+    "recollection d' recombined": 1.127
+   },
+   "lifelog | random | nearest": {
+    "recall": 0.87,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 2.347,
+    "recollection d' recombined": 3.536
+   },
+   "lifelog | random | stored": {
+    "recall": 0.933,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 2.584,
+    "recollection d' recombined": 4.159
+   },
+   "lifelog | oracle | snap": {
+    "recall": 0.79,
+    "construction": 0.823,
+    "false recall": 0.73,
+    "familiarity d' recombined": 2.192,
+    "recollection d' recombined": 3.87
+   },
+   "lifelog | oracle | nearest": {
+    "recall": 0.938,
+    "construction": 0.91,
+    "false recall": 0.855,
+    "familiarity d' recombined": 3.022,
+    "recollection d' recombined": 7.02
+   },
+   "lifelog | oracle | stored": {
+    "recall": 0.938,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 5.772,
+    "recollection d' recombined": 6.383
+   },
+   "lifelog | encode+replay | snap": {
+    "recall": 0.761,
+    "construction": 0.077,
+    "false recall": 0.064,
+    "familiarity d' recombined": 2.796,
+    "recollection d' recombined": 3.215
+   },
+   "lifelog | encode+replay | nearest": {
+    "recall": 0.977,
+    "construction": 0.105,
+    "false recall": 0.086,
+    "familiarity d' recombined": 3.861,
+    "recollection d' recombined": 6.347
+   },
+   "lifelog | encode+replay | stored": {
+    "recall": 0.978,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 4.216,
+    "recollection d' recombined": 6.06
+   },
+   "lifelog | encode+anneal | snap": {
+    "recall": 0.782,
+    "construction": 0.1,
+    "false recall": 0.063,
+    "familiarity d' recombined": 2.894,
+    "recollection d' recombined": 3.378
+   },
+   "lifelog | encode+anneal | nearest": {
+    "recall": 0.982,
+    "construction": 0.109,
+    "false recall": 0.082,
+    "familiarity d' recombined": 4.064,
+    "recollection d' recombined": 6.608
+   },
+   "lifelog | encode+anneal | stored": {
+    "recall": 0.984,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 4.469,
+    "recollection d' recombined": 6.239
+   },
+   "lifelog | oracle+replay | snap": {
+    "recall": 0.81,
+    "construction": 0.781,
+    "false recall": 0.679,
+    "familiarity d' recombined": 2.248,
+    "recollection d' recombined": 4.018
+   },
+   "lifelog | oracle+replay | nearest": {
+    "recall": 0.956,
+    "construction": 0.871,
+    "false recall": 0.819,
+    "familiarity d' recombined": 3.101,
+    "recollection d' recombined": 7.598
+   },
+   "lifelog | oracle+replay | stored": {
+    "recall": 0.957,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 5.9,
+    "recollection d' recombined": 6.753
+   },
+   "lifelog | knn | knn": {
+    "recall": 0.999,
+    "construction": 0.0,
+    "false recall": 0.0,
+    "familiarity d' recombined": 12.165
+   }
+  }
+ },
+ "E5 I7": {
+  "construction (snap)": {
+   "Nh 400": {
+    "pinv": 0.9475,
+    "ridge 1%": 0.9475
+   },
+   "Nh 600": {
+    "pinv": 0.9774999999999998,
+    "ridge 1%": 0.9862500000000001
+   },
+   "Nh 700": {
+    "pinv": 0.81875,
+    "ridge 1%": 0.99
+   },
+   "Nh 800": {
+    "pinv": 0.0025,
+    "ridge 1%": 0.9824999999999999
+   },
+   "Nh 900": {
+    "pinv": 0.7,
+    "ridge 1%": 0.99
+   },
+   "Nh 1200": {
+    "pinv": 0.98125,
+    "ridge 1%": 0.9875
+   }
+  },
+  "pass": true
  }
 }

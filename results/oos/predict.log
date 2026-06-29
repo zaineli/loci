@@ -1,0 +1,47 @@
+load             seed 30  4 rows  (5s)
+load             seed 31  4 rows  (5s)
+load             seed 32  4 rows  (5s)
+load             seed 32  4 rows  (10s)
+load             seed 30  4 rows  (11s)
+load             seed 31  4 rows  (11s)
+load             seed 32  4 rows  (19s)
+load             seed 30  4 rows  (20s)
+load             seed 31  4 rows  (21s)
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 5027.39it/s]
+Loading weights: 100%|██████████| 103/103 [00:00<00:00, 5590.52it/s]
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 23536.55it/s]
+lifelog          seed 32  5 rows  (45s)
+lifelog          seed 31  5 rows  (46s)
+lifelog          seed 30  5 rows  (47s)
+cards 7/12/4     seed 30  5 rows  (32s)
+cards 7/12/4     seed 32  5 rows  (32s)
+cards 7/12/4     seed 31  5 rows  (32s)
+Nh 200           seed 30  3 rows  (26s)
+Nh 200           seed 32  3 rows  (26s)
+Nh 200           seed 31  3 rows  (27s)
+Nh 800           seed 30  3 rows  (41s)
+Nh 800           seed 31  3 rows  (44s)
+Nh 800           seed 32  3 rows  (43s)
+periods 5,6,7    seed 30  4 rows  (46s)
+periods 5,6,7    seed 32  4 rows  (48s)
+periods 5,6,7    seed 31  4 rows  (48s)
+Ns 500           seed 30  3 rows  (11s)
+Ns 500           seed 31  3 rows  (9s)
+Ns 500           seed 32  3 rows  (10s)
+Ns 2000          seed 30  3 rows  (6s)
+Ns 2000          seed 31  3 rows  (6s)
+Ns 2000          seed 32  3 rows  (6s)
+mask 0.25        seed 30  4 rows  (22s)
+mask 0.25        seed 32  4 rows  (21s)
+mask 0.25        seed 31  4 rows  (22s)
+mask 0.5         seed 30  4 rows  (25s)
+mask 0.5         seed 31  4 rows  (26s)
+mask 0.5         seed 32  4 rows  (27s)
+pinv read        seed 30  4 rows  (32s)
+pinv read        seed 31  4 rows  (32s)
+pinv read        seed 32  4 rows  (31s)
+periods 3,4,5,7  seed 30  2 rows  (4s)
+periods 3,4,5,7  seed 31  2 rows  (4s)
+periods 3,4,5,7  seed 32  2 rows  (4s)
+156 predictions written
+exit 0

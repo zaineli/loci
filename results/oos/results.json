@@ -1,0 +1,9693 @@
+{
+ "summary": {
+  "load": {
+   "rows": 36,
+   "MAE": 0.006753613315696905,
+   "bias": 0.005144190917108006,
+   "max": 0.02641333333333351,
+   "within": 1.0,
+   "module_MAE": 0.003313209876543452,
+   "MAE_E": 0.0955826962081129,
+   "floor": 0.007010310424718379
+  },
+  "lifelog": {
+   "rows": 15,
+   "MAE": 0.007136111111111108,
+   "bias": 0.006529166666666677,
+   "max": 0.017237499999999906,
+   "within": 1.0,
+   "module_MAE": 0.005069351851851772,
+   "MAE_E": 0.20577208333333333,
+   "floor": 0.00883953362365725
+  },
+  "cards 7/12/4": {
+   "rows": 15,
+   "MAE": 0.00815666666666676,
+   "bias": 0.007520000000000319,
+   "max": 0.021017708333333107,
+   "within": 1.0,
+   "module_MAE": 0.005618101851852,
+   "MAE_E": 0.2742141666666667,
+   "floor": 0.009376446853335819
+  },
+  "Nh 200": {
+   "rows": 9,
+   "MAE": 0.0038141203703703896,
+   "bias": 0.0019703703703703754,
+   "max": 0.011052083333333185,
+   "within": 1.0,
+   "module_MAE": 0.004402893518518496,
+   "MAE_E": 0.3664356481481481,
+   "floor": 0.009123037358055568
+  },
+  "Nh 800": {
+   "rows": 9,
+   "MAE": 0.00841388888888888,
+   "bias": 0.00501712962962892,
+   "max": 0.03383437499999975,
+   "within": 1.0,
+   "module_MAE": 0.003874074074074108,
+   "MAE_E": 0.09573449074074072,
+   "floor": 0.00716164739716366
+  },
+  "periods 5,6,7": {
+   "rows": 12,
+   "MAE": 0.008877083333333332,
+   "bias": 0.0057828124999996415,
+   "max": 0.022921875000000425,
+   "within": 1.0,
+   "module_MAE": 0.003858854166666595,
+   "MAE_E": 0.2046986979166667,
+   "floor": 0.008193638338074101
+  },
+  "Ns 500": {
+   "rows": 9,
+   "MAE": 0.006655092592592399,
+   "bias": 0.005160648148148477,
+   "max": 0.020216666666666328,
+   "within": 1.0,
+   "module_MAE": 0.003947839506173015,
+   "MAE_E": 0.14015509259259262,
+   "floor": 0.01045127707235758
+  },
+  "Ns 2000": {
+   "rows": 9,
+   "MAE": 0.009591782407407157,
+   "bias": 0.008597916666665225,
+   "max": 0.022201562499999272,
+   "within": 1.0,
+   "module_MAE": 0.005404880401233546,
+   "MAE_E": 0.24717256944444455,
+   "floor": 0.006297583998047846
+  },
+  "mask 0.25": {
+   "rows": 12,
+   "MAE": 0.00590885416666657,
+   "bias": 0.004186979166666198,
+   "max": 0.017013541666666354,
+   "within": 1.0,
+   "module_MAE": 0.002837355324073736,
+   "MAE_E": 0.14191848958333333,
+   "floor": 0.006991213364050269
+  },
+  "mask 0.5": {
+   "rows": 12,
+   "MAE": 0.004084548611110961,
+   "bias": 0.0023055555555556904,
+   "max": 0.010755208333332988,
+   "within": 1.0,
+   "module_MAE": 0.0040486111111108876,
+   "MAE_E": 0.20244383680555553,
+   "floor": 0.009078012165281613
+  },
+  "pinv read": {
+   "rows": 12,
+   "MAE": 0.02885104166666663,
+   "bias": 0.02885104166666663,
+   "max": 0.04271874999999936,
+   "within": 1.0,
+   "module_MAE": 0.02271640624999964,
+   "MAE_E": 0.12667994791666667,
+   "floor": 0.00913584382334673
+  },
+  "periods 3,4,5,7": {
+   "rows": 6,
+   "MAE": 0.006765451388888732,
+   "bias": 0.00042864583333329653,
+   "max": 0.01160833333333322,
+   "within": 1.0,
+   "module_MAE": 0.006748350694444465,
+   "MAE_E": 0.4504526041666667,
+   "floor": 0.009571327242501556
+  },
+  "ALL": {
+   "rows": 156,
+   "MAE": 0.008602863756613772,
+   "bias": 0.0069149455001017174,
+   "max": 0.04271874999999936,
+   "within": 1.0,
+   "module_MAE": 0.005642816506410196,
+   "MAE_E": 0.1865247327787953,
+   "floor": 0.008212341350124497
+  }
+ },
+ "rows": [
+  {
+   "id": "load|load 0.3|seed 30|random",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.3,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "random",
+   "P": 300,
+   "alpha_read": 168.75,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9968083333333334,
+    "modules": [
+     0.997025,
+     0.9997583333333334,
+     1.0
+    ]
+   },
+   "T-relu": {
+    "address": 0.926108333333334,
+    "modules": [
+     0.9540000000000021,
+     0.9871833333333342,
+     0.9838666666666669
+    ]
+   },
+   "measured": 0.93,
+   "measured_modules": [
+    0.9577777777777777,
+    0.9899999999999999,
+    0.9822222222222222
+   ],
+   "err": -0.0038916666666660715,
+   "err_E": 0.06680833333333336,
+   "module_err": 0.00274629629629534,
+   "floor": 0.00850490054811538
+  },
+  {
+   "id": "load|load 0.3|seed 30|kmeans",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.3,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "kmeans",
+   "P": 300,
+   "alpha_read": 168.75,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9990166666666668,
+    "modules": [
+     1.0,
+     1.0,
+     0.9990166666666668
+    ]
+   },
+   "T-relu": {
+    "address": 0.9824750000000008,
+    "modules": [
+     0.997591666666667,
+     0.9999250000000001,
+     0.9849333333333341
+    ]
+   },
+   "measured": 0.9811111111111112,
+   "measured_modules": [
+    0.9988888888888888,
+    0.9988888888888888,
+    0.9833333333333334
+   ],
+   "err": 0.0013638888888896084,
+   "err_E": 0.01790555555555562,
+   "module_err": 0.0013111111111112628,
+   "floor": 0.004537755045226665
+  },
+  {
+   "id": "load|load 0.3|seed 30|oracle",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.3,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "oracle",
+   "P": 300,
+   "alpha_read": 168.75,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9996499999999999,
+    "modules": [
+     1.0,
+     1.0,
+     0.9996499999999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.9912916666666667,
+    "modules": [
+     0.9991416666666667,
+     1.0,
+     0.99215
+    ]
+   },
+   "measured": 0.9911111111111112,
+   "measured_modules": [
+    0.9988888888888888,
+    1.0,
+    0.9922222222222222
+   ],
+   "err": 0.00018055555555551717,
+   "err_E": 0.008538888888888763,
+   "module_err": 0.00010833333333337691,
+   "floor": 0.00312869808621375
+  },
+  {
+   "id": "load|load 0.3|seed 30|error",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.3,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "error",
+   "P": 300,
+   "alpha_read": 168.75,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9999833333333333,
+    "modules": [
+     1.0,
+     1.0,
+     0.9999833333333333
+    ]
+   },
+   "T-relu": {
+    "address": 0.9881,
+    "modules": [
+     0.9998500000000001,
+     0.9999750000000001,
+     0.988275
+    ]
+   },
+   "measured": 0.9866666666666667,
+   "measured_modules": [
+    1.0,
+    0.9988888888888888,
+    0.9877777777777778
+   ],
+   "err": 0.0014333333333332865,
+   "err_E": 0.013316666666666643,
+   "module_err": 0.0005777777777777882,
+   "floor": 0.003823255674241164
+  },
+  {
+   "id": "load|load 0.3|seed 31|random",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.3,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "random",
+   "P": 300,
+   "alpha_read": 168.75,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9978083333333333,
+    "modules": [
+     0.9981749999999999,
+     0.9996416666666668,
+     0.9999916666666667
+    ]
+   },
+   "T-relu": {
+    "address": 0.9090916666666675,
+    "modules": [
+     0.9592083333333334,
+     0.9765666666666681,
+     0.9718083333333342
+    ]
+   },
+   "measured": 0.8944444444444445,
+   "measured_modules": [
+    0.9522222222222222,
+    0.9733333333333333,
+    0.9655555555555555
+   ],
+   "err": 0.014647222222223033,
+   "err_E": 0.10336388888888881,
+   "module_err": 0.005490740740741591,
+   "floor": 0.010242264302981356
+  },
+  {
+   "id": "load|load 0.3|seed 31|kmeans",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.3,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "kmeans",
+   "P": 300,
+   "alpha_read": 168.75,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9990166666666668,
+    "modules": [
+     1.0,
+     1.0,
+     0.9990166666666668
+    ]
+   },
+   "T-relu": {
+    "address": 0.9852750000000011,
+    "modules": [
+     0.9985500000000002,
+     0.9995833333333335,
+     0.9871250000000009
+    ]
+   },
+   "measured": 0.98,
+   "measured_modules": [
+    0.9988888888888888,
+    1.0,
+    0.9811111111111112
+   ],
+   "err": 0.00527500000000114,
+   "err_E": 0.019016666666666793,
+   "module_err": 0.002256481481481646,
+   "floor": 0.004666666666666669
+  },
+  {
+   "id": "load|load 0.3|seed 31|oracle",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.3,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "oracle",
+   "P": 300,
+   "alpha_read": 168.75,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9998833333333335,
+    "modules": [
+     1.0,
+     1.0,
+     0.9998833333333335
+    ]
+   },
+   "T-relu": {
+    "address": 0.9970750000000004,
+    "modules": [
+     0.999575,
+     0.9997250000000001,
+     0.9977750000000003
+    ]
+   },
+   "measured": 0.9977777777777778,
+   "measured_modules": [
+    0.9988888888888888,
+    1.0,
+    0.9988888888888888
+   ],
+   "err": -0.0007027777777773858,
+   "err_E": 0.0021055555555556937,
+   "module_err": 0.000691666666666535,
+   "floor": 0.0015696014889197895
+  },
+  {
+   "id": "load|load 0.3|seed 31|error",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.3,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "error",
+   "P": 300,
+   "alpha_read": 168.75,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9999750000000001,
+    "modules": [
+     1.0,
+     1.0,
+     0.9999750000000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.996241666666667,
+    "modules": [
+     0.9998333333333335,
+     0.9987333333333334,
+     0.9976750000000002
+    ]
+   },
+   "measured": 0.9977777777777778,
+   "measured_modules": [
+    1.0,
+    0.9988888888888888,
+    0.9988888888888888
+   ],
+   "err": -0.0015361111111107384,
+   "err_E": 0.002197222222222295,
+   "module_err": 0.0005120370370368758,
+   "floor": 0.0015696014889197895
+  },
+  {
+   "id": "load|load 0.3|seed 32|random",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.3,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "random",
+   "P": 300,
+   "alpha_read": 168.75,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9971250000000002,
+    "modules": [
+     0.9974250000000001,
+     0.9996666666666666,
+     1.0
+    ]
+   },
+   "T-relu": {
+    "address": 0.9047166666666673,
+    "modules": [
+     0.9295666666666674,
+     0.990508333333334,
+     0.9824666666666669
+    ]
+   },
+   "measured": 0.89,
+   "measured_modules": [
+    0.9199999999999999,
+    0.9833333333333334,
+    0.9855555555555555
+   ],
+   "err": 0.014716666666667266,
+   "err_E": 0.10712500000000014,
+   "module_err": 0.0066101851851855615,
+   "floor": 0.010429658564774676
+  },
+  {
+   "id": "load|load 0.3|seed 32|kmeans",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.3,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "kmeans",
+   "P": 300,
+   "alpha_read": 168.75,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9931416666666667,
+    "modules": [
+     1.0,
+     1.0,
+     0.9931416666666667
+    ]
+   },
+   "T-relu": {
+    "address": 0.9603083333333344,
+    "modules": [
+     0.9859250000000003,
+     0.9982666666666667,
+     0.9759000000000012
+    ]
+   },
+   "measured": 0.9555555555555556,
+   "measured_modules": [
+    0.9866666666666667,
+    0.9955555555555556,
+    0.9722222222222223
+   ],
+   "err": 0.004752777777778827,
+   "err_E": 0.0375861111111111,
+   "module_err": 0.002376851851852139,
+   "floor": 0.0068693470337005185
+  },
+  {
+   "id": "load|load 0.3|seed 32|oracle",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.3,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "oracle",
+   "P": 300,
+   "alpha_read": 168.75,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9996499999999999,
+    "modules": [
+     1.0,
+     1.0,
+     0.9996499999999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.9917250000000003,
+    "modules": [
+     0.9993500000000001,
+     1.0,
+     0.9923750000000003
+    ]
+   },
+   "measured": 0.9899999999999999,
+   "measured_modules": [
+    0.9988888888888888,
+    1.0,
+    0.991111111111111
+   ],
+   "err": 0.0017250000000004206,
+   "err_E": 0.009650000000000047,
+   "module_err": 0.0005750000000001773,
+   "floor": 0.0033166247903554194
+  },
+  {
+   "id": "load|load 0.3|seed 32|error",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.3,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "error",
+   "P": 300,
+   "alpha_read": 168.75,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9998083333333333,
+    "modules": [
+     1.0,
+     1.0,
+     0.9998083333333333
+    ]
+   },
+   "T-relu": {
+    "address": 0.9833250000000003,
+    "modules": [
+     0.9953083333333336,
+     0.9999666666666667,
+     0.9880500000000001
+    ]
+   },
+   "measured": 0.9777777777777779,
+   "measured_modules": [
+    0.9944444444444445,
+    1.0,
+    0.9833333333333334
+   ],
+   "err": 0.005547222222222481,
+   "err_E": 0.022030555555555442,
+   "module_err": 0.0018712962962963802,
+   "floor": 0.004913518207933917
+  },
+  {
+   "id": "load|load 0.5|seed 30|random",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.5,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "random",
+   "P": 500,
+   "alpha_read": 281.25,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9556249999999998,
+    "modules": [
+     0.9634400000000001,
+     0.9926200000000001,
+     0.9991700000000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.7610800000000001,
+    "modules": [
+     0.8898200000000018,
+     0.9332500000000019,
+     0.9150150000000011
+    ]
+   },
+   "measured": 0.7346666666666666,
+   "measured_modules": [
+    0.87,
+    0.9246666666666666,
+    0.9113333333333333
+   ],
+   "err": 0.02641333333333351,
+   "err_E": 0.22095833333333326,
+   "module_err": 0.010695000000001639,
+   "floor": 0.011399753083745736
+  },
+  {
+   "id": "load|load 0.5|seed 30|kmeans",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.5,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "kmeans",
+   "P": 500,
+   "alpha_read": 281.25,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9856900000000002,
+    "modules": [
+     0.9997,
+     0.999965,
+     0.98599
+    ]
+   },
+   "T-relu": {
+    "address": 0.906945000000001,
+    "modules": [
+     0.9975800000000006,
+     0.9945900000000005,
+     0.9145950000000013
+    ]
+   },
+   "measured": 0.9033333333333333,
+   "measured_modules": [
+    0.996,
+    0.9933333333333333,
+    0.914
+   ],
+   "err": 0.003611666666667679,
+   "err_E": 0.08235666666666686,
+   "module_err": 0.0011438888888896843,
+   "floor": 0.0076298633549241775
+  },
+  {
+   "id": "load|load 0.5|seed 30|oracle",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.5,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "oracle",
+   "P": 500,
+   "alpha_read": 281.25,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9929850000000001,
+    "modules": [
+     1.0,
+     1.0,
+     0.9929850000000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.9489450000000004,
+    "modules": [
+     0.9996800000000001,
+     0.999995,
+     0.9492400000000004
+    ]
+   },
+   "measured": 0.9373333333333335,
+   "measured_modules": [
+    0.9986666666666667,
+    1.0,
+    0.9386666666666666
+   ],
+   "err": 0.011611666666666909,
+   "err_E": 0.055651666666666655,
+   "module_err": 0.003863888888889074,
+   "floor": 0.006257771464643274
+  },
+  {
+   "id": "load|load 0.5|seed 30|error",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.5,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "error",
+   "P": 500,
+   "alpha_read": 281.25,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9946900000000001,
+    "modules": [
+     1.0,
+     0.9999750000000001,
+     0.994715
+    ]
+   },
+   "T-relu": {
+    "address": 0.9418300000000014,
+    "modules": [
+     0.99916,
+     0.9952550000000002,
+     0.9473450000000013
+    ]
+   },
+   "measured": 0.9446666666666665,
+   "measured_modules": [
+    0.9993333333333334,
+    0.9973333333333333,
+    0.9480000000000001
+   ],
+   "err": -0.002836666666665155,
+   "err_E": 0.05002333333333353,
+   "module_err": 0.0009688888888883899,
+   "floor": 0.0059031943643847425
+  },
+  {
+   "id": "load|load 0.5|seed 31|random",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.5,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "random",
+   "P": 500,
+   "alpha_read": 281.25,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.955145,
+    "modules": [
+     0.963955,
+     0.991365,
+     0.9993050000000002
+    ]
+   },
+   "T-relu": {
+    "address": 0.7210050000000005,
+    "modules": [
+     0.8734150000000018,
+     0.8992950000000008,
+     0.916515000000001
+    ]
+   },
+   "measured": 0.6973333333333334,
+   "measured_modules": [
+    0.8633333333333333,
+    0.884,
+    0.9073333333333333
+   ],
+   "err": 0.02367166666666709,
+   "err_E": 0.25781166666666666,
+   "module_err": 0.011519444444445673,
+   "floor": 0.011861971605528753
+  },
+  {
+   "id": "load|load 0.5|seed 31|kmeans",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.5,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "kmeans",
+   "P": 500,
+   "alpha_read": 281.25,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.979935,
+    "modules": [
+     1.0,
+     0.9999450000000001,
+     0.97999
+    ]
+   },
+   "T-relu": {
+    "address": 0.9133050000000019,
+    "modules": [
+     0.9933000000000001,
+     0.9944950000000007,
+     0.9245150000000018
+    ]
+   },
+   "measured": 0.908,
+   "measured_modules": [
+    0.9899999999999999,
+    0.9946666666666667,
+    0.922
+   ],
+   "err": 0.0053050000000018915,
+   "err_E": 0.07193499999999997,
+   "module_err": 0.0019955555555559723,
+   "floor": 0.007462617949933297
+  },
+  {
+   "id": "load|load 0.5|seed 31|oracle",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.5,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "oracle",
+   "P": 500,
+   "alpha_read": 281.25,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.99089,
+    "modules": [
+     1.0,
+     1.0,
+     0.99089
+    ]
+   },
+   "T-relu": {
+    "address": 0.9726050000000006,
+    "modules": [
+     0.9997950000000001,
+     0.9997950000000002,
+     0.9730100000000006
+    ]
+   },
+   "measured": 0.9686666666666666,
+   "measured_modules": [
+    1.0,
+    1.0,
+    0.9686666666666666
+   ],
+   "err": 0.003938333333334043,
+   "err_E": 0.022223333333333484,
+   "module_err": 0.0015844444444445733,
+   "floor": 0.0044982630392597575
+  },
+  {
+   "id": "load|load 0.5|seed 31|error",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.5,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "error",
+   "P": 500,
+   "alpha_read": 281.25,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.99302,
+    "modules": [
+     0.99999,
+     0.999995,
+     0.993035
+    ]
+   },
+   "T-relu": {
+    "address": 0.9699100000000008,
+    "modules": [
+     0.994175,
+     0.9973150000000002,
+     0.9780850000000008
+    ]
+   },
+   "measured": 0.9666666666666667,
+   "measured_modules": [
+    0.9933333333333333,
+    0.9979999999999999,
+    0.9753333333333334
+   ],
+   "err": 0.003243333333334153,
+   "err_E": 0.02635333333333334,
+   "module_err": 0.001426111111111276,
+   "floor": 0.004634811914358713
+  },
+  {
+   "id": "load|load 0.5|seed 32|random",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.5,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "random",
+   "P": 500,
+   "alpha_read": 281.25,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9549300000000001,
+    "modules": [
+     0.9614700000000002,
+     0.9943250000000001,
+     0.998895
+    ]
+   },
+   "T-relu": {
+    "address": 0.6916600000000004,
+    "modules": [
+     0.8126550000000002,
+     0.9323300000000013,
+     0.9116350000000011
+    ]
+   },
+   "measured": 0.6693333333333333,
+   "measured_modules": [
+    0.7959999999999999,
+    0.93,
+    0.9026666666666667
+   ],
+   "err": 0.02232666666666705,
+   "err_E": 0.2855966666666667,
+   "module_err": 0.009317777777778646,
+   "floor": 0.012147049634162807
+  },
+  {
+   "id": "load|load 0.5|seed 32|kmeans",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.5,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "kmeans",
+   "P": 500,
+   "alpha_read": 281.25,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9652549999999999,
+    "modules": [
+     0.99998,
+     0.999995,
+     0.9652749999999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.8993750000000014,
+    "modules": [
+     0.9927500000000002,
+     0.9936950000000003,
+     0.911650000000002
+    ]
+   },
+   "measured": 0.888,
+   "measured_modules": [
+    0.9926666666666666,
+    0.9926666666666666,
+    0.9006666666666666
+   ],
+   "err": 0.011375000000001356,
+   "err_E": 0.07725499999999985,
+   "module_err": 0.004031666666667581,
+   "floor": 0.008142726815999661
+  },
+  {
+   "id": "load|load 0.5|seed 32|oracle",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.5,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "oracle",
+   "P": 500,
+   "alpha_read": 281.25,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9911599999999999,
+    "modules": [
+     1.0,
+     1.0,
+     0.9911599999999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.9543900000000016,
+    "modules": [
+     0.99985,
+     0.9999549999999999,
+     0.9545850000000015
+    ]
+   },
+   "measured": 0.9466666666666667,
+   "measured_modules": [
+    1.0,
+    1.0,
+    0.9466666666666667
+   ],
+   "err": 0.00772333333333497,
+   "err_E": 0.044493333333333274,
+   "module_err": 0.0027044444444449534,
+   "floor": 0.005801660043406478
+  },
+  {
+   "id": "load|load 0.5|seed 32|error",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.5,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "error",
+   "P": 500,
+   "alpha_read": 281.25,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9926600000000001,
+    "modules": [
+     1.0,
+     1.0,
+     0.9926600000000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.9319500000000009,
+    "modules": [
+     0.9938350000000002,
+     0.99919,
+     0.9384400000000008
+    ]
+   },
+   "measured": 0.9293333333333335,
+   "measured_modules": [
+    0.996,
+    1.0,
+    0.9319999999999999
+   ],
+   "err": 0.0026166666666674887,
+   "err_E": 0.06332666666666664,
+   "module_err": 0.0031383333333335393,
+   "floor": 0.006616791210694641
+  },
+  {
+   "id": "load|load 0.7|seed 30|random",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.7,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "random",
+   "P": 700,
+   "alpha_read": 393.74999999999994,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.8495964285714286,
+    "modules": [
+     0.8843214285714284,
+     0.9673107142857144,
+     0.9914535714285716
+    ]
+   },
+   "T-relu": {
+    "address": 0.5615214285714277,
+    "modules": [
+     0.7938571428571425,
+     0.8531428571428574,
+     0.8218142857142866
+    ]
+   },
+   "measured": 0.5533333333333333,
+   "measured_modules": [
+    0.7790476190476191,
+    0.8480952380952381,
+    0.8204761904761906
+   ],
+   "err": 0.008188095238094384,
+   "err_E": 0.29626309523809524,
+   "module_err": 0.00706507936507957,
+   "floor": 0.010848646076498289
+  },
+  {
+   "id": "load|load 0.7|seed 30|kmeans",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.7,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "kmeans",
+   "P": 700,
+   "alpha_read": 393.74999999999994,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9571464285714285,
+    "modules": [
+     0.9993357142857144,
+     0.9997821428571428,
+     0.9579928571428572
+    ]
+   },
+   "T-relu": {
+    "address": 0.8562321428571439,
+    "modules": [
+     0.9929428571428561,
+     0.9976285714285706,
+     0.8647035714285722
+    ]
+   },
+   "measured": 0.8585714285714285,
+   "measured_modules": [
+    0.9947619047619046,
+    0.998095238095238,
+    0.8647619047619047
+   ],
+   "err": -0.0023392857142846557,
+   "err_E": 0.09857499999999997,
+   "module_err": 0.0007813492063494613,
+   "floor": 0.0076040882053276014
+  },
+  {
+   "id": "load|load 0.7|seed 30|oracle",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.7,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "oracle",
+   "P": 700,
+   "alpha_read": 393.74999999999994,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9626285714285715,
+    "modules": [
+     1.0,
+     1.0,
+     0.9626285714285715
+    ]
+   },
+   "T-relu": {
+    "address": 0.9002464285714288,
+    "modules": [
+     0.9997714285714286,
+     0.9999928571428571,
+     0.9004750000000001
+    ]
+   },
+   "measured": 0.9095238095238095,
+   "measured_modules": [
+    1.0,
+    1.0,
+    0.9095238095238095
+   ],
+   "err": -0.009277380952380732,
+   "err_E": 0.05310476190476199,
+   "module_err": 0.003094841269841201,
+   "floor": 0.006259858869286439
+  },
+  {
+   "id": "load|load 0.7|seed 30|error",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.7,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "error",
+   "P": 700,
+   "alpha_read": 393.74999999999994,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9669964285714284,
+    "modules": [
+     0.9986750000000002,
+     0.9991785714285715,
+     0.9690357142857143
+    ]
+   },
+   "T-relu": {
+    "address": 0.8858035714285715,
+    "modules": [
+     0.9973249999999996,
+     0.990714285714286,
+     0.8960357142857137
+    ]
+   },
+   "measured": 0.8866666666666667,
+   "measured_modules": [
+    0.9961904761904762,
+    0.9904761904761905,
+    0.899047619047619
+   ],
+   "err": -0.0008630952380952461,
+   "err_E": 0.08032976190476171,
+   "module_err": 0.0014615079365080479,
+   "floor": 0.006917503296121501
+  },
+  {
+   "id": "load|load 0.7|seed 31|random",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.7,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "random",
+   "P": 700,
+   "alpha_read": 393.74999999999994,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.8468107142857142,
+    "modules": [
+     0.8938749999999998,
+     0.9563249999999999,
+     0.990532142857143
+    ]
+   },
+   "T-relu": {
+    "address": 0.517678571428571,
+    "modules": [
+     0.7747750000000007,
+     0.7992964285714288,
+     0.8357000000000002
+    ]
+   },
+   "measured": 0.5004761904761904,
+   "measured_modules": [
+    0.7595238095238095,
+    0.7933333333333333,
+    0.8252380952380953
+   ],
+   "err": 0.01720238095238058,
+   "err_E": 0.3463345238095238,
+   "module_err": 0.010558730158730508,
+   "floor": 0.010910889563547018
+  },
+  {
+   "id": "load|load 0.7|seed 31|kmeans",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.7,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "kmeans",
+   "P": 700,
+   "alpha_read": 393.74999999999994,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9544964285714286,
+    "modules": [
+     0.999932142857143,
+     0.9999821428571428,
+     0.9545750000000002
+    ]
+   },
+   "T-relu": {
+    "address": 0.8174000000000005,
+    "modules": [
+     0.9928214285714281,
+     0.9870678571428568,
+     0.835103571428572
+    ]
+   },
+   "measured": 0.8166666666666668,
+   "measured_modules": [
+    0.9947619047619048,
+    0.9876190476190475,
+    0.8323809523809523
+   ],
+   "err": 0.0007333333333336967,
+   "err_E": 0.13782976190476182,
+   "module_err": 0.0017380952380956864,
+   "floor": 0.008443713418650366
+  },
+  {
+   "id": "load|load 0.7|seed 31|oracle",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.7,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "oracle",
+   "P": 700,
+   "alpha_read": 393.74999999999994,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9605500000000001,
+    "modules": [
+     1.0,
+     1.0,
+     0.9605500000000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.9317821428571429,
+    "modules": [
+     0.9991321428571426,
+     0.9992857142857143,
+     0.9333500000000002
+    ]
+   },
+   "measured": 0.9352380952380952,
+   "measured_modules": [
+    1.0,
+    0.9995238095238096,
+    0.9357142857142856
+   ],
+   "err": -0.0034559523809523096,
+   "err_E": 0.025311904761904924,
+   "module_err": 0.001156746031746018,
+   "floor": 0.005370457125773274
+  },
+  {
+   "id": "load|load 0.7|seed 31|error",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.7,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "error",
+   "P": 700,
+   "alpha_read": 393.74999999999994,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9679857142857143,
+    "modules": [
+     0.998842857142857,
+     0.9994928571428571,
+     0.9696071428571429
+    ]
+   },
+   "T-relu": {
+    "address": 0.8954571428571416,
+    "modules": [
+     0.9908250000000002,
+     0.9886928571428568,
+     0.913242857142856
+    ]
+   },
+   "measured": 0.8995238095238095,
+   "measured_modules": [
+    0.9928571428571429,
+    0.9909523809523809,
+    0.9123809523809524
+   ],
+   "err": -0.004066666666667884,
+   "err_E": 0.06846190476190483,
+   "module_err": 0.0017178571428568083,
+   "floor": 0.006560368950991602
+  },
+  {
+   "id": "load|load 0.7|seed 32|random",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.7,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "random",
+   "P": 700,
+   "alpha_read": 393.74999999999994,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.8411214285714286,
+    "modules": [
+     0.8807035714285715,
+     0.9638607142857143,
+     0.9910357142857144
+    ]
+   },
+   "T-relu": {
+    "address": 0.48165714285714256,
+    "modules": [
+     0.6951178571428573,
+     0.8572999999999998,
+     0.7995571428571426
+    ]
+   },
+   "measured": 0.48,
+   "measured_modules": [
+    0.6852380952380952,
+    0.8476190476190476,
+    0.7933333333333333
+   ],
+   "err": 0.0016571428571425795,
+   "err_E": 0.3611214285714286,
+   "module_err": 0.008594841269841225,
+   "floor": 0.01090216230190795
+  },
+  {
+   "id": "load|load 0.7|seed 32|kmeans",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.7,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "kmeans",
+   "P": 700,
+   "alpha_read": 393.74999999999994,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9526250000000002,
+    "modules": [
+     0.9994714285714286,
+     0.9996285714285714,
+     0.9534750000000002
+    ]
+   },
+   "T-relu": {
+    "address": 0.8326321428571438,
+    "modules": [
+     0.9958607142857138,
+     0.9914571428571425,
+     0.8431678571428582
+    ]
+   },
+   "measured": 0.8219047619047619,
+   "measured_modules": [
+    0.9947619047619048,
+    0.9914285714285714,
+    0.8342857142857142
+   ],
+   "err": 0.010727380952381904,
+   "err_E": 0.13072023809523825,
+   "module_err": 0.0033365079365080077,
+   "floor": 0.008348861463954475
+  },
+  {
+   "id": "load|load 0.7|seed 32|oracle",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.7,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "oracle",
+   "P": 700,
+   "alpha_read": 393.74999999999994,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9651214285714286,
+    "modules": [
+     1.0,
+     1.0,
+     0.9651214285714286
+    ]
+   },
+   "T-relu": {
+    "address": 0.8862392857142848,
+    "modules": [
+     0.9996964285714288,
+     0.999975,
+     0.8865607142857131
+    ]
+   },
+   "measured": 0.8823809523809524,
+   "measured_modules": [
+    0.9985714285714286,
+    1.0,
+    0.8833333333333333
+   ],
+   "err": 0.003858333333332409,
+   "err_E": 0.0827404761904762,
+   "module_err": 0.0014591269841267203,
+   "floor": 0.007030031065982834
+  },
+  {
+   "id": "load|load 0.7|seed 32|error",
+   "family": "load",
+   "setting": {
+    "family": "load",
+    "load": 0.7,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "error",
+   "P": 700,
+   "alpha_read": 393.74999999999994,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9663642857142858,
+    "modules": [
+     0.9993107142857142,
+     0.9992642857142856,
+     0.9677714285714286
+    ]
+   },
+   "T-relu": {
+    "address": 0.8741249999999989,
+    "modules": [
+     0.986939285714286,
+     0.988642857142857,
+     0.8954392857142844
+    ]
+   },
+   "measured": 0.8738095238095238,
+   "measured_modules": [
+    0.9857142857142858,
+    0.9890476190476191,
+    0.8961904761904762
+   ],
+   "err": 0.0003154761904751169,
+   "err_E": 0.09255476190476197,
+   "module_err": 0.0007936507936513459,
+   "floor": 0.007246228572729174
+  },
+  {
+   "id": "lifelog|load 0.8|seed 30|sequential",
+   "family": "lifelog",
+   "setting": {
+    "family": "lifelog",
+    "load": 0.8,
+    "content": "lifelog",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "sequential",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.5921875,
+    "modules": [
+     0.73458125,
+     0.853796875,
+     0.94141875
+    ]
+   },
+   "T-relu": {
+    "address": 0.28649375000000005,
+    "modules": [
+     0.6461937499999999,
+     0.6653062500000008,
+     0.6481031250000006
+    ]
+   },
+   "measured": 0.27875,
+   "measured_modules": [
+    0.6383333333333333,
+    0.66,
+    0.6416666666666667
+   ],
+   "err": 0.007743750000000049,
+   "err_E": 0.3134375,
+   "module_err": 0.006534375000000388,
+   "floor": 0.00915260521882522
+  },
+  {
+   "id": "lifelog|load 0.8|seed 30|random",
+   "family": "lifelog",
+   "setting": {
+    "family": "lifelog",
+    "load": 0.8,
+    "content": "lifelog",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.6044125,
+    "modules": [
+     0.751159375,
+     0.857525,
+     0.9326062500000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.2959249999999996,
+    "modules": [
+     0.6573312500000001,
+     0.6734781250000005,
+     0.6415625000000007
+    ]
+   },
+   "measured": 0.2866666666666667,
+   "measured_modules": [
+    0.6325,
+    0.6704166666666667,
+    0.6429166666666667
+   ],
+   "err": 0.009258333333332924,
+   "err_E": 0.31774583333333334,
+   "module_err": 0.009748958333333335,
+   "floor": 0.009230585230834702
+  },
+  {
+   "id": "lifelog|load 0.8|seed 30|kmeans",
+   "family": "lifelog",
+   "setting": {
+    "family": "lifelog",
+    "load": 0.8,
+    "content": "lifelog",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.86535625,
+    "modules": [
+     0.9948999999999999,
+     0.9837156250000001,
+     0.8846593749999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.6410499999999998,
+    "modules": [
+     0.9792843749999982,
+     0.9533187499999991,
+     0.6923343750000001
+    ]
+   },
+   "measured": 0.6429166666666667,
+   "measured_modules": [
+    0.97625,
+    0.9533333333333335,
+    0.6966666666666667
+   ],
+   "err": -0.0018666666666669052,
+   "err_E": 0.22243958333333336,
+   "module_err": 0.0024604166666664096,
+   "floor": 0.009780397622900464
+  },
+  {
+   "id": "lifelog|load 0.8|seed 30|oracle",
+   "family": "lifelog",
+   "setting": {
+    "family": "lifelog",
+    "load": 0.8,
+    "content": "lifelog",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.8621749999999999,
+    "modules": [
+     1.0,
+     1.0,
+     0.8621749999999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.7852312500000004,
+    "modules": [
+     0.9989062499999994,
+     0.9991781249999999,
+     0.7867593749999999
+    ]
+   },
+   "measured": 0.7879166666666667,
+   "measured_modules": [
+    0.9975,
+    0.9991666666666666,
+    0.7904166666666667
+   ],
+   "err": -0.0026854166666663293,
+   "err_E": 0.0742583333333332,
+   "module_err": 0.001691666666666462,
+   "floor": 0.008344259330410827
+  },
+  {
+   "id": "lifelog|load 0.8|seed 30|error",
+   "family": "lifelog",
+   "setting": {
+    "family": "lifelog",
+    "load": 0.8,
+    "content": "lifelog",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.8488062500000001,
+    "modules": [
+     0.9943781249999999,
+     0.9960437499999999,
+     0.8565437499999998
+    ]
+   },
+   "T-relu": {
+    "address": 0.7476249999999994,
+    "modules": [
+     0.9912281250000001,
+     0.9836468749999996,
+     0.7640781249999992
+    ]
+   },
+   "measured": 0.73875,
+   "measured_modules": [
+    0.9916666666666667,
+    0.98375,
+    0.7541666666666668
+   ],
+   "err": 0.008874999999999411,
+   "err_E": 0.11005625000000008,
+   "module_err": 0.003484374999999799,
+   "floor": 0.008967497734875655
+  },
+  {
+   "id": "lifelog|load 0.8|seed 31|sequential",
+   "family": "lifelog",
+   "setting": {
+    "family": "lifelog",
+    "load": 0.8,
+    "content": "lifelog",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "sequential",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.59649375,
+    "modules": [
+     0.7517500000000001,
+     0.8535062500000001,
+     0.925046875
+    ]
+   },
+   "T-relu": {
+    "address": 0.27305937499999994,
+    "modules": [
+     0.627996875,
+     0.6472406250000007,
+     0.661971875
+    ]
+   },
+   "measured": 0.2604166666666667,
+   "measured_modules": [
+    0.6208333333333332,
+    0.6395833333333334,
+    0.6604166666666665
+   ],
+   "err": 0.012642708333333252,
+   "err_E": 0.33607708333333336,
+   "module_err": 0.005458680555555835,
+   "floor": 0.008958232396072177
+  },
+  {
+   "id": "lifelog|load 0.8|seed 31|random",
+   "family": "lifelog",
+   "setting": {
+    "family": "lifelog",
+    "load": 0.8,
+    "content": "lifelog",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.6065687500000001,
+    "modules": [
+     0.759965625,
+     0.8514375,
+     0.925865625
+    ]
+   },
+   "T-relu": {
+    "address": 0.27673437499999953,
+    "modules": [
+     0.629809375,
+     0.6282562500000011,
+     0.679040625
+    ]
+   },
+   "measured": 0.26833333333333337,
+   "measured_modules": [
+    0.61875,
+    0.62875,
+    0.6629166666666667
+   ],
+   "err": 0.008401041666666165,
+   "err_E": 0.33823541666666673,
+   "module_err": 0.009225694444444063,
+   "floor": 0.009044578384211625
+  },
+  {
+   "id": "lifelog|load 0.8|seed 31|kmeans",
+   "family": "lifelog",
+   "setting": {
+    "family": "lifelog",
+    "load": 0.8,
+    "content": "lifelog",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.8563375000000001,
+    "modules": [
+     0.997303125,
+     0.9928937499999999,
+     0.8647906249999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.7298593750000006,
+    "modules": [
+     0.9869718749999987,
+     0.9793593749999987,
+     0.7548500000000001
+    ]
+   },
+   "measured": 0.7179166666666666,
+   "measured_modules": [
+    0.9862500000000001,
+    0.9787500000000001,
+    0.7433333333333333
+   ],
+   "err": 0.011942708333333996,
+   "err_E": 0.13842083333333344,
+   "module_err": 0.004282638888888024,
+   "floor": 0.009185866099359948
+  },
+  {
+   "id": "lifelog|load 0.8|seed 31|oracle",
+   "family": "lifelog",
+   "setting": {
+    "family": "lifelog",
+    "load": 0.8,
+    "content": "lifelog",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.8545156249999999,
+    "modules": [
+     1.0,
+     1.0,
+     0.8545156249999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.8461749999999995,
+    "modules": [
+     0.9949343750000001,
+     0.9963312499999998,
+     0.8532937499999994
+    ]
+   },
+   "measured": 0.8450000000000001,
+   "measured_modules": [
+    0.9966666666666667,
+    0.99625,
+    0.8495833333333334
+   ],
+   "err": 0.001174999999999371,
+   "err_E": 0.009515624999999805,
+   "module_err": 0.0018413194444441376,
+   "floor": 0.00738734841920067
+  },
+  {
+   "id": "lifelog|load 0.8|seed 31|error",
+   "family": "lifelog",
+   "setting": {
+    "family": "lifelog",
+    "load": 0.8,
+    "content": "lifelog",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.866384375,
+    "modules": [
+     0.99569375,
+     0.9975125,
+     0.8723468750000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.8219593750000009,
+    "modules": [
+     0.9895437499999997,
+     0.9911187499999994,
+     0.8392687500000008
+    ]
+   },
+   "measured": 0.8204166666666666,
+   "measured_modules": [
+    0.99125,
+    0.9916666666666667,
+    0.8366666666666666
+   ],
+   "err": 0.0015427083333343639,
+   "err_E": 0.04596770833333341,
+   "module_err": 0.0016187500000005943,
+   "floor": 0.007835101566088722
+  },
+  {
+   "id": "lifelog|load 0.8|seed 32|sequential",
+   "family": "lifelog",
+   "setting": {
+    "family": "lifelog",
+    "load": 0.8,
+    "content": "lifelog",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "sequential",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.6007031250000001,
+    "modules": [
+     0.7512718749999999,
+     0.85335,
+     0.935553125
+    ]
+   },
+   "T-relu": {
+    "address": 0.24839374999999983,
+    "modules": [
+     0.5478250000000002,
+     0.6879843750000003,
+     0.6383437500000007
+    ]
+   },
+   "measured": 0.24416666666666664,
+   "measured_modules": [
+    0.5395833333333333,
+    0.6758333333333333,
+    0.6416666666666666
+   ],
+   "err": 0.004227083333333187,
+   "err_E": 0.3565364583333335,
+   "module_err": 0.007905208333333302,
+   "floor": 0.008769010433423003
+  },
+  {
+   "id": "lifelog|load 0.8|seed 32|random",
+   "family": "lifelog",
+   "setting": {
+    "family": "lifelog",
+    "load": 0.8,
+    "content": "lifelog",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.6002125,
+    "modules": [
+     0.748228125,
+     0.85518125,
+     0.931996875
+    ]
+   },
+   "T-relu": {
+    "address": 0.24723749999999992,
+    "modules": [
+     0.5458718750000001,
+     0.697903125,
+     0.6338968750000007
+    ]
+   },
+   "measured": 0.23,
+   "measured_modules": [
+    0.5279166666666666,
+    0.6866666666666666,
+    0.6245833333333334
+   ],
+   "err": 0.017237499999999906,
+   "err_E": 0.37021250000000006,
+   "module_err": 0.012835069444444716,
+   "floor": 0.008590207603234434
+  },
+  {
+   "id": "lifelog|load 0.8|seed 32|kmeans",
+   "family": "lifelog",
+   "setting": {
+    "family": "lifelog",
+    "load": 0.8,
+    "content": "lifelog",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.8751437500000001,
+    "modules": [
+     0.9956156250000001,
+     0.99525,
+     0.8830687500000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.6170343750000002,
+    "modules": [
+     0.9752687499999992,
+     0.9697312499999993,
+     0.6535187499999998
+    ]
+   },
+   "measured": 0.6095833333333334,
+   "measured_modules": [
+    0.9700000000000001,
+    0.9620833333333333,
+    0.65375
+   ],
+   "err": 0.00745104166666688,
+   "err_E": 0.26556041666666674,
+   "module_err": 0.004382638888888457,
+   "floor": 0.009958068191495853
+  },
+  {
+   "id": "lifelog|load 0.8|seed 32|oracle",
+   "family": "lifelog",
+   "setting": {
+    "family": "lifelog",
+    "load": 0.8,
+    "content": "lifelog",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.8509406249999999,
+    "modules": [
+     1.0,
+     1.0,
+     0.8509406249999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.7777124999999997,
+    "modules": [
+     0.9979093749999994,
+     0.9997687499999998,
+     0.7797468749999994
+    ]
+   },
+   "measured": 0.77375,
+   "measured_modules": [
+    0.9983333333333334,
+    1.0,
+    0.7745833333333333
+   ],
+   "err": 0.003962499999999647,
+   "err_E": 0.07719062499999985,
+   "module_err": 0.001939583333333439,
+   "floor": 0.00854061223166505
+  },
+  {
+   "id": "lifelog|load 0.8|seed 32|error",
+   "family": "lifelog",
+   "setting": {
+    "family": "lifelog",
+    "load": 0.8,
+    "content": "lifelog",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.8600937500000001,
+    "modules": [
+     0.9956437499999999,
+     0.9980375000000001,
+     0.8655968749999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.7571968750000009,
+    "modules": [
+     0.9881406249999997,
+     0.9947124999999994,
+     0.7717062500000006
+    ]
+   },
+   "measured": 0.7491666666666666,
+   "measured_modules": [
+    0.9866666666666667,
+    0.9941666666666666,
+    0.7658333333333335
+   ],
+   "err": 0.008030208333334232,
+   "err_E": 0.11092708333333345,
+   "module_err": 0.0026309027777776293,
+   "floor": 0.00884863389226039
+  },
+  {
+   "id": "cards 7/12/4|load 0.8|seed 30|sequential",
+   "family": "cards 7/12/4",
+   "setting": {
+    "family": "cards 7/12/4",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     7,
+     12,
+     4
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "sequential",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.7855531250000002,
+    "modules": [
+     0.8447781249999999,
+     0.9455843750000001,
+     0.9835875000000002
+    ]
+   },
+   "T-relu": {
+    "address": 0.4589343749999998,
+    "modules": [
+     0.7495906250000008,
+     0.7966312500000008,
+     0.7601375000000006
+    ]
+   },
+   "measured": 0.4379166666666667,
+   "measured_modules": [
+    0.7395833333333334,
+    0.7949999999999999,
+    0.7404166666666668
+   ],
+   "err": 0.021017708333333107,
+   "err_E": 0.3476364583333335,
+   "module_err": 0.010453125000000693,
+   "floor": 0.01012722526415434
+  },
+  {
+   "id": "cards 7/12/4|load 0.8|seed 30|random",
+   "family": "cards 7/12/4",
+   "setting": {
+    "family": "cards 7/12/4",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     7,
+     12,
+     4
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.7781718750000002,
+    "modules": [
+     0.84221875,
+     0.93608125,
+     0.9848343750000003
+    ]
+   },
+   "T-relu": {
+    "address": 0.46016874999999985,
+    "modules": [
+     0.7472468750000005,
+     0.7811093749999998,
+     0.7677124999999998
+    ]
+   },
+   "measured": 0.45083333333333336,
+   "measured_modules": [
+    0.72125,
+    0.7845833333333333,
+    0.7604166666666666
+   ],
+   "err": 0.009335416666666485,
+   "err_E": 0.3273385416666668,
+   "module_err": 0.01225555555555576,
+   "floor": 0.010156743221641982
+  },
+  {
+   "id": "cards 7/12/4|load 0.8|seed 30|kmeans",
+   "family": "cards 7/12/4",
+   "setting": {
+    "family": "cards 7/12/4",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     7,
+     12,
+     4
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9678781250000001,
+    "modules": [
+     0.9994437500000001,
+     0.9974156250000001,
+     0.9709187499999998
+    ]
+   },
+   "T-relu": {
+    "address": 0.7335593750000006,
+    "modules": [
+     0.9632343749999985,
+     0.9755624999999997,
+     0.7820374999999993
+    ]
+   },
+   "measured": 0.7258333333333332,
+   "measured_modules": [
+    0.9645833333333332,
+    0.97625,
+    0.7716666666666668
+   ],
+   "err": 0.007726041666667349,
+   "err_E": 0.24204479166666693,
+   "module_err": 0.0041357638888891435,
+   "floor": 0.00910584303152733
+  },
+  {
+   "id": "cards 7/12/4|load 0.8|seed 30|oracle",
+   "family": "cards 7/12/4",
+   "setting": {
+    "family": "cards 7/12/4",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     7,
+     12,
+     4
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9574000000000001,
+    "modules": [
+     1.0,
+     1.0,
+     0.9574000000000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.7885875000000004,
+    "modules": [
+     0.9997718749999998,
+     0.999903125,
+     0.7888781250000007
+    ]
+   },
+   "measured": 0.7841666666666667,
+   "measured_modules": [
+    1.0,
+    0.9995833333333334,
+    0.7845833333333333
+   ],
+   "err": 0.004420833333333762,
+   "err_E": 0.17323333333333346,
+   "module_err": 0.0016142361111114074,
+   "floor": 0.0083976510990563
+  },
+  {
+   "id": "cards 7/12/4|load 0.8|seed 30|error",
+   "family": "cards 7/12/4",
+   "setting": {
+    "family": "cards 7/12/4",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     7,
+     12,
+     4
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9535375,
+    "modules": [
+     0.9998968750000001,
+     0.9745781250000001,
+     0.9784406250000002
+    ]
+   },
+   "T-relu": {
+    "address": 0.6613593750000011,
+    "modules": [
+     0.9878718749999996,
+     0.9228625000000008,
+     0.7251968750000001
+    ]
+   },
+   "measured": 0.6554166666666666,
+   "measured_modules": [
+    0.9895833333333334,
+    0.9187499999999998,
+    0.7204166666666666
+   ],
+   "err": 0.005942708333334434,
+   "err_E": 0.2981208333333334,
+   "module_err": 0.0035347222222227304,
+   "floor": 0.009700637000609424
+  },
+  {
+   "id": "cards 7/12/4|load 0.8|seed 31|sequential",
+   "family": "cards 7/12/4",
+   "setting": {
+    "family": "cards 7/12/4",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     7,
+     12,
+     4
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "sequential",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.7731875000000001,
+    "modules": [
+     0.845475,
+     0.9308,
+     0.9824687499999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.43085624999999994,
+    "modules": [
+     0.7179343749999991,
+     0.7542718750000001,
+     0.7875281249999994
+    ]
+   },
+   "measured": 0.42250000000000004,
+   "measured_modules": [
+    0.7008333333333333,
+    0.7587499999999999,
+    0.7691666666666667
+   ],
+   "err": 0.008356249999999898,
+   "err_E": 0.3506875000000001,
+   "module_err": 0.013313541666666096,
+   "floor": 0.01008285983736757
+  },
+  {
+   "id": "cards 7/12/4|load 0.8|seed 31|random",
+   "family": "cards 7/12/4",
+   "setting": {
+    "family": "cards 7/12/4",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     7,
+     12,
+     4
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.7825593750000001,
+    "modules": [
+     0.8500281249999999,
+     0.9385124999999997,
+     0.9802249999999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.43133750000000015,
+    "modules": [
+     0.7228156249999997,
+     0.7534562500000002,
+     0.7842812499999997
+    ]
+   },
+   "measured": 0.42250000000000004,
+   "measured_modules": [
+    0.7204166666666666,
+    0.7445833333333333,
+    0.7829166666666666
+   ],
+   "err": 0.00883750000000011,
+   "err_E": 0.360059375,
+   "module_err": 0.004212152777777718,
+   "floor": 0.01008285983736757
+  },
+  {
+   "id": "cards 7/12/4|load 0.8|seed 31|kmeans",
+   "family": "cards 7/12/4",
+   "setting": {
+    "family": "cards 7/12/4",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     7,
+     12,
+     4
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9477062500000001,
+    "modules": [
+     0.999571875,
+     0.9977781250000001,
+     0.950165625
+    ]
+   },
+   "T-relu": {
+    "address": 0.7817468750000001,
+    "modules": [
+     0.9890562499999994,
+     0.9779437499999998,
+     0.80789375
+    ]
+   },
+   "measured": 0.7720833333333333,
+   "measured_modules": [
+    0.98875,
+    0.9791666666666666,
+    0.7970833333333333
+   ],
+   "err": 0.00966354166666672,
+   "err_E": 0.17562291666666674,
+   "module_err": 0.00411319444444432,
+   "floor": 0.008562774563048626
+  },
+  {
+   "id": "cards 7/12/4|load 0.8|seed 31|oracle",
+   "family": "cards 7/12/4",
+   "setting": {
+    "family": "cards 7/12/4",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     7,
+     12,
+     4
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.958096875,
+    "modules": [
+     1.0,
+     1.0,
+     0.958096875
+    ]
+   },
+   "T-relu": {
+    "address": 0.8429062499999996,
+    "modules": [
+     0.9992812499999999,
+     0.99974375,
+     0.8436781249999998
+    ]
+   },
+   "measured": 0.8354166666666667,
+   "measured_modules": [
+    0.9979166666666667,
+    0.9995833333333334,
+    0.8375
+   ],
+   "err": 0.007489583333332939,
+   "err_E": 0.12268020833333326,
+   "module_err": 0.002567708333333233,
+   "floor": 0.007569006422086889
+  },
+  {
+   "id": "cards 7/12/4|load 0.8|seed 31|error",
+   "family": "cards 7/12/4",
+   "setting": {
+    "family": "cards 7/12/4",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     7,
+     12,
+     4
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.94810625,
+    "modules": [
+     0.9999843749999999,
+     0.9693593749999999,
+     0.9780093750000002
+    ]
+   },
+   "T-relu": {
+    "address": 0.6914750000000016,
+    "modules": [
+     0.9972312499999992,
+     0.9395343749999996,
+     0.7354281250000015
+    ]
+   },
+   "measured": 0.6962499999999999,
+   "measured_modules": [
+    0.9979166666666668,
+    0.9433333333333334,
+    0.73375
+   ],
+   "err": -0.004774999999998308,
+   "err_E": 0.2518562500000001,
+   "module_err": 0.0020541666666676153,
+   "floor": 0.009387179588406734
+  },
+  {
+   "id": "cards 7/12/4|load 0.8|seed 32|sequential",
+   "family": "cards 7/12/4",
+   "setting": {
+    "family": "cards 7/12/4",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     7,
+     12,
+     4
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "sequential",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.7820625000000001,
+    "modules": [
+     0.844796875,
+     0.9389906249999999,
+     0.9859625
+    ]
+   },
+   "T-relu": {
+    "address": 0.4120500000000005,
+    "modules": [
+     0.6440093750000006,
+     0.8209000000000003,
+     0.7637843750000008
+    ]
+   },
+   "measured": 0.4008333333333333,
+   "measured_modules": [
+    0.63875,
+    0.8066666666666666,
+    0.7579166666666666
+   ],
+   "err": 0.011216666666667208,
+   "err_E": 0.3812291666666668,
+   "module_err": 0.008453472222222813,
+   "floor": 0.01000345715703289
+  },
+  {
+   "id": "cards 7/12/4|load 0.8|seed 32|random",
+   "family": "cards 7/12/4",
+   "setting": {
+    "family": "cards 7/12/4",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     7,
+     12,
+     4
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.78525,
+    "modules": [
+     0.8491312499999999,
+     0.9408093750000001,
+     0.9814218750000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.4051218750000002,
+    "modules": [
+     0.65455,
+     0.8139656250000009,
+     0.7518468749999997
+    ]
+   },
+   "measured": 0.40166666666666667,
+   "measured_modules": [
+    0.6395833333333333,
+    0.8095833333333333,
+    0.7466666666666667
+   ],
+   "err": 0.003455208333333515,
+   "err_E": 0.38358333333333333,
+   "module_err": 0.008176388888889089,
+   "floor": 0.010006884204460522
+  },
+  {
+   "id": "cards 7/12/4|load 0.8|seed 32|kmeans",
+   "family": "cards 7/12/4",
+   "setting": {
+    "family": "cards 7/12/4",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     7,
+     12,
+     4
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9391937500000002,
+    "modules": [
+     0.9982999999999999,
+     0.9990437500000001,
+     0.9417218749999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.6840343749999999,
+    "modules": [
+     0.9864156249999984,
+     0.9886218749999993,
+     0.7021187500000005
+    ]
+   },
+   "measured": 0.6749999999999999,
+   "measured_modules": [
+    0.9804166666666667,
+    0.98875,
+    0.6958333333333333
+   ],
+   "err": 0.009034374999999928,
+   "err_E": 0.2641937500000002,
+   "module_err": 0.004137499999999831,
+   "floor": 0.009560661587986472
+  },
+  {
+   "id": "cards 7/12/4|load 0.8|seed 32|oracle",
+   "family": "cards 7/12/4",
+   "setting": {
+    "family": "cards 7/12/4",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     7,
+     12,
+     4
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.956975,
+    "modules": [
+     1.0,
+     1.0,
+     0.956975
+    ]
+   },
+   "T-relu": {
+    "address": 0.7950656250000001,
+    "modules": [
+     0.9995031249999999,
+     1.0,
+     0.7954875000000001
+    ]
+   },
+   "measured": 0.7929166666666667,
+   "measured_modules": [
+    0.9995833333333334,
+    1.0,
+    0.7933333333333333
+   ],
+   "err": 0.002148958333333395,
+   "err_E": 0.1640583333333333,
+   "module_err": 0.0007447916666667442,
+   "floor": 0.008271432423027083
+  },
+  {
+   "id": "cards 7/12/4|load 0.8|seed 32|error",
+   "family": "cards 7/12/4",
+   "setting": {
+    "family": "cards 7/12/4",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     7,
+     12,
+     4
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9362843750000001,
+    "modules": [
+     0.9999624999999999,
+     0.9551781249999999,
+     0.9803750000000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.6743468750000009,
+    "modules": [
+     0.9901468749999993,
+     0.9242406249999988,
+     0.7366281250000002
+    ]
+   },
+   "measured": 0.6654166666666667,
+   "measured_modules": [
+    0.98875,
+    0.91375,
+    0.735
+   ],
+   "err": 0.008930208333334244,
+   "err_E": 0.2708677083333334,
+   "module_err": 0.004505208333332789,
+   "floor": 0.009631487562263528
+  },
+  {
+   "id": "Nh 200|load 0.8|seed 30|random",
+   "family": "Nh 200",
+   "setting": {
+    "family": "Nh 200",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 200,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.78486875,
+    "modules": [
+     0.8502906249999999,
+     0.939634375,
+     0.9816499999999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.2398812499999997,
+    "modules": [
+     0.6256156250000016,
+     0.608078125,
+     0.6117031250000007
+    ]
+   },
+   "measured": 0.23541666666666664,
+   "measured_modules": [
+    0.6224999999999999,
+    0.6037499999999999,
+    0.6166666666666667
+   ],
+   "err": 0.0044645833333330776,
+   "err_E": 0.5494520833333334,
+   "module_err": 0.0041357638888892545,
+   "floor": 0.008660149626359
+  },
+  {
+   "id": "Nh 200|load 0.8|seed 30|oracle",
+   "family": "Nh 200",
+   "setting": {
+    "family": "Nh 200",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 200,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.950275,
+    "modules": [
+     1.0,
+     1.0,
+     0.950275
+    ]
+   },
+   "T-relu": {
+    "address": 0.728259375000001,
+    "modules": [
+     0.9813999999999994,
+     0.9737093750000002,
+     0.763746875000001
+    ]
+   },
+   "measured": 0.7304166666666667,
+   "measured_modules": [
+    0.9825,
+    0.9695833333333334,
+    0.7683333333333334
+   ],
+   "err": -0.0021572916666656727,
+   "err_E": 0.21985833333333327,
+   "module_err": 0.003270833333333297,
+   "floor": 0.009057873180329138
+  },
+  {
+   "id": "Nh 200|load 0.8|seed 30|error",
+   "family": "Nh 200",
+   "setting": {
+    "family": "Nh 200",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 200,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.944609375,
+    "modules": [
+     0.9975562500000001,
+     0.998253125,
+     0.9486
+    ]
+   },
+   "T-relu": {
+    "address": 0.6878906249999995,
+    "modules": [
+     0.9684624999999994,
+     0.9552687499999993,
+     0.7467499999999997
+    ]
+   },
+   "measured": 0.6879166666666667,
+   "measured_modules": [
+    0.9666666666666668,
+    0.9541666666666666,
+    0.7487499999999999
+   ],
+   "err": -2.6041666667198093e-05,
+   "err_E": 0.25669270833333324,
+   "module_err": 0.001632638888888538,
+   "floor": 0.009457962394830982
+  },
+  {
+   "id": "Nh 200|load 0.8|seed 31|random",
+   "family": "Nh 200",
+   "setting": {
+    "family": "Nh 200",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 200,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.7887125,
+    "modules": [
+     0.859496875,
+     0.9353437500000003,
+     0.980325
+    ]
+   },
+   "T-relu": {
+    "address": 0.18907499999999977,
+    "modules": [
+     0.6550125000000002,
+     0.5415312500000006,
+     0.5243250000000002
+    ]
+   },
+   "measured": 0.18916666666666668,
+   "measured_modules": [
+    0.6454166666666666,
+    0.53375,
+    0.5179166666666667
+   ],
+   "err": -9.166666666690637e-05,
+   "err_E": 0.5995458333333333,
+   "module_err": 0.007928472222222557,
+   "floor": 0.00799433755043971
+  },
+  {
+   "id": "Nh 200|load 0.8|seed 31|oracle",
+   "family": "Nh 200",
+   "setting": {
+    "family": "Nh 200",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 200,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.942321875,
+    "modules": [
+     1.0,
+     1.0,
+     0.942321875
+    ]
+   },
+   "T-relu": {
+    "address": 0.6501468750000003,
+    "modules": [
+     0.9968874999999994,
+     0.9132906249999998,
+     0.7151406250000001
+    ]
+   },
+   "measured": 0.6462500000000001,
+   "measured_modules": [
+    0.99625,
+    0.9083333333333333,
+    0.7158333333333333
+   ],
+   "err": 0.003896875000000244,
+   "err_E": 0.2960718749999999,
+   "module_err": 0.002095833333333038,
+   "floor": 0.00975984412230373
+  },
+  {
+   "id": "Nh 200|load 0.8|seed 31|error",
+   "family": "Nh 200",
+   "setting": {
+    "family": "Nh 200",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 200,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.945853125,
+    "modules": [
+     0.9979375,
+     0.9975687500000001,
+     0.94989375
+    ]
+   },
+   "T-relu": {
+    "address": 0.5937000000000002,
+    "modules": [
+     0.9778249999999999,
+     0.8860656249999996,
+     0.6762937499999997
+    ]
+   },
+   "measured": 0.5870833333333333,
+   "measured_modules": [
+    0.9783333333333334,
+    0.8833333333333333,
+    0.6695833333333333
+   ],
+   "err": 0.006616666666666937,
+   "err_E": 0.35876979166666667,
+   "module_err": 0.00331701388888872,
+   "floor": 0.010050217515381519
+  },
+  {
+   "id": "Nh 200|load 0.8|seed 32|random",
+   "family": "Nh 200",
+   "setting": {
+    "family": "Nh 200",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 200,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.7873749999999999,
+    "modules": [
+     0.84918125,
+     0.9429124999999999,
+     0.982359375
+    ]
+   },
+   "T-relu": {
+    "address": 0.24396874999999985,
+    "modules": [
+     0.6671656249999991,
+     0.5616687500000002,
+     0.6216500000000005
+    ]
+   },
+   "measured": 0.23291666666666666,
+   "measured_modules": [
+    0.6470833333333332,
+    0.5525,
+    0.6066666666666668
+   ],
+   "err": 0.011052083333333185,
+   "err_E": 0.5544583333333333,
+   "module_err": 0.014744791666666571,
+   "floor": 0.00862811521170652
+  },
+  {
+   "id": "Nh 200|load 0.8|seed 32|oracle",
+   "family": "Nh 200",
+   "setting": {
+    "family": "Nh 200",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 200,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9416187500000001,
+    "modules": [
+     1.0,
+     1.0,
+     0.9416187500000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.7250750000000002,
+    "modules": [
+     0.9993218749999998,
+     0.9762999999999995,
+     0.7435875
+    ]
+   },
+   "measured": 0.7266666666666666,
+   "measured_modules": [
+    0.9987499999999999,
+    0.97625,
+    0.7470833333333333
+   ],
+   "err": -0.0015916666666663248,
+   "err_E": 0.2149520833333335,
+   "module_err": 0.0013725694444442678,
+   "floor": 0.009097211620010787
+  },
+  {
+   "id": "Nh 200|load 0.8|seed 32|error",
+   "family": "Nh 200",
+   "setting": {
+    "family": "Nh 200",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 200,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9427031249999999,
+    "modules": [
+     0.9964656250000001,
+     0.9964687500000002,
+     0.9494093749999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.6901531249999995,
+    "modules": [
+     0.9810281249999997,
+     0.95168125,
+     0.7376562499999999
+    ]
+   },
+   "measured": 0.6945833333333334,
+   "measured_modules": [
+    0.9816666666666668,
+    0.9529166666666667,
+    0.7391666666666667
+   ],
+   "err": -0.004430208333333963,
+   "err_E": 0.24811979166666642,
+   "module_err": 0.0011281250000002203,
+   "floor": 0.00940162500113874
+  },
+  {
+   "id": "Nh 800|load 0.8|seed 30|random",
+   "family": "Nh 800",
+   "setting": {
+    "family": "Nh 800",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 800,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.78486875,
+    "modules": [
+     0.8502906249999999,
+     0.939634375,
+     0.9816499999999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.5944687499999993,
+    "modules": [
+     0.7690656249999995,
+     0.8810374999999999,
+     0.866443749999999
+    ]
+   },
+   "measured": 0.5879166666666666,
+   "measured_modules": [
+    0.7608333333333333,
+    0.8804166666666666,
+    0.8624999999999999
+   ],
+   "err": 0.006552083333332681,
+   "err_E": 0.19695208333333336,
+   "module_err": 0.004265624999999533,
+   "floor": 0.01004719404697613
+  },
+  {
+   "id": "Nh 800|load 0.8|seed 30|oracle",
+   "family": "Nh 800",
+   "setting": {
+    "family": "Nh 800",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 800,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.950275,
+    "modules": [
+     1.0,
+     1.0,
+     0.950275
+    ]
+   },
+   "T-relu": {
+    "address": 0.9095499999999989,
+    "modules": [
+     1.0,
+     1.0,
+     0.9095499999999989
+    ]
+   },
+   "measured": 0.9154166666666667,
+   "measured_modules": [
+    1.0,
+    1.0,
+    0.9154166666666667
+   ],
+   "err": -0.005866666666667797,
+   "err_E": 0.034858333333333325,
+   "module_err": 0.0019555555555559323,
+   "floor": 0.00567997186963235
+  },
+  {
+   "id": "Nh 800|load 0.8|seed 30|error",
+   "family": "Nh 800",
+   "setting": {
+    "family": "Nh 800",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 800,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.944609375,
+    "modules": [
+     0.9975562500000001,
+     0.998253125,
+     0.9486
+    ]
+   },
+   "T-relu": {
+    "address": 0.8907312499999998,
+    "modules": [
+     0.99491875,
+     0.9965281250000001,
+     0.8986124999999996
+    ]
+   },
+   "measured": 0.8933333333333332,
+   "measured_modules": [
+    0.9954166666666667,
+    0.9966666666666666,
+    0.9008333333333334
+   ],
+   "err": -0.002602083333333449,
+   "err_E": 0.05127604166666677,
+   "module_err": 0.0009524305555556797,
+   "floor": 0.0063010875016701485
+  },
+  {
+   "id": "Nh 800|load 0.8|seed 31|random",
+   "family": "Nh 800",
+   "setting": {
+    "family": "Nh 800",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 800,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.7887125,
+    "modules": [
+     0.859496875,
+     0.9353437500000003,
+     0.980325
+    ]
+   },
+   "T-relu": {
+    "address": 0.5757156249999997,
+    "modules": [
+     0.8158531250000004,
+     0.7883312500000001,
+     0.8867937499999995
+    ]
+   },
+   "measured": 0.5595833333333333,
+   "measured_modules": [
+    0.8024999999999999,
+    0.7787499999999999,
+    0.8762500000000001
+   ],
+   "err": 0.01613229166666641,
+   "err_E": 0.22912916666666672,
+   "module_err": 0.011159375000000046,
+   "floor": 0.010133480530500715
+  },
+  {
+   "id": "Nh 800|load 0.8|seed 31|oracle",
+   "family": "Nh 800",
+   "setting": {
+    "family": "Nh 800",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 800,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.942321875,
+    "modules": [
+     1.0,
+     1.0,
+     0.942321875
+    ]
+   },
+   "T-relu": {
+    "address": 0.9443156249999984,
+    "modules": [
+     1.0,
+     0.9999875,
+     0.9443281249999984
+    ]
+   },
+   "measured": 0.9425,
+   "measured_modules": [
+    1.0,
+    1.0,
+    0.9425
+   ],
+   "err": 0.001815624999998433,
+   "err_E": -0.00017812500000002895,
+   "module_err": 0.000613541666666125,
+   "floor": 0.004751918472224315
+  },
+  {
+   "id": "Nh 800|load 0.8|seed 31|error",
+   "family": "Nh 800",
+   "setting": {
+    "family": "Nh 800",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 800,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.945853125,
+    "modules": [
+     0.9979375,
+     0.9975687500000001,
+     0.94989375
+    ]
+   },
+   "T-relu": {
+    "address": 0.9289874999999985,
+    "modules": [
+     0.9989218750000001,
+     0.9918531249999998,
+     0.937237499999998
+    ]
+   },
+   "measured": 0.9308333333333333,
+   "measured_modules": [
+    0.9987499999999999,
+    0.9929166666666668,
+    0.9383333333333335
+   ],
+   "err": -0.0018458333333347676,
+   "err_E": 0.015019791666666671,
+   "module_err": 0.0007770833333342239,
+   "floor": 0.005179391811500367
+  },
+  {
+   "id": "Nh 800|load 0.8|seed 32|random",
+   "family": "Nh 800",
+   "setting": {
+    "family": "Nh 800",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 800,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.7873749999999999,
+    "modules": [
+     0.84918125,
+     0.9429124999999999,
+     0.982359375
+    ]
+   },
+   "T-relu": {
+    "address": 0.5700843749999998,
+    "modules": [
+     0.7612531249999995,
+     0.8786906249999997,
+     0.8437093749999999
+    ]
+   },
+   "measured": 0.53625,
+   "measured_modules": [
+    0.7320833333333333,
+    0.8762500000000001,
+    0.8383333333333334
+   ],
+   "err": 0.03383437499999975,
+   "err_E": 0.25112499999999993,
+   "module_err": 0.01232881944444412,
+   "floor": 0.010179348732851232
+  },
+  {
+   "id": "Nh 800|load 0.8|seed 32|oracle",
+   "family": "Nh 800",
+   "setting": {
+    "family": "Nh 800",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 800,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9416187500000001,
+    "modules": [
+     1.0,
+     1.0,
+     0.9416187500000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.9083624999999996,
+    "modules": [
+     1.0,
+     1.0,
+     0.9083624999999996
+    ]
+   },
+   "measured": 0.9133333333333334,
+   "measured_modules": [
+    1.0,
+    1.0,
+    0.9133333333333334
+   ],
+   "err": -0.004970833333333813,
+   "err_E": 0.02828541666666662,
+   "module_err": 0.0016569444444446042,
+   "floor": 0.005742950590200253
+  },
+  {
+   "id": "Nh 800|load 0.8|seed 32|error",
+   "family": "Nh 800",
+   "setting": {
+    "family": "Nh 800",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 800,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9427031249999999,
+    "modules": [
+     0.9964656250000001,
+     0.9964687500000002,
+     0.9494093749999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.8900218749999996,
+    "modules": [
+     0.98560625,
+     0.9866781249999999,
+     0.91204375
+    ]
+   },
+   "measured": 0.8879166666666668,
+   "measured_modules": [
+    0.9833333333333334,
+    0.9874999999999999,
+    0.9116666666666666
+   ],
+   "err": 0.002105208333332831,
+   "err_E": 0.054786458333333066,
+   "module_err": 0.0011572916666667081,
+   "floor": 0.006439483018917426
+  },
+  {
+   "id": "periods 5,6,7|load 0.8|seed 30|random",
+   "family": "periods 5,6,7",
+   "setting": {
+    "family": "periods 5,6,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     5,
+     6,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.977925,
+    "modules": [
+     0.9822593750000002,
+     0.9962031250000003,
+     0.9993343750000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.49740000000000045,
+    "modules": [
+     0.8384656249999992,
+     0.7094031250000004,
+     0.8224812500000007
+    ]
+   },
+   "measured": 0.4908333333333334,
+   "measured_modules": [
+    0.8379166666666666,
+    0.7091666666666666,
+    0.8179166666666666
+   ],
+   "err": 0.006566666666667054,
+   "err_E": 0.48709166666666665,
+   "module_err": 0.00178333333333347,
+   "floor": 0.010204491907615616
+  },
+  {
+   "id": "periods 5,6,7|load 0.8|seed 30|kmeans",
+   "family": "periods 5,6,7",
+   "setting": {
+    "family": "periods 5,6,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     5,
+     6,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9344968750000001,
+    "modules": [
+     0.99895625,
+     0.9989062499999999,
+     0.9365125000000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.7719656250000004,
+    "modules": [
+     0.9847687499999991,
+     0.9822218749999989,
+     0.7988374999999999
+    ]
+   },
+   "measured": 0.7600000000000001,
+   "measured_modules": [
+    0.9833333333333334,
+    0.9804166666666667,
+    0.7895833333333333
+   ],
+   "err": 0.011965625000000313,
+   "err_E": 0.174496875,
+   "module_err": 0.004164930555554817,
+   "floor": 0.008717797887081345
+  },
+  {
+   "id": "periods 5,6,7|load 0.8|seed 30|oracle",
+   "family": "periods 5,6,7",
+   "setting": {
+    "family": "periods 5,6,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     5,
+     6,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9494250000000001,
+    "modules": [
+     1.0,
+     1.0,
+     0.9494250000000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.8593031250000006,
+    "modules": [
+     0.9999968749999999,
+     0.9994624999999999,
+     0.8597125000000004
+    ]
+   },
+   "measured": 0.8716666666666667,
+   "measured_modules": [
+    1.0,
+    0.9983333333333334,
+    0.8729166666666668
+   ],
+   "err": -0.012363541666666089,
+   "err_E": 0.07775833333333337,
+   "module_err": 0.004778819444444323,
+   "floor": 0.0068271482848773464
+  },
+  {
+   "id": "periods 5,6,7|load 0.8|seed 30|error",
+   "family": "periods 5,6,7",
+   "setting": {
+    "family": "periods 5,6,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     5,
+     6,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9452062500000001,
+    "modules": [
+     0.997434375,
+     0.9979499999999999,
+     0.9496093750000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.8238437499999983,
+    "modules": [
+     0.9888249999999998,
+     0.9933843750000002,
+     0.8404906249999986
+    ]
+   },
+   "measured": 0.8216666666666667,
+   "measured_modules": [
+    0.9908333333333333,
+    0.99375,
+    0.8358333333333333
+   ],
+   "err": 0.002177083333331664,
+   "err_E": 0.12353958333333348,
+   "module_err": 0.0023437499999995337,
+   "floor": 0.007813731384437793
+  },
+  {
+   "id": "periods 5,6,7|load 0.8|seed 31|random",
+   "family": "periods 5,6,7",
+   "setting": {
+    "family": "periods 5,6,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     5,
+     6,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.97670625,
+    "modules": [
+     0.98074375,
+     0.9968593750000001,
+     0.999015625
+    ]
+   },
+   "T-relu": {
+    "address": 0.48623124999999995,
+    "modules": [
+     0.7988843749999998,
+     0.7701687500000003,
+     0.7831218750000004
+    ]
+   },
+   "measured": 0.4795833333333333,
+   "measured_modules": [
+    0.7983333333333333,
+    0.76625,
+    0.7745833333333333
+   ],
+   "err": 0.006647916666666642,
+   "err_E": 0.4971229166666667,
+   "module_err": 0.004336111111111281,
+   "floor": 0.010197694995320883
+  },
+  {
+   "id": "periods 5,6,7|load 0.8|seed 31|kmeans",
+   "family": "periods 5,6,7",
+   "setting": {
+    "family": "periods 5,6,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     5,
+     6,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9538906250000002,
+    "modules": [
+     0.9989062500000001,
+     0.9984468750000001,
+     0.9564781250000002
+    ]
+   },
+   "T-relu": {
+    "address": 0.7653749999999997,
+    "modules": [
+     0.9810562499999993,
+     0.9721624999999999,
+     0.800934375
+    ]
+   },
+   "measured": 0.7454166666666667,
+   "measured_modules": [
+    0.9824999999999999,
+    0.9708333333333333,
+    0.7791666666666668
+   ],
+   "err": 0.019958333333332967,
+   "err_E": 0.2084739583333335,
+   "module_err": 0.008180208333333475,
+   "floor": 0.00889219366734624
+  },
+  {
+   "id": "periods 5,6,7|load 0.8|seed 31|oracle",
+   "family": "periods 5,6,7",
+   "setting": {
+    "family": "periods 5,6,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     5,
+     6,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9446499999999999,
+    "modules": [
+     1.0,
+     1.0,
+     0.9446499999999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.8951187499999985,
+    "modules": [
+     0.9995874999999999,
+     0.9918343749999997,
+     0.9032999999999987
+    ]
+   },
+   "measured": 0.89875,
+   "measured_modules": [
+    0.9987499999999999,
+    0.9916666666666667,
+    0.9075000000000001
+   ],
+   "err": -0.003631250000001529,
+   "err_E": 0.04589999999999983,
+   "module_err": 0.0017350694444447923,
+   "floor": 0.006157598202627383
+  },
+  {
+   "id": "periods 5,6,7|load 0.8|seed 31|error",
+   "family": "periods 5,6,7",
+   "setting": {
+    "family": "periods 5,6,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     5,
+     6,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9448093750000001,
+    "modules": [
+     0.997771875,
+     0.997359375,
+     0.9492906250000002
+    ]
+   },
+   "T-relu": {
+    "address": 0.8463500000000005,
+    "modules": [
+     0.9958031249999995,
+     0.9681718749999999,
+     0.87881875
+    ]
+   },
+   "measured": 0.8420833333333334,
+   "measured_modules": [
+    0.9945833333333334,
+    0.9666666666666668,
+    0.8758333333333334
+   ],
+   "err": 0.004266666666667085,
+   "err_E": 0.10272604166666666,
+   "module_err": 0.0019034722222219431,
+   "floor": 0.007443649224214433
+  },
+  {
+   "id": "periods 5,6,7|load 0.8|seed 32|random",
+   "family": "periods 5,6,7",
+   "setting": {
+    "family": "periods 5,6,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     5,
+     6,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.97575,
+    "modules": [
+     0.9793718749999999,
+     0.9967750000000001,
+     0.9994843750000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.6079218750000004,
+    "modules": [
+     0.854006249999999,
+     0.8420937499999984,
+     0.8403062500000003
+    ]
+   },
+   "measured": 0.585,
+   "measured_modules": [
+    0.84875,
+    0.8262499999999999,
+    0.8333333333333334
+   ],
+   "err": 0.022921875000000425,
+   "err_E": 0.39075000000000004,
+   "module_err": 0.009357638888888112,
+   "floor": 0.010057646344945721
+  },
+  {
+   "id": "periods 5,6,7|load 0.8|seed 32|kmeans",
+   "family": "periods 5,6,7",
+   "setting": {
+    "family": "periods 5,6,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     5,
+     6,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.941240625,
+    "modules": [
+     0.999703125,
+     0.9964437500000001,
+     0.9449031250000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.7183468749999997,
+    "modules": [
+     0.9980687499999994,
+     0.9651062499999995,
+     0.7479281250000009
+    ]
+   },
+   "measured": 0.7050000000000001,
+   "measured_modules": [
+    0.9974999999999999,
+    0.96125,
+    0.7374999999999999
+   ],
+   "err": 0.013346874999999647,
+   "err_E": 0.23624062499999998,
+   "module_err": 0.0049510416666666375,
+   "floor": 0.009308933880955434
+  },
+  {
+   "id": "periods 5,6,7|load 0.8|seed 32|oracle",
+   "family": "periods 5,6,7",
+   "setting": {
+    "family": "periods 5,6,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     5,
+     6,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.947871875,
+    "modules": [
+     1.0,
+     1.0,
+     0.947871875
+    ]
+   },
+   "T-relu": {
+    "address": 0.9032624999999989,
+    "modules": [
+     1.0,
+     0.9998218749999999,
+     0.903415624999999
+    ]
+   },
+   "measured": 0.9058333333333334,
+   "measured_modules": [
+    1.0,
+    1.0,
+    0.9058333333333334
+   ],
+   "err": -0.0025708333333345212,
+   "err_E": 0.04203854166666665,
+   "module_err": 0.0008652777777781914,
+   "floor": 0.005961658939826632
+  },
+  {
+   "id": "periods 5,6,7|load 0.8|seed 32|error",
+   "family": "periods 5,6,7",
+   "setting": {
+    "family": "periods 5,6,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     5,
+     6,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9456625,
+    "modules": [
+     0.996478125,
+     0.9965281250000001,
+     0.952265625
+    ]
+   },
+   "T-relu": {
+    "address": 0.8755249999999987,
+    "modules": [
+     0.9895781249999999,
+     0.9984499999999998,
+     0.887074999999999
+    ]
+   },
+   "measured": 0.8754166666666666,
+   "measured_modules": [
+    0.9866666666666667,
+    0.9987499999999999,
+    0.8895833333333334
+   ],
+   "err": 0.00010833333333204465,
+   "err_E": 0.07024583333333334,
+   "module_err": 0.0019065972222225651,
+   "floor": 0.006741115337640381
+  },
+  {
+   "id": "Ns 500|load 0.8|seed 30|random",
+   "family": "Ns 500",
+   "setting": {
+    "family": "Ns 500",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 500,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "random",
+   "P": 400,
+   "alpha_read": 225.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.8019250000000001,
+    "modules": [
+     0.8555812500000001,
+     0.95030625,
+     0.984025
+    ]
+   },
+   "T-relu": {
+    "address": 0.5060499999999997,
+    "modules": [
+     0.7768999999999999,
+     0.8151562500000012,
+     0.7891000000000014
+    ]
+   },
+   "measured": 0.48583333333333334,
+   "measured_modules": [
+    0.7666666666666666,
+    0.7941666666666666,
+    0.7883333333333332
+   ],
+   "err": 0.020216666666666328,
+   "err_E": 0.31609166666666677,
+   "module_err": 0.010663194444445375,
+   "floor": 0.014427962016964245
+  },
+  {
+   "id": "Ns 500|load 0.8|seed 30|oracle",
+   "family": "Ns 500",
+   "setting": {
+    "family": "Ns 500",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 500,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "oracle",
+   "P": 400,
+   "alpha_read": 225.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9301062499999999,
+    "modules": [
+     1.0,
+     1.0,
+     0.9301062499999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.9077000000000001,
+    "modules": [
+     0.9969750000000001,
+     0.9993250000000002,
+     0.9113937500000001
+    ]
+   },
+   "measured": 0.9025,
+   "measured_modules": [
+    0.9941666666666666,
+    0.9983333333333334,
+    0.91
+   ],
+   "err": 0.0052000000000000934,
+   "err_E": 0.027606249999999943,
+   "module_err": 0.00173125000000011,
+   "floor": 0.008563184279226976
+  },
+  {
+   "id": "Ns 500|load 0.8|seed 30|error",
+   "family": "Ns 500",
+   "setting": {
+    "family": "Ns 500",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 500,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "error",
+   "P": 400,
+   "alpha_read": 225.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.940475,
+    "modules": [
+     0.9982625,
+     0.9985500000000002,
+     0.9434062499999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.8829812500000008,
+    "modules": [
+     0.9903687500000004,
+     0.9919125000000001,
+     0.8996312500000008
+    ]
+   },
+   "measured": 0.8841666666666667,
+   "measured_modules": [
+    0.9858333333333335,
+    0.9941666666666666,
+    0.8999999999999999
+   ],
+   "err": -0.0011854166666658283,
+   "err_E": 0.056308333333333294,
+   "module_err": 0.002386111111110867,
+   "floor": 0.009238324713849288
+  },
+  {
+   "id": "Ns 500|load 0.8|seed 31|random",
+   "family": "Ns 500",
+   "setting": {
+    "family": "Ns 500",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 500,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "random",
+   "P": 400,
+   "alpha_read": 225.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.7972062499999999,
+    "modules": [
+     0.8670750000000002,
+     0.93620625,
+     0.98073125
+    ]
+   },
+   "T-relu": {
+    "address": 0.45617500000000044,
+    "modules": [
+     0.7524312499999999,
+     0.7614875000000001,
+     0.7941187500000004
+    ]
+   },
+   "measured": 0.4458333333333333,
+   "measured_modules": [
+    0.7466666666666666,
+    0.7549999999999999,
+    0.7908333333333334
+   ],
+   "err": 0.010341666666667138,
+   "err_E": 0.3513729166666666,
+   "module_err": 0.005179166666666846,
+   "floor": 0.01434880866780184
+  },
+  {
+   "id": "Ns 500|load 0.8|seed 31|oracle",
+   "family": "Ns 500",
+   "setting": {
+    "family": "Ns 500",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 500,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "oracle",
+   "P": 400,
+   "alpha_read": 225.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9355875,
+    "modules": [
+     1.0,
+     1.0,
+     0.9355875
+    ]
+   },
+   "T-relu": {
+    "address": 0.9330875000000006,
+    "modules": [
+     0.9967562500000001,
+     0.9979375000000001,
+     0.9382750000000005
+    ]
+   },
+   "measured": 0.9349999999999999,
+   "measured_modules": [
+    0.9983333333333334,
+    0.9991666666666666,
+    0.9375
+   ],
+   "err": -0.0019124999999993175,
+   "err_E": 0.0005875000000000741,
+   "module_err": 0.0011937500000001044,
+   "floor": 0.007116588602226025
+  },
+  {
+   "id": "Ns 500|load 0.8|seed 31|error",
+   "family": "Ns 500",
+   "setting": {
+    "family": "Ns 500",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 500,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "error",
+   "P": 400,
+   "alpha_read": 225.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9423312500000001,
+    "modules": [
+     0.9973875000000001,
+     0.99829375,
+     0.9464375000000002
+    ]
+   },
+   "T-relu": {
+    "address": 0.9296500000000008,
+    "modules": [
+     0.9963625000000004,
+     0.9958000000000002,
+     0.9370062500000012
+    ]
+   },
+   "measured": 0.9250000000000002,
+   "measured_modules": [
+    0.9958333333333335,
+    0.9983333333333334,
+    0.93
+   ],
+   "err": 0.004650000000000598,
+   "err_E": 0.01733124999999991,
+   "module_err": 0.0033562500000003936,
+   "floor": 0.007603453162872767
+  },
+  {
+   "id": "Ns 500|load 0.8|seed 32|random",
+   "family": "Ns 500",
+   "setting": {
+    "family": "Ns 500",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 500,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "random",
+   "P": 400,
+   "alpha_read": 225.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.79124375,
+    "modules": [
+     0.8519374999999999,
+     0.9420812500000001,
+     0.9849250000000002
+    ]
+   },
+   "T-relu": {
+    "address": 0.42833124999999966,
+    "modules": [
+     0.6521437500000001,
+     0.8251875000000005,
+     0.7888125000000002
+    ]
+   },
+   "measured": 0.4216666666666667,
+   "measured_modules": [
+    0.6391666666666667,
+    0.8275,
+    0.7833333333333333
+   ],
+   "err": 0.006664583333332974,
+   "err_E": 0.36957708333333333,
+   "module_err": 0.00692291666666663,
+   "floor": 0.014255521997016013
+  },
+  {
+   "id": "Ns 500|load 0.8|seed 32|oracle",
+   "family": "Ns 500",
+   "setting": {
+    "family": "Ns 500",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 500,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "oracle",
+   "P": 400,
+   "alpha_read": 225.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9385062500000001,
+    "modules": [
+     1.0,
+     1.0,
+     0.9385062500000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.9122062500000007,
+    "modules": [
+     0.9979125000000003,
+     0.9997999999999999,
+     0.9143500000000008
+    ]
+   },
+   "measured": 0.9158333333333332,
+   "measured_modules": [
+    0.9966666666666667,
+    1.0,
+    0.9191666666666668
+   ],
+   "err": -0.0036270833333325037,
+   "err_E": 0.02267291666666693,
+   "module_err": 0.002087499999999909,
+   "floor": 0.008014707256500858
+  },
+  {
+   "id": "Ns 500|load 0.8|seed 32|error",
+   "family": "Ns 500",
+   "setting": {
+    "family": "Ns 500",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 500,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "error",
+   "P": 400,
+   "alpha_read": 225.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.94318125,
+    "modules": [
+     0.9979375,
+     0.9981874999999999,
+     0.9468375
+    ]
+   },
+   "T-relu": {
+    "address": 0.8494312500000002,
+    "modules": [
+     0.9864937500000004,
+     0.9936062500000005,
+     0.8684312499999998
+    ]
+   },
+   "measured": 0.8433333333333334,
+   "measured_modules": [
+    0.9816666666666666,
+    0.9933333333333333,
+    0.8675
+   ],
+   "err": 0.006097916666666814,
+   "err_E": 0.09984791666666659,
+   "module_err": 0.0020104166666669032,
+   "floor": 0.010492942954760205
+  },
+  {
+   "id": "Ns 2000|load 0.8|seed 30|random",
+   "family": "Ns 2000",
+   "setting": {
+    "family": "Ns 2000",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 2000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle"
+    ]
+   },
+   "seed": 30,
+   "placement": "random",
+   "P": 1600,
+   "alpha_read": 900.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.77753125,
+    "modules": [
+     0.8423265624999999,
+     0.93915,
+     0.9822734375000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.4559515624999993,
+    "modules": [
+     0.7451687499999988,
+     0.7922249999999985,
+     0.7643765624999971
+    ]
+   },
+   "measured": 0.43375,
+   "measured_modules": [
+    0.72375,
+    0.7831250000000001,
+    0.7512500000000001
+   ],
+   "err": 0.022201562499999272,
+   "err_E": 0.34378125,
+   "module_err": 0.014548437499998087,
+   "floor": 0.0071532471865929535
+  },
+  {
+   "id": "Ns 2000|load 0.8|seed 30|kmeans",
+   "family": "Ns 2000",
+   "setting": {
+    "family": "Ns 2000",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 2000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle"
+    ]
+   },
+   "seed": 30,
+   "placement": "kmeans",
+   "P": 1600,
+   "alpha_read": 900.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.967665625,
+    "modules": [
+     0.9998203125,
+     0.9963875,
+     0.9713625
+    ]
+   },
+   "T-relu": {
+    "address": 0.7251703124999973,
+    "modules": [
+     0.9879406249999992,
+     0.9750812499999987,
+     0.7523437499999972
+    ]
+   },
+   "measured": 0.72625,
+   "measured_modules": [
+    0.98875,
+    0.9766666666666666,
+    0.7495833333333334
+   ],
+   "err": -0.0010796875000026462,
+   "err_E": 0.24141562500000002,
+   "module_err": 0.0017184027777774984,
+   "floor": 0.006435755224719163
+  },
+  {
+   "id": "Ns 2000|load 0.8|seed 30|oracle",
+   "family": "Ns 2000",
+   "setting": {
+    "family": "Ns 2000",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 2000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle"
+    ]
+   },
+   "seed": 30,
+   "placement": "oracle",
+   "P": 1600,
+   "alpha_read": 900.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9745656250000002,
+    "modules": [
+     1.0,
+     1.0,
+     0.9745656250000002
+    ]
+   },
+   "T-relu": {
+    "address": 0.8084515624999986,
+    "modules": [
+     0.9999765624999999,
+     0.9999968749999999,
+     0.8084781249999986
+    ]
+   },
+   "measured": 0.8012499999999999,
+   "measured_modules": [
+    1.0,
+    1.0,
+    0.8012499999999999
+   ],
+   "err": 0.007201562499998704,
+   "err_E": 0.1733156250000003,
+   "module_err": 0.0024182291666663045,
+   "floor": 0.005759926892982237
+  },
+  {
+   "id": "Ns 2000|load 0.8|seed 31|random",
+   "family": "Ns 2000",
+   "setting": {
+    "family": "Ns 2000",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 2000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle"
+    ]
+   },
+   "seed": 31,
+   "placement": "random",
+   "P": 1600,
+   "alpha_read": 900.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.7740546875,
+    "modules": [
+     0.8441,
+     0.9341312500000001,
+     0.9808312499999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.43379531249999986,
+    "modules": [
+     0.7232703124999992,
+     0.7537890624999983,
+     0.7862984374999984
+    ]
+   },
+   "measured": 0.4222916666666667,
+   "measured_modules": [
+    0.7174999999999999,
+    0.7460416666666666,
+    0.7752083333333334
+   ],
+   "err": 0.011503645833333187,
+   "err_E": 0.3517630208333333,
+   "module_err": 0.008202604166665331,
+   "floor": 0.007129186123057742
+  },
+  {
+   "id": "Ns 2000|load 0.8|seed 31|kmeans",
+   "family": "Ns 2000",
+   "setting": {
+    "family": "Ns 2000",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 2000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle"
+    ]
+   },
+   "seed": 31,
+   "placement": "kmeans",
+   "P": 1600,
+   "alpha_read": 900.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9562640625000002,
+    "modules": [
+     0.9999734375,
+     0.9927796875,
+     0.9633140625
+    ]
+   },
+   "T-relu": {
+    "address": 0.7537859374999983,
+    "modules": [
+     0.9978890624999984,
+     0.9813828124999976,
+     0.770148437499998
+    ]
+   },
+   "measured": 0.74375,
+   "measured_modules": [
+    0.9975,
+    0.9791666666666666,
+    0.7606250000000001
+   ],
+   "err": 0.010035937499998315,
+   "err_E": 0.21251406250000016,
+   "module_err": 0.004042881944442393,
+   "floor": 0.006301222392983232
+  },
+  {
+   "id": "Ns 2000|load 0.8|seed 31|oracle",
+   "family": "Ns 2000",
+   "setting": {
+    "family": "Ns 2000",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 2000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle"
+    ]
+   },
+   "seed": 31,
+   "placement": "oracle",
+   "P": 1600,
+   "alpha_read": 900.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9712109375,
+    "modules": [
+     1.0,
+     1.0,
+     0.9712109375
+    ]
+   },
+   "T-relu": {
+    "address": 0.878384374999996,
+    "modules": [
+     0.9999390625000001,
+     0.9999374999999998,
+     0.878503124999996
+    ]
+   },
+   "measured": 0.8760416666666666,
+   "measured_modules": [
+    0.9997916666666667,
+    1.0,
+    0.8762500000000001
+   ],
+   "err": 0.0023427083333293908,
+   "err_E": 0.09516927083333337,
+   "module_err": 0.0008210069444431664,
+   "floor": 0.004756413760443094
+  },
+  {
+   "id": "Ns 2000|load 0.8|seed 32|random",
+   "family": "Ns 2000",
+   "setting": {
+    "family": "Ns 2000",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 2000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle"
+    ]
+   },
+   "seed": 32,
+   "placement": "random",
+   "P": 1600,
+   "alpha_read": 900.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.7746749999999999,
+    "modules": [
+     0.8414734374999999,
+     0.9373515624999998,
+     0.9824656250000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.3922703125000001,
+    "modules": [
+     0.6445265624999992,
+     0.8070234374999992,
+     0.7493390624999986
+    ]
+   },
+   "measured": 0.3714583333333333,
+   "measured_modules": [
+    0.6304166666666667,
+    0.789375,
+    0.7425
+   ],
+   "err": 0.020811979166666827,
+   "err_E": 0.4032166666666666,
+   "module_err": 0.012865798611110035,
+   "floor": 0.006974313585259298
+  },
+  {
+   "id": "Ns 2000|load 0.8|seed 32|kmeans",
+   "family": "Ns 2000",
+   "setting": {
+    "family": "Ns 2000",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 2000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle"
+    ]
+   },
+   "seed": 32,
+   "placement": "kmeans",
+   "P": 1600,
+   "alpha_read": 900.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9488093750000001,
+    "modules": [
+     0.9999906250000001,
+     0.9789984375,
+     0.9692921875
+    ]
+   },
+   "T-relu": {
+    "address": 0.7083812500000001,
+    "modules": [
+     0.9814624999999992,
+     0.9618078124999969,
+     0.751871874999998
+    ]
+   },
+   "measured": 0.700625,
+   "measured_modules": [
+    0.9795833333333333,
+    0.960625,
+    0.74625
+   ],
+   "err": 0.00775625000000002,
+   "err_E": 0.248184375,
+   "module_err": 0.0028946180555536514,
+   "floor": 0.0066104338198380245
+  },
+  {
+   "id": "Ns 2000|load 0.8|seed 32|oracle",
+   "family": "Ns 2000",
+   "setting": {
+    "family": "Ns 2000",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 2000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle"
+    ]
+   },
+   "seed": 32,
+   "placement": "oracle",
+   "P": 1600,
+   "alpha_read": 900.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.9741515625000002,
+    "modules": [
+     1.0,
+     1.0,
+     0.9741515625000002
+    ]
+   },
+   "T-relu": {
+    "address": 0.8155656249999973,
+    "modules": [
+     0.9999671874999998,
+     1.0,
+     0.8155953124999972
+    ]
+   },
+   "measured": 0.8189583333333333,
+   "measured_modules": [
+    1.0,
+    1.0,
+    0.8189583333333333
+   ],
+   "err": -0.0033927083333360475,
+   "err_E": 0.1551932291666669,
+   "module_err": 0.0011319444444454578,
+   "floor": 0.005557756996554872
+  },
+  {
+   "id": "mask 0.25|load 0.8|seed 30|random",
+   "family": "mask 0.25",
+   "setting": {
+    "family": "mask 0.25",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.25,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 266.6666666666667,
+   "theory_rate": 0.06698729810778065,
+   "E": {
+    "address": 0.9119750000000001,
+    "modules": [
+     0.93003125,
+     0.9821718749999999,
+     0.9980593750000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.6653937500000009,
+    "modules": [
+     0.8357562499999988,
+     0.8920437499999998,
+     0.8828281249999987
+    ]
+   },
+   "measured": 0.6508333333333334,
+   "measured_modules": [
+    0.8270833333333334,
+    0.8858333333333333,
+    0.875
+   ],
+   "err": 0.01456041666666752,
+   "err_E": 0.2611416666666667,
+   "module_err": 0.0075704861111102195,
+   "floor": 0.009730735360092172
+  },
+  {
+   "id": "mask 0.25|load 0.8|seed 30|kmeans",
+   "family": "mask 0.25",
+   "setting": {
+    "family": "mask 0.25",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.25,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 266.6666666666667,
+   "theory_rate": 0.06698729810778065,
+   "E": {
+    "address": 0.9785312500000001,
+    "modules": [
+     0.9999750000000001,
+     0.9992593750000001,
+     0.9792968750000002
+    ]
+   },
+   "T-relu": {
+    "address": 0.849259375,
+    "modules": [
+     0.995928124999999,
+     0.996903124999999,
+     0.8556875000000003
+    ]
+   },
+   "measured": 0.8554166666666667,
+   "measured_modules": [
+    0.9958333333333335,
+    0.9954166666666667,
+    0.8629166666666667
+   ],
+   "err": -0.0061572916666666755,
+   "err_E": 0.12311458333333336,
+   "module_err": 0.0029368055555547556,
+   "floor": 0.007178642892159223
+  },
+  {
+   "id": "mask 0.25|load 0.8|seed 30|oracle",
+   "family": "mask 0.25",
+   "setting": {
+    "family": "mask 0.25",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.25,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 266.6666666666667,
+   "theory_rate": 0.06698729810778065,
+   "E": {
+    "address": 0.989571875,
+    "modules": [
+     1.0,
+     1.0,
+     0.989571875
+    ]
+   },
+   "T-relu": {
+    "address": 0.9215687499999992,
+    "modules": [
+     0.9998749999999997,
+     0.9999750000000001,
+     0.9217156249999993
+    ]
+   },
+   "measured": 0.9241666666666667,
+   "measured_modules": [
+    1.0,
+    1.0,
+    0.9241666666666667
+   ],
+   "err": -0.0025979166666675324,
+   "err_E": 0.0654052083333333,
+   "module_err": 0.000867013888889212,
+   "floor": 0.005403804172713611
+  },
+  {
+   "id": "mask 0.25|load 0.8|seed 30|error",
+   "family": "mask 0.25",
+   "setting": {
+    "family": "mask 0.25",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.25,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 266.6666666666667,
+   "theory_rate": 0.06698729810778065,
+   "E": {
+    "address": 0.9894124999999999,
+    "modules": [
+     0.9999937499999999,
+     0.9999843749999999,
+     0.989434375
+    ]
+   },
+   "T-relu": {
+    "address": 0.9183999999999987,
+    "modules": [
+     0.9982124999999995,
+     0.996465625,
+     0.9229437499999987
+    ]
+   },
+   "measured": 0.91375,
+   "measured_modules": [
+    0.9974999999999999,
+    0.9966666666666666,
+    0.9195833333333333
+   ],
+   "err": 0.004649999999998711,
+   "err_E": 0.07566249999999997,
+   "module_err": 0.0014246527777771838,
+   "floor": 0.005730435465564551
+  },
+  {
+   "id": "mask 0.25|load 0.8|seed 31|random",
+   "family": "mask 0.25",
+   "setting": {
+    "family": "mask 0.25",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.25,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 266.6666666666667,
+   "theory_rate": 0.06698729810778065,
+   "E": {
+    "address": 0.926703125,
+    "modules": [
+     0.943690625,
+     0.9837812500000002,
+     0.998
+    ]
+   },
+   "T-relu": {
+    "address": 0.6322312499999999,
+    "modules": [
+     0.83105625,
+     0.8619843749999997,
+     0.8804624999999995
+    ]
+   },
+   "measured": 0.61625,
+   "measured_modules": [
+    0.8208333333333333,
+    0.8574999999999999,
+    0.8766666666666666
+   ],
+   "err": 0.015981249999999947,
+   "err_E": 0.310453125,
+   "module_err": 0.006167708333333133,
+   "floor": 0.00992652040201735
+  },
+  {
+   "id": "mask 0.25|load 0.8|seed 31|kmeans",
+   "family": "mask 0.25",
+   "setting": {
+    "family": "mask 0.25",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.25,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 266.6666666666667,
+   "theory_rate": 0.06698729810778065,
+   "E": {
+    "address": 0.989659375,
+    "modules": [
+     0.999959375,
+     0.999759375,
+     0.9899343750000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.8736187499999996,
+    "modules": [
+     0.9958374999999999,
+     0.9892968749999994,
+     0.8880281249999997
+    ]
+   },
+   "measured": 0.8745833333333334,
+   "measured_modules": [
+    0.995,
+    0.9891666666666666,
+    0.89
+   ],
+   "err": -0.0009645833333338238,
+   "err_E": 0.11507604166666663,
+   "module_err": 0.0009798611111109985,
+   "floor": 0.0067604032913752285
+  },
+  {
+   "id": "mask 0.25|load 0.8|seed 31|oracle",
+   "family": "mask 0.25",
+   "setting": {
+    "family": "mask 0.25",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.25,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 266.6666666666667,
+   "theory_rate": 0.06698729810778065,
+   "E": {
+    "address": 0.9878656250000002,
+    "modules": [
+     1.0,
+     1.0,
+     0.9878656250000002
+    ]
+   },
+   "T-relu": {
+    "address": 0.9576031249999989,
+    "modules": [
+     0.9999437499999999,
+     0.999903125,
+     0.9577531249999987
+    ]
+   },
+   "measured": 0.9558333333333332,
+   "measured_modules": [
+    1.0,
+    0.9995833333333334,
+    0.9562499999999999
+   ],
+   "err": 0.0017697916666656877,
+   "err_E": 0.03203229166666699,
+   "module_err": 0.0006263888888884775,
+   "floor": 0.004194042015279053
+  },
+  {
+   "id": "mask 0.25|load 0.8|seed 31|error",
+   "family": "mask 0.25",
+   "setting": {
+    "family": "mask 0.25",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.25,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 266.6666666666667,
+   "theory_rate": 0.06698729810778065,
+   "E": {
+    "address": 0.9863968750000001,
+    "modules": [
+     0.9999875,
+     0.9999906249999999,
+     0.98641875
+    ]
+   },
+   "T-relu": {
+    "address": 0.9414718749999991,
+    "modules": [
+     0.9899687500000001,
+     0.9964562499999997,
+     0.9539812499999993
+    ]
+   },
+   "measured": 0.9420833333333333,
+   "measured_modules": [
+    0.9891666666666666,
+    0.9970833333333333,
+    0.9554166666666667
+   ],
+   "err": -0.0006114583333342027,
+   "err_E": 0.04431354166666679,
+   "module_err": 0.0009548611111114639,
+   "floor": 0.0047680501949997406
+  },
+  {
+   "id": "mask 0.25|load 0.8|seed 32|random",
+   "family": "mask 0.25",
+   "setting": {
+    "family": "mask 0.25",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.25,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 266.6666666666667,
+   "theory_rate": 0.06698729810778065,
+   "E": {
+    "address": 0.912465625,
+    "modules": [
+     0.9276750000000001,
+     0.9860562500000001,
+     0.997371875
+    ]
+   },
+   "T-relu": {
+    "address": 0.5953468749999996,
+    "modules": [
+     0.7585812499999993,
+     0.9037031249999992,
+     0.863778124999999
+    ]
+   },
+   "measured": 0.5783333333333333,
+   "measured_modules": [
+    0.7529166666666667,
+    0.8949999999999999,
+    0.8508333333333334
+   ],
+   "err": 0.017013541666666354,
+   "err_E": 0.3341322916666667,
+   "module_err": 0.009104166666665803,
+   "floor": 0.010080176273444017
+  },
+  {
+   "id": "mask 0.25|load 0.8|seed 32|kmeans",
+   "family": "mask 0.25",
+   "setting": {
+    "family": "mask 0.25",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.25,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 266.6666666666667,
+   "theory_rate": 0.06698729810778065,
+   "E": {
+    "address": 0.9771781249999999,
+    "modules": [
+     1.0,
+     0.9984031250000001,
+     0.97875
+    ]
+   },
+   "T-relu": {
+    "address": 0.8045156250000012,
+    "modules": [
+     0.9968624999999989,
+     0.9954156249999994,
+     0.8107593750000008
+    ]
+   },
+   "measured": 0.7991666666666667,
+   "measured_modules": [
+    0.9966666666666667,
+    0.9966666666666667,
+    0.8045833333333333
+   ],
+   "err": 0.005348958333334486,
+   "err_E": 0.1780114583333332,
+   "module_err": 0.002540972222222345,
+   "floor": 0.008177695925390485
+  },
+  {
+   "id": "mask 0.25|load 0.8|seed 32|oracle",
+   "family": "mask 0.25",
+   "setting": {
+    "family": "mask 0.25",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.25,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 266.6666666666667,
+   "theory_rate": 0.06698729810778065,
+   "E": {
+    "address": 0.98566875,
+    "modules": [
+     1.0,
+     1.0,
+     0.98566875
+    ]
+   },
+   "T-relu": {
+    "address": 0.910112499999999,
+    "modules": [
+     0.9994624999999999,
+     1.0,
+     0.910643749999999
+    ]
+   },
+   "measured": 0.9091666666666667,
+   "measured_modules": [
+    1.0,
+    1.0,
+    0.9091666666666667
+   ],
+   "err": 0.0009458333333323132,
+   "err_E": 0.0765020833333333,
+   "module_err": 0.0006715277777774586,
+   "floor": 0.005865955409851865
+  },
+  {
+   "id": "mask 0.25|load 0.8|seed 32|error",
+   "family": "mask 0.25",
+   "setting": {
+    "family": "mask 0.25",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.25,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 266.6666666666667,
+   "theory_rate": 0.06698729810778065,
+   "E": {
+    "address": 0.98884375,
+    "modules": [
+     0.9999843749999999,
+     0.999978125,
+     0.98888125
+    ]
+   },
+   "T-relu": {
+    "address": 0.9019718749999983,
+    "modules": [
+     0.9918031249999997,
+     0.9981749999999999,
+     0.9110499999999984
+    ]
+   },
+   "measured": 0.9016666666666667,
+   "measured_modules": [
+    0.9916666666666667,
+    0.9979166666666667,
+    0.9108333333333333
+   ],
+   "err": 0.0003052083333315858,
+   "err_E": 0.0871770833333333,
+   "module_err": 0.00020381944444377206,
+   "floor": 0.006078098965715926
+  },
+  {
+   "id": "mask 0.5|load 0.8|seed 30|random",
+   "family": "mask 0.5",
+   "setting": {
+    "family": "mask 0.5",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.5,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 800.0,
+   "theory_rate": 0.14644660940672627,
+   "E": {
+    "address": 0.556903125,
+    "modules": [
+     0.7274468749999999,
+     0.83170625,
+     0.9178468750000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.26316562499999974,
+    "modules": [
+     0.6295843749999999,
+     0.6512031249999997,
+     0.6157843750000003
+    ]
+   },
+   "measured": 0.2683333333333333,
+   "measured_modules": [
+    0.61625,
+    0.6466666666666666,
+    0.6037499999999999
+   ],
+   "err": -0.005167708333333576,
+   "err_E": 0.28856979166666674,
+   "module_err": 0.009968402777777774,
+   "floor": 0.009044578384211624
+  },
+  {
+   "id": "mask 0.5|load 0.8|seed 30|kmeans",
+   "family": "mask 0.5",
+   "setting": {
+    "family": "mask 0.5",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.5,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 800.0,
+   "theory_rate": 0.14644660940672627,
+   "E": {
+    "address": 0.8452031249999998,
+    "modules": [
+     0.99425625,
+     0.9909937500000001,
+     0.8583593749999998
+    ]
+   },
+   "T-relu": {
+    "address": 0.6209781250000006,
+    "modules": [
+     0.9828593749999986,
+     0.9778312499999978,
+     0.6471593749999996
+    ]
+   },
+   "measured": 0.6145833333333334,
+   "measured_modules": [
+    0.9770833333333333,
+    0.9754166666666667,
+    0.6466666666666667
+   ],
+   "err": 0.006394791666667232,
+   "err_E": 0.23061979166666646,
+   "module_err": 0.0028944444444431263,
+   "floor": 0.009934591497268148
+  },
+  {
+   "id": "mask 0.5|load 0.8|seed 30|oracle",
+   "family": "mask 0.5",
+   "setting": {
+    "family": "mask 0.5",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.5,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 800.0,
+   "theory_rate": 0.14644660940672627,
+   "E": {
+    "address": 0.8530625000000001,
+    "modules": [
+     1.0,
+     1.0,
+     0.8530625000000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.7739406250000005,
+    "modules": [
+     0.9988281249999996,
+     0.9997218749999999,
+     0.7751750000000003
+    ]
+   },
+   "measured": 0.7766666666666667,
+   "measured_modules": [
+    0.9991666666666666,
+    0.9995833333333334,
+    0.7779166666666666
+   ],
+   "err": -0.0027260416666662346,
+   "err_E": 0.07639583333333333,
+   "module_err": 0.0010729166666666086,
+   "floor": 0.008501361546725804
+  },
+  {
+   "id": "mask 0.5|load 0.8|seed 30|error",
+   "family": "mask 0.5",
+   "setting": {
+    "family": "mask 0.5",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.5,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 800.0,
+   "theory_rate": 0.14644660940672627,
+   "E": {
+    "address": 0.895,
+    "modules": [
+     0.9865343750000001,
+     0.98419375,
+     0.9218843749999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.6149218749999996,
+    "modules": [
+     0.9909249999999993,
+     0.9855781249999999,
+     0.6309593749999997
+    ]
+   },
+   "measured": 0.6041666666666666,
+   "measured_modules": [
+    0.9891666666666666,
+    0.985,
+    0.6204166666666667
+   ],
+   "err": 0.010755208333332988,
+   "err_E": 0.2908333333333334,
+   "module_err": 0.0042930555555551475,
+   "floor": 0.009982261466295174
+  },
+  {
+   "id": "mask 0.5|load 0.8|seed 31|random",
+   "family": "mask 0.5",
+   "setting": {
+    "family": "mask 0.5",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.5,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 800.0,
+   "theory_rate": 0.14644660940672627,
+   "E": {
+    "address": 0.557496875,
+    "modules": [
+     0.7335187500000001,
+     0.830159375,
+     0.9127937500000002
+    ]
+   },
+   "T-relu": {
+    "address": 0.2470812499999998,
+    "modules": [
+     0.6061187500000008,
+     0.6086968750000006,
+     0.6552937500000007
+    ]
+   },
+   "measured": 0.24625,
+   "measured_modules": [
+    0.6033333333333334,
+    0.59875,
+    0.6525
+   ],
+   "err": 0.0008312499999998113,
+   "err_E": 0.31124687500000003,
+   "module_err": 0.0051753472222229036,
+   "floor": 0.008794196417240179
+  },
+  {
+   "id": "mask 0.5|load 0.8|seed 31|kmeans",
+   "family": "mask 0.5",
+   "setting": {
+    "family": "mask 0.5",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.5,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 800.0,
+   "theory_rate": 0.14644660940672627,
+   "E": {
+    "address": 0.8535718749999998,
+    "modules": [
+     0.9939218750000001,
+     0.9887531249999999,
+     0.8680718749999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.6626593750000002,
+    "modules": [
+     0.9681124999999998,
+     0.9703906249999996,
+     0.7098875000000001
+    ]
+   },
+   "measured": 0.6541666666666667,
+   "measured_modules": [
+    0.9666666666666667,
+    0.9674999999999999,
+    0.70375
+   ],
+   "err": 0.008492708333333487,
+   "err_E": 0.19940520833333308,
+   "module_err": 0.003491319444444326,
+   "floor": 0.009708944306001402
+  },
+  {
+   "id": "mask 0.5|load 0.8|seed 31|oracle",
+   "family": "mask 0.5",
+   "setting": {
+    "family": "mask 0.5",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.5,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 800.0,
+   "theory_rate": 0.14644660940672627,
+   "E": {
+    "address": 0.8599562500000001,
+    "modules": [
+     1.0,
+     1.0,
+     0.8599562500000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.8451843749999992,
+    "modules": [
+     0.9994624999999999,
+     0.9988000000000001,
+     0.8466249999999989
+    ]
+   },
+   "measured": 0.8375,
+   "measured_modules": [
+    0.9983333333333334,
+    0.9970833333333333,
+    0.8408333333333333
+   ],
+   "err": 0.007684374999999188,
+   "err_E": 0.022456250000000066,
+   "module_err": 0.002879166666666285,
+   "floor": 0.007530320654969924
+  },
+  {
+   "id": "mask 0.5|load 0.8|seed 31|error",
+   "family": "mask 0.5",
+   "setting": {
+    "family": "mask 0.5",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.5,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 800.0,
+   "theory_rate": 0.14644660940672627,
+   "E": {
+    "address": 0.81948125,
+    "modules": [
+     0.98911875,
+     0.9798874999999999,
+     0.843034375
+    ]
+   },
+   "T-relu": {
+    "address": 0.8040718750000003,
+    "modules": [
+     0.9908999999999999,
+     0.9780968749999995,
+     0.828915625
+    ]
+   },
+   "measured": 0.8045833333333334,
+   "measured_modules": [
+    0.9899999999999999,
+    0.9787499999999999,
+    0.8316666666666667
+   ],
+   "err": -0.0005114583333331035,
+   "err_E": 0.014897916666666622,
+   "module_err": 0.0014347222222223326,
+   "floor": 0.008093953325774419
+  },
+  {
+   "id": "mask 0.5|load 0.8|seed 32|random",
+   "family": "mask 0.5",
+   "setting": {
+    "family": "mask 0.5",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.5,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 800.0,
+   "theory_rate": 0.14644660940672627,
+   "E": {
+    "address": 0.552375,
+    "modules": [
+     0.7195562500000001,
+     0.8376187500000002,
+     0.9157281250000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.22457499999999997,
+    "modules": [
+     0.5253375000000002,
+     0.6830062499999999,
+     0.6014187500000003
+    ]
+   },
+   "measured": 0.22416666666666665,
+   "measured_modules": [
+    0.5154166666666666,
+    0.6641666666666667,
+    0.6054166666666667
+   ],
+   "err": 0.0004083333333333161,
+   "err_E": 0.3282083333333333,
+   "module_err": 0.010919444444444407,
+   "floor": 0.008512636984267914
+  },
+  {
+   "id": "mask 0.5|load 0.8|seed 32|kmeans",
+   "family": "mask 0.5",
+   "setting": {
+    "family": "mask 0.5",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.5,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 800.0,
+   "theory_rate": 0.14644660940672627,
+   "E": {
+    "address": 0.8215125000000001,
+    "modules": [
+     0.9966843750000001,
+     0.9751843749999999,
+     0.8448843750000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.5426062500000002,
+    "modules": [
+     0.9839499999999988,
+     0.9655843749999998,
+     0.56981875
+    ]
+   },
+   "measured": 0.5441666666666666,
+   "measured_modules": [
+    0.9824999999999999,
+    0.9591666666666666,
+    0.5745833333333333
+   ],
+   "err": -0.0015604166666663977,
+   "err_E": 0.2773458333333335,
+   "module_err": 0.004210763888888451,
+   "floor": 0.010166310899968327
+  },
+  {
+   "id": "mask 0.5|load 0.8|seed 32|oracle",
+   "family": "mask 0.5",
+   "setting": {
+    "family": "mask 0.5",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.5,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 800.0,
+   "theory_rate": 0.14644660940672627,
+   "E": {
+    "address": 0.847678125,
+    "modules": [
+     1.0,
+     1.0,
+     0.847678125
+    ]
+   },
+   "T-relu": {
+    "address": 0.777625000000001,
+    "modules": [
+     0.9978624999999997,
+     0.9999562499999999,
+     0.7794500000000008
+    ]
+   },
+   "measured": 0.7783333333333333,
+   "measured_modules": [
+    0.9974999999999999,
+    1.0,
+    0.7799999999999999
+   ],
+   "err": -0.0007083333333323116,
+   "err_E": 0.06934479166666663,
+   "module_err": 0.0003187499999996642,
+   "floor": 0.008478663307472557
+  },
+  {
+   "id": "mask 0.5|load 0.8|seed 32|error",
+   "family": "mask 0.5",
+   "setting": {
+    "family": "mask 0.5",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "mask",
+    "rate": 0.5,
+    "read": "ridge",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 800.0,
+   "theory_rate": 0.14644660940672627,
+   "E": {
+    "address": 0.7904187500000001,
+    "modules": [
+     0.989153125,
+     0.8636875,
+     0.92469375
+    ]
+   },
+   "T-relu": {
+    "address": 0.47419062500000053,
+    "modules": [
+     0.9849437499999977,
+     0.8364656250000005,
+     0.5781156250000007
+    ]
+   },
+   "measured": 0.47041666666666665,
+   "measured_modules": [
+    0.98375,
+    0.83625,
+    0.57375
+   ],
+   "err": 0.003773958333333882,
+   "err_E": 0.3200020833333334,
+   "module_err": 0.0019249999999996215,
+   "floor": 0.010188327193183891
+  },
+  {
+   "id": "pinv read|load 0.8|seed 30|random",
+   "family": "pinv read",
+   "setting": {
+    "family": "pinv read",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "pinv",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 0.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.19707187499999995,
+    "modules": [
+     0.49780624999999984,
+     0.59196875,
+     0.648834375
+    ]
+   },
+   "T-relu": {
+    "address": 0.14838437500000007,
+    "modules": [
+     0.5179906250000004,
+     0.539734375,
+     0.5003812499999999
+    ]
+   },
+   "measured": 0.12875,
+   "measured_modules": [
+    0.4808333333333333,
+    0.5012500000000001,
+    0.46125
+   ],
+   "err": 0.019634375000000065,
+   "err_E": 0.06832187499999995,
+   "module_err": 0.038257638888888966,
+   "floor": 0.006836587766690826
+  },
+  {
+   "id": "pinv read|load 0.8|seed 30|kmeans",
+   "family": "pinv read",
+   "setting": {
+    "family": "pinv read",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "pinv",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 0.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.52685,
+    "modules": [
+     0.9199124999999999,
+     0.918725,
+     0.6229125
+    ]
+   },
+   "T-relu": {
+    "address": 0.3944281250000001,
+    "modules": [
+     0.8355124999999997,
+     0.8109593749999999,
+     0.577515625
+    ]
+   },
+   "measured": 0.36708333333333326,
+   "measured_modules": [
+    0.8166666666666668,
+    0.78875,
+    0.5479166666666666
+   ],
+   "err": 0.027344791666666812,
+   "err_E": 0.15976666666666678,
+   "module_err": 0.023551388888888747,
+   "floor": 0.009838977752672918
+  },
+  {
+   "id": "pinv read|load 0.8|seed 30|oracle",
+   "family": "pinv read",
+   "setting": {
+    "family": "pinv read",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "pinv",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 0.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.74114375,
+    "modules": [
+     1.0,
+     1.0,
+     0.74114375
+    ]
+   },
+   "T-relu": {
+    "address": 0.6599468750000002,
+    "modules": [
+     0.9577874999999978,
+     0.9765499999999977,
+     0.708284375000001
+    ]
+   },
+   "measured": 0.6195833333333334,
+   "measured_modules": [
+    0.9562499999999999,
+    0.9704166666666666,
+    0.6670833333333333
+   ],
+   "err": 0.04036354166666678,
+   "err_E": 0.12156041666666662,
+   "module_err": 0.016290624999998893,
+   "floor": 0.009910008122871058
+  },
+  {
+   "id": "pinv read|load 0.8|seed 30|error",
+   "family": "pinv read",
+   "setting": {
+    "family": "pinv read",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "pinv",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 30,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 0.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.712796875,
+    "modules": [
+     0.99639375,
+     0.99796875,
+     0.7164625
+    ]
+   },
+   "T-relu": {
+    "address": 0.5864687499999994,
+    "modules": [
+     0.9245656249999982,
+     0.9415874999999977,
+     0.6763406249999993
+    ]
+   },
+   "measured": 0.5437500000000001,
+   "measured_modules": [
+    0.9179166666666667,
+    0.9433333333333334,
+    0.625
+   ],
+   "err": 0.04271874999999936,
+   "err_E": 0.16904687499999993,
+   "module_err": 0.019911805555555457,
+   "floor": 0.0101670615531234
+  },
+  {
+   "id": "pinv read|load 0.8|seed 31|random",
+   "family": "pinv read",
+   "setting": {
+    "family": "pinv read",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "pinv",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 0.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.19427812499999997,
+    "modules": [
+     0.54074375,
+     0.551034375,
+     0.64361875
+    ]
+   },
+   "T-relu": {
+    "address": 0.14620625,
+    "modules": [
+     0.5035187500000005,
+     0.5098968749999999,
+     0.5427593750000004
+    ]
+   },
+   "measured": 0.13083333333333333,
+   "measured_modules": [
+    0.4895833333333333,
+    0.4770833333333333,
+    0.5191666666666667
+   ],
+   "err": 0.01537291666666668,
+   "err_E": 0.06344479166666664,
+   "module_err": 0.02344722222222249,
+   "floor": 0.0068834333796872465
+  },
+  {
+   "id": "pinv read|load 0.8|seed 31|kmeans",
+   "family": "pinv read",
+   "setting": {
+    "family": "pinv read",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "pinv",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 0.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.5279281250000001,
+    "modules": [
+     0.931546875,
+     0.9278843749999999,
+     0.6089218750000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.3935250000000003,
+    "modules": [
+     0.7956749999999988,
+     0.8242812500000002,
+     0.596509375
+    ]
+   },
+   "measured": 0.35874999999999996,
+   "measured_modules": [
+    0.7883333333333332,
+    0.7908333333333334,
+    0.5566666666666668
+   ],
+   "err": 0.03477500000000033,
+   "err_E": 0.16917812500000012,
+   "module_err": 0.02687743055555521,
+   "floor": 0.009790480867914507
+  },
+  {
+   "id": "pinv read|load 0.8|seed 31|oracle",
+   "family": "pinv read",
+   "setting": {
+    "family": "pinv read",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "pinv",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 0.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.7351093749999998,
+    "modules": [
+     1.0,
+     0.9998937499999999,
+     0.7352
+    ]
+   },
+   "T-relu": {
+    "address": 0.6666781250000001,
+    "modules": [
+     0.9607968749999993,
+     0.9563062499999984,
+     0.727634375
+    ]
+   },
+   "measured": 0.6333333333333334,
+   "measured_modules": [
+    0.9583333333333334,
+    0.9541666666666666,
+    0.6920833333333333
+   ],
+   "err": 0.03334479166666671,
+   "err_E": 0.10177604166666643,
+   "module_err": 0.013384722222221498,
+   "floor": 0.009836628449792096
+  },
+  {
+   "id": "pinv read|load 0.8|seed 31|error",
+   "family": "pinv read",
+   "setting": {
+    "family": "pinv read",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "pinv",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 31,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 0.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.700025,
+    "modules": [
+     0.9938874999999999,
+     0.9959375,
+     0.7076437499999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.57525,
+    "modules": [
+     0.9083468749999988,
+     0.9202374999999984,
+     0.6924687500000004
+    ]
+   },
+   "measured": 0.5379166666666667,
+   "measured_modules": [
+    0.8975,
+    0.9058333333333334,
+    0.6558333333333334
+   ],
+   "err": 0.03733333333333333,
+   "err_E": 0.1621083333333333,
+   "module_err": 0.020628819444443613,
+   "floor": 0.010176818559617261
+  },
+  {
+   "id": "pinv read|load 0.8|seed 32|random",
+   "family": "pinv read",
+   "setting": {
+    "family": "pinv read",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "pinv",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 0.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.20175625,
+    "modules": [
+     0.5022000000000001,
+     0.600521875,
+     0.6621406249999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.14330000000000012,
+    "modules": [
+     0.45810625,
+     0.565821875,
+     0.541859375
+    ]
+   },
+   "measured": 0.12291666666666667,
+   "measured_modules": [
+    0.43416666666666665,
+    0.5249999999999999,
+    0.5004166666666667
+   ],
+   "err": 0.020383333333333448,
+   "err_E": 0.07883958333333332,
+   "module_err": 0.03540138888888892,
+   "floor": 0.006702243396872865
+  },
+  {
+   "id": "pinv read|load 0.8|seed 32|kmeans",
+   "family": "pinv read",
+   "setting": {
+    "family": "pinv read",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "pinv",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "kmeans",
+   "P": 800,
+   "alpha_read": 0.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.49952187499999995,
+    "modules": [
+     0.9617687500000001,
+     0.8602749999999999,
+     0.602996875
+    ]
+   },
+   "T-relu": {
+    "address": 0.33366562499999985,
+    "modules": [
+     0.7775531249999994,
+     0.7811812500000006,
+     0.5396031249999996
+    ]
+   },
+   "measured": 0.30875,
+   "measured_modules": [
+    0.7620833333333333,
+    0.74625,
+    0.5033333333333333
+   ],
+   "err": 0.02491562499999983,
+   "err_E": 0.19077187499999992,
+   "module_err": 0.028890277777777678,
+   "floor": 0.00943008124523149
+  },
+  {
+   "id": "pinv read|load 0.8|seed 32|oracle",
+   "family": "pinv read",
+   "setting": {
+    "family": "pinv read",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "pinv",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "oracle",
+   "P": 800,
+   "alpha_read": 0.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.6999718750000001,
+    "modules": [
+     1.0,
+     1.0,
+     0.6999718750000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.6368437499999997,
+    "modules": [
+     0.9459156249999987,
+     0.9772656249999983,
+     0.6906437499999992
+    ]
+   },
+   "measured": 0.6245833333333334,
+   "measured_modules": [
+    0.9466666666666667,
+    0.9700000000000001,
+    0.6749999999999999
+   ],
+   "err": 0.01226041666666633,
+   "err_E": 0.07538854166666675,
+   "module_err": 0.007886805555555135,
+   "floor": 0.009884309810999189
+  },
+  {
+   "id": "pinv read|load 0.8|seed 32|error",
+   "family": "pinv read",
+   "setting": {
+    "family": "pinv read",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "pinv",
+    "placements": [
+     "random",
+     "kmeans",
+     "oracle",
+     "error"
+    ]
+   },
+   "seed": 32,
+   "placement": "error",
+   "P": 800,
+   "alpha_read": 0.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.6999562500000001,
+    "modules": [
+     0.9972218749999999,
+     0.9971875000000001,
+     0.7038062499999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.577765625,
+    "modules": [
+     0.9028749999999994,
+     0.9503718749999984,
+     0.6759593749999994
+    ]
+   },
+   "measured": 0.54,
+   "measured_modules": [
+    0.8883333333333333,
+    0.9495833333333333,
+    0.6370833333333333
+   ],
+   "err": 0.037765624999999914,
+   "err_E": 0.15995625000000002,
+   "module_err": 0.01806874999999908,
+   "floor": 0.010173494974687903
+  },
+  {
+   "id": "periods 3,4,5,7|load 0.8|seed 30|sequential",
+   "family": "periods 3,4,5,7",
+   "setting": {
+    "family": "periods 3,4,5,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random"
+    ]
+   },
+   "seed": 30,
+   "placement": "sequential",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.7807718750000001,
+    "modules": [
+     0.843709375,
+     0.94095,
+     0.984534375,
+     0.9997437499999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.2726843749999995,
+    "modules": [
+     0.7779687499999994,
+     0.7193499999999997,
+     0.6652000000000007,
+     0.7243906250000001
+    ]
+   },
+   "measured": 0.2679166666666667,
+   "measured_modules": [
+    0.77625,
+    0.7258333333333334,
+    0.6549999999999999,
+    0.7158333333333333
+   ],
+   "err": 0.004767708333332787,
+   "err_E": 0.5128552083333334,
+   "module_err": 0.0067398437500001684,
+   "floor": 0.009040126436912837
+  },
+  {
+   "id": "periods 3,4,5,7|load 0.8|seed 30|random",
+   "family": "periods 3,4,5,7",
+   "setting": {
+    "family": "periods 3,4,5,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random"
+    ]
+   },
+   "seed": 30,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.771978125,
+    "modules": [
+     0.83920625,
+     0.9374062500000001,
+     0.9818937500000001,
+     0.999375
+    ]
+   },
+   "T-relu": {
+    "address": 0.2796812500000002,
+    "modules": [
+     0.7732249999999994,
+     0.7307374999999994,
+     0.6794218750000003,
+     0.7264625000000001
+    ]
+   },
+   "measured": 0.2870833333333333,
+   "measured_modules": [
+    0.7625000000000001,
+    0.7487499999999999,
+    0.6754166666666667,
+    0.73375
+   ],
+   "err": -0.007402083333333087,
+   "err_E": 0.48489479166666666,
+   "module_err": 0.010007552083333343,
+   "floor": 0.009234592868113614
+  },
+  {
+   "id": "periods 3,4,5,7|load 0.8|seed 31|sequential",
+   "family": "periods 3,4,5,7",
+   "setting": {
+    "family": "periods 3,4,5,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random"
+    ]
+   },
+   "seed": 31,
+   "placement": "sequential",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.781078125,
+    "modules": [
+     0.843384375,
+     0.9433000000000001,
+     0.9828749999999999,
+     0.9996843750000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.342809375,
+    "modules": [
+     0.7370593750000005,
+     0.8354812499999998,
+     0.7477218749999995,
+     0.7326124999999998
+    ]
+   },
+   "measured": 0.33749999999999997,
+   "measured_modules": [
+    0.7254166666666667,
+    0.8383333333333334,
+    0.7579166666666666,
+    0.7320833333333333
+   ],
+   "err": 0.005309375000000061,
+   "err_E": 0.443578125,
+   "module_err": 0.006304687500000211,
+   "floor": 0.009652153257175312
+  },
+  {
+   "id": "periods 3,4,5,7|load 0.8|seed 31|random",
+   "family": "periods 3,4,5,7",
+   "setting": {
+    "family": "periods 3,4,5,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random"
+    ]
+   },
+   "seed": 31,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.783334375,
+    "modules": [
+     0.8443468749999999,
+     0.944425,
+     0.9827156250000002,
+     0.9993843749999999
+    ]
+   },
+   "T-relu": {
+    "address": 0.36304687500000016,
+    "modules": [
+     0.7549750000000007,
+     0.8499906250000001,
+     0.7531468750000001,
+     0.7377687500000014
+    ]
+   },
+   "measured": 0.35916666666666663,
+   "measured_modules": [
+    0.7474999999999999,
+    0.8533333333333334,
+    0.7491666666666666,
+    0.7479166666666667
+   ],
+   "err": 0.0038802083333335236,
+   "err_E": 0.4241677083333334,
+   "module_err": 0.006236458333333195,
+   "floor": 0.009792981590196417
+  },
+  {
+   "id": "periods 3,4,5,7|load 0.8|seed 32|sequential",
+   "family": "periods 3,4,5,7",
+   "setting": {
+    "family": "periods 3,4,5,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random"
+    ]
+   },
+   "seed": 32,
+   "placement": "sequential",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.7878125,
+    "modules": [
+     0.8485906249999999,
+     0.9438562500000001,
+     0.9838375,
+     0.999753125
+    ]
+   },
+   "T-relu": {
+    "address": 0.35797500000000015,
+    "modules": [
+     0.7221468749999996,
+     0.8112749999999999,
+     0.8157500000000003,
+     0.7227812500000007
+    ]
+   },
+   "measured": 0.3695833333333334,
+   "measured_modules": [
+    0.7295833333333334,
+    0.8145833333333333,
+    0.8183333333333334,
+    0.725
+   ],
+   "err": -0.01160833333333322,
+   "err_E": 0.41822916666666665,
+   "module_err": 0.003886718749999879,
+   "floor": 0.009852907630397647
+  },
+  {
+   "id": "periods 3,4,5,7|load 0.8|seed 32|random",
+   "family": "periods 3,4,5,7",
+   "setting": {
+    "family": "periods 3,4,5,7",
+    "load": 0.8,
+    "content": "factored",
+    "cards": [
+     9,
+     16,
+     5
+    ],
+    "Ns": 1000,
+    "Nh": 400,
+    "periods": [
+     3,
+     4,
+     5,
+     7
+    ],
+    "cue": "flip",
+    "rate": 0.1,
+    "read": "ridge",
+    "placements": [
+     "sequential",
+     "random"
+    ]
+   },
+   "seed": 32,
+   "placement": "random",
+   "P": 800,
+   "alpha_read": 450.0,
+   "theory_rate": 0.1,
+   "E": {
+    "address": 0.788990625,
+    "modules": [
+     0.850990625,
+     0.9434656249999999,
+     0.9832406250000001,
+     0.9994437500000001
+    ]
+   },
+   "T-relu": {
+    "address": 0.37762499999999977,
+    "modules": [
+     0.7269406250000005,
+     0.82921875,
+     0.8285812500000002,
+     0.7257937500000002
+    ]
+   },
+   "measured": 0.37000000000000005,
+   "measured_modules": [
+    0.7108333333333333,
+    0.8337499999999999,
+    0.8254166666666668,
+    0.7312499999999998
+   ],
+   "err": 0.007624999999999715,
+   "err_E": 0.4189906249999999,
+   "module_err": 0.007314843749999994,
+   "floor": 0.009855201672213511
+  }
+ ],
+ "tau": [
+  0.9393939393939394,
+  0.9545454545454546,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  0.9,
+  0.8,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0,
+  1.0
+ ]
+}
