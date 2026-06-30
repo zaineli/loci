@@ -1,0 +1,6 @@
+seed 40: exact encode 0.701 (E4 0.701) + replay 0.861 (E4 0.861) | NATIVE encode 0.651 + replay 0.681 (30 sweeps) | E4 k-means 0.840 random 0.506 oracle 0.882 | law exact 1.375 native 2.469 (2s)
+seed 41: exact encode 0.686 (E4 0.686) + replay 0.828 (E4 0.828) | NATIVE encode 0.596 + replay 0.586 (30 sweeps) | E4 k-means 0.724 random 0.424 oracle 0.839 | law exact 1.410 native 2.508 (2s)
+seed 42: exact encode 0.642 (E4 0.642) + replay 0.831 (E4 0.831) | NATIVE encode 0.593 + replay 0.571 (30 sweeps) | E4 k-means 0.765 random 0.416 oracle 0.881 | law exact 1.376 native 2.463 (2s)
+[z] seed 40: exact encode 0.701 (E4 0.701) + replay 0.861 (E4 0.861) | NATIVE encode 0.659 + replay 0.686 (30 sweeps) | E4 k-means 0.840 random 0.506 oracle 0.882 | law exact 1.375 native 2.476 (3s)
+[z] seed 41: exact encode 0.686 (E4 0.686) + replay 0.828 (E4 0.828) | NATIVE encode 0.599 + replay 0.598 (30 sweeps) | E4 k-means 0.724 random 0.424 oracle 0.839 | law exact 1.410 native 2.487 (2s)
+[z] seed 42: exact encode 0.642 (E4 0.642) + replay 0.831 (E4 0.831) | NATIVE encode 0.620 + replay 0.590 (30 sweeps) | E4 k-means 0.765 random 0.416 oracle 0.881 | law exact 1.376 native 2.470 (2s)

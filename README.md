@@ -1,7 +1,8 @@
 # loci
 
-A memory that files itself, a theory that predicts it, and the one thing accuracy cannot teach it:
-to imagine.
+Where a memory is put decides what it can do. A zero-fit theory predicts how; the theory's error
+law implies a way to choose; and choosing for recall turns out not to find the structure a memory
+needs to imagine.
 
 Vector-HaSH (Chandra, Sharma, Chaudhuri & Fiete, *Nature* 2025) stores memories the way the
 hippocampus is thought to. A fixed **scaffold** of grid-cell modules combines into 3,600 addresses,
@@ -10,29 +11,33 @@ recalls by snapping to an address and reading out what is stored there. The pape
 open: *where* each memory goes. For content without a spatial layout, "the scaffold trajectory can
 be arbitrarily chosen".
 
-loci shows that the choice decides what the memory can do, and answers three questions about it.
-Each answer was pre-registered and tested on seeds no pilot had touched. Every criterion is in
-[`docs/PREREG.md`](docs/PREREG.md), and the git history shows each one committed before the run it
-governs.
+loci studies that choice. The answers below were pre-registered ([`docs/PREREG.md`](docs/PREREG.md))
+and tested on seeds no pilot had touched. Criteria that failed are reported where their numbers are,
+alongside one choice made after seeing related results (§3). An internal red team checked every
+claim before publication ([`docs/redteam/`](docs/redteam)).
 
-1. **Can the effect of a choice be predicted?** Yes. The theory has no fitted parameters and never
-   simulates a cue. It predicts how often a noisy cue finds its own memory to within **0.009** on
-   average, over 156 conditions it was never developed on: new content, new scaffolds, new noise,
-   new sizes. Every prediction was hashed before measurement.
-2. **Can the memory make the choice itself?** Mostly. The theory says the best place for a new
-   memory is where its own recall points. It also says that replaying a memory, with its own trace
-   set aside, computes exactly where the memory should move. A memory that does just that, with no
-   labels and no knowledge of the content, beats k-means on five kinds of content. It comes within
-   0.01–0.06 of an oracle that knows the content's true structure.
-3. **Does filing for accuracy teach a memory to imagine?** No.
-   - Filed by itself, the memory recalls as well as the oracle-filed one when every address counts
-     as a valid state (0.997 against 0.991). Asked for a combination it has never experienced, it
-     constructs it **31%** of the time; the oracle-filed memory does so **100%** of the time.
-   - Where the structure is present, imagination is free for recall. Its price is truth. A new
-     event that recombines familiar parts is recalled as experienced exactly as often as the
-     combination is constructed (r = 0.998 over 90 conditions).
-   - Familiarity cannot tell such an event apart. Only recollection, checking what was recalled
-     against the cue, rejects it.
+1. **The effect of a placement can be predicted.**
+   - The theory is a Gaussian account of the cue path with no fitted parameters. It predicts how
+     often a noisy cue finds its own address, for any placement.
+   - Frozen and hashed, it predicted 156 conditions it was never developed on (new content,
+     scaffolds, noise types and sizes) to within **0.009** on average, every one within 0.05.
+   - Re-running the frozen code reproduces the hashed predictions exactly.
+2. **The theory's error law implies a way to choose. The network cannot yet run it.**
+   - The law says the best place for a new memory is where its own recall coefficients point. It
+     also says that replay, recall with the memory's own trace set aside, is exact descent.
+   - Computed exactly, the rule beats k-means on five kinds of content. It lands 0.01–0.06 below an
+     oracle that knows the content's true factors, and 0.13–0.20 below at higher noise.
+   - Run through the network's own read-out instead, it does not organise the memory.
+3. **Filing for recall does not find the structure imagination needs.**
+   - Filed by the true factors, the memory constructs combinations it has never experienced:
+     0.95–1.00 on factored content.
+   - Filed by the recall rule, it constructs 0.24–0.31 of them, while recalling as well (with a
+     decoder that admits every address) or 0.05 worse (with the paper's own snap).
+   - The error law prefers the factor-aligned filing strongly. Recall accuracy barely notices, so
+     search never gets there.
+   - Where the structure is present, whatever constructs a never-experienced combination also
+     completes a recombined new event to it. In an exploratory check, comparing the recall with the
+     cue flagged both as not experienced.
 
 ```python
 import numpy as np
@@ -46,19 +51,19 @@ events = factored(1_000, 800, np.random.default_rng(0))   # 800 events of 1,000 
 alpha = mmse_alpha(800, flip_rate=0.1)                    # the write matched to cues with 10% of bits flipped
 
 where, K = consolidate.encode(events.patterns, scaffold, alpha)           # each where its own recall points
-where = consolidate.replay(K, scaffold, where, np.random.default_rng(1))  # replay: exact descent on recall error
+where = consolidate.replay(K, scaffold, where, np.random.default_rng(1))  # replay: descend the error law
 
-print(theory.predict(scaffold, events.patterns, where, alpha, flip_rate=0.1).address)  # 0.869, before any cue
+print(theory.predict(scaffold, events.patterns, where, alpha, flip_rate=0.1).address)  # 0.901, before any cue
 memory = Memory(scaffold, rule="ridge", alpha=alpha)
 memory.store(events.patterns, where)
 cues = flip(events.patterns, 0.1, np.random.default_rng(2))
-print((memory.recall(cues).address == where).mean())                      # 0.864, measured
+print((memory.recall(cues).address == where).mean())                      # 0.903, measured
 ```
 
 This is a study of how scaffold memories work and fail, not a better memory. kNN over the stored
 patterns keeps 800,000 bits, against the scaffold's 840,000 weights, and recalls everything.
 
-## 1. A theory that predicts the memory
+## 1. A zero-fit theory of noisy recall
 
 ![Predicted against measured recall](results/theory.png)
 
@@ -70,16 +75,28 @@ Recall is a chain, and every link has known statistics:
 - The grid input x = W_gh h₀ is then Gaussian over all grid cells.
 - Recall is the probability that every module's argmax lands on the right phase.
 
-Nothing is fitted and no cue is drawn: the prediction needs only the stored patterns, the scaffold
-and the placement ([`src/loci/theory.py`](src/loci/theory.py)). The argmax probability is taken by
-Monte Carlo over that Gaussian, so the theory is semi-analytic, not closed-form. The derivations are
-in [`docs/THEORY.md`](docs/THEORY.md).
+Nothing is fitted and no cue is drawn. The prediction needs only the stored patterns, the scaffold
+and the placement ([`src/loci/theory.py`](src/loci/theory.py)).
 
-It was developed on 180 factored-content conditions, where its mean error was 0.010, the sampling
-floor of one cue per item. Then it was frozen and hashed, and it predicted 156 conditions that each
-change something it had not seen. The frozen code, the hashes, the UTC timeline and the one logged
-patch are in [`results/oos/`](results/oos). [`bench/oos.py`](bench/oos.py) re-verifies the hashes and
-the scores.
+It is best read as a zero-fit Gaussian emulator of the network's own cue path:
+- it predicts address recall through the paper's snap, not content or other decoders;
+- the argmax probability is Monte Carlo over the Gaussian, 400 draws per item.
+
+The derivations are in [`docs/THEORY.md`](docs/THEORY.md).
+
+It was developed on 180 factored-content conditions, where its mean error was 0.010. Then it was
+frozen, hashed and run on 156 conditions that each change something it had not seen. The timeline,
+in UTC:
+- **21:02:06:** predictions hashed.
+- **21:02:23:** the pre-registered bars for this test committed. That was 17 s after the hash, and
+  10 s after a first measurement launch that crashed and wrote nothing.
+- **21:03:18 onward:** measured.
+
+Two changes were logged along the way: a patch for hard-coded module counts, and a bookkeeping fix
+in the measurement script. The frozen code, the hashes and the log are in
+[`results/oos/`](results/oos). [`bench/oos.py`](bench/oos.py) re-verifies the hashes and the scores,
+and re-running the frozen code reproduces the hashed predictions exactly
+([`docs/redteam`](docs/redteam), G5).
 
 | new in these conditions | mean \|error\| |
 |---|---|
@@ -89,169 +106,216 @@ the scores.
 | half and double the place cells (Nh 200, 800) | 0.004, 0.008 |
 | other cue dimensions (Ns 500, 2,000) | 0.007, 0.010 |
 | masked cues instead of flipped (25%, 50% unknown) | 0.006, 0.004 |
-| new loads (P/Ns 0.3, 0.5, 0.7) | 0.007 |
+| loads between the developed ones (P/Ns 0.3, 0.5, 0.7) | 0.007 |
 | the paper's own write rule (pseudo-inverse) | **0.029**, optimistic |
 | **all 156** | **0.009**; every one within 0.05; r = 0.999 |
 
-- **The pseudo-inverse read is where it is weakest.** The theory is optimistic there by 0.029, and 9
+- **The pseudo-inverse read is where it is weakest.** The theory is optimistic there by 0.029, and 8
   of its 10 worst rows are pseudo-inverse rows.
-- **E4's self-filing memories were a second test.** No placement of that kind was in the development
-  set. Over 1,240 of those rows the mean error was 0.012 and 98.9% were within 0.05, but the worst
-  row was off by 0.068. That exceeds the pre-registered 0.06, so that criterion **failed**.
+- **E4 was a second test.** No placement made by encoding or replay was in the development set. Over
+  E4's 1,240 rows (every arm; 720 of them made by encoding or replay), the mean error was 0.012 and
+  98.9% were within 0.05. The worst row was off by 0.068, beyond the pre-registered 0.06, so that
+  criterion **failed**.
+- **That failure is sampling noise.** Each E4 row measures one cue per item, with a sampling SD of
+  0.016–0.022. Re-measured over 20 cue draws, the four worst rows fall within 0.021 of the theory
+  (G3). A maximum-error bar of 0.06 was one even a perfect theory would usually miss.
 - **The error law alone fails.** Project K through the phase indicators instead of the scaffold's
-  templates W_gh H, and the mean error on the same conditions is 0.187. That law ranks placements,
-  but it cannot give their size. The magnitudes live in the scaffold.
+  templates W_gh H, and the mean error on the same conditions is 0.187. The law ranks placements;
+  the magnitudes live in the scaffold.
+- The frozen file loads round 1's measured results at import, for its own comparison table. Its
+  prediction function never reads them.
 
-## 2. A memory that files itself
+## 2. A filing rule from the error law
 
-Two exact identities, both from the block inverse of K, turn the theory into a procedure:
+The error law, Σ qᵀKq over each module's phases, changes by exact amounts when an item moves. This
+follows from the block inverse of K ([`docs/THEORY.md`](docs/THEORY.md), §1–2).
 - **Encoding.** A new item s has ridge coefficients c over the stored items and prediction error
-  r = sᵀs + α − sᵀSc. Putting it on phase k of module m raises the error law Σ qᵀKq by
-  ‖Q_mᵀc − e_k‖² / r. So the cheapest address is the free one where the item's own recall is
-  largest: **store where your recall points.**
+  r = sᵀs + α − sᵀSc. Putting it on phase k of module m raises the law by ‖Q_mᵀc − e_k‖² / r. So the
+  cheapest free address is the one where its own recall coefficients are largest: **store where
+  your recall points.**
 - **Replay.** A stored item's recall is c = eᵢ − αKeᵢ. The part that spreads onto other items,
-  −αKeᵢ, is −α/2 times the gradient of the error law for moving it. So replay, recall with the
-  item's own trace set aside, is exact coordinate descent: **move it to where that recall points.**
+  −αKeᵢ, is −α/2 times the law's gradient for moving it. So recall with the item's own trace set
+  aside is exact coordinate descent: **move it to where that recall points.**
 
 Every module keeps its full phase count (9, 16, 25), so nothing is matched to the content. Capacity
-grows with the count so far, so the memory never knows how many items will come
+grows with the count so far, so the rule never uses how many items will come
 ([`src/loci/consolidate.py`](src/loci/consolidate.py)).
+
+What the rule needs, and what the network cannot yet do:
+- **The rule needs K.** That is the full P × P precision of the stored patterns, maintained by
+  recursive least squares, which is more state than the memory's 840,000 weights.
+- **The network's own read-out delivers the rule's choice for 78–86% of new items**
+  ([`docs/THEORY.md`](docs/THEORY.md), C1).
+- **Run through that read-out end to end, filing does not organise.** After replay it recalls
+  0.57–0.69 against k-means' 0.72–0.84 (G2, 3 seeds). The memory does not yet file itself.
 
 ![Recall by arm and kind of content](results/consolidate.png)
 
-Noisy cues (10% flips) that find their own address, P/Ns = 0.8, seeds 40–49
+Noisy cues that find their own address through the paper's snap, P/Ns = 0.8, seeds 40–49
 ([`bench/consolidate.py`](bench/consolidate.py)):
 
-| content | random | k-means | stored where recall points | **… then replayed** | oracle |
-|---|---|---|---|---|---|
-| 3 factors, 9 / 16 / 5 values | 0.438 | 0.765 | 0.677 | **0.839** | 0.888 |
-| 3 factors, 7 / 12 / 4 (no module matches) | 0.430 | 0.764 | 0.666 | **0.815** | 0.826 |
-| 4 factors on 3 modules | 0.441 | 0.770 | 0.681 | **0.832** | – |
-| a 5 × 4 hierarchy (no product structure) | 0.462 | 0.650 | 0.668 | **0.795** | – |
-| life-log sentences | 0.277 | 0.636 | 0.539 | **0.743** | 0.800 |
+| content | random | k-means | encoded (exact rule) | **… then replayed** | oracle | oracle, then replayed |
+|---|---|---|---|---|---|---|
+| **10% of bits flipped** | | | | | | |
+| 3 factors, 9 / 16 / 5 values | 0.438 | 0.765 | 0.677 | **0.839** | 0.888 | 0.898 |
+| 3 factors, 7 / 12 / 4 (no module matches) | 0.430 | 0.764 | 0.666 | **0.815** | 0.826 | 0.866 |
+| 4 factors on 3 modules | 0.441 | 0.770 | 0.681 | **0.832** | – | – |
+| a 5 × 4 hierarchy (no product structure) | 0.462 | 0.650 | 0.668 | **0.795** | – | – |
+| life-log sentences | 0.277 | 0.636 | 0.539 | **0.743** | 0.800 | 0.819 |
+| **20% of bits flipped** | | | | | | |
+| 3 factors, 9 / 16 / 5 values | 0.115 | 0.457 | 0.301 | **0.557** | 0.723 | 0.726 |
+| 3 factors, 7 / 12 / 4 | 0.105 | 0.457 | 0.286 | **0.465** | 0.592 | 0.607 |
+| life-log sentences | 0.058 | 0.361 | 0.218 | **0.446** | 0.647 | 0.649 |
 
-- **Against k-means:** the self-filing memory beats it by 0.05–0.15 on every kind (S1, pass).
+- **Against k-means:** the rule beats it by 0.05–0.15 at the headline condition (S1, pass). On
+  7 / 12 / 4 factors that margin is 0.051, and 0.01–0.03 in the other three conditions.
 - **Encoding alone** beats random by 0.21–0.26 (S3, pass).
-- **Against the oracle it falls 0.011, 0.049 and 0.057 short.** The pre-registered bar was 0.03, so
-  that criterion **failed** (S2). The pilots had suggested parity; the fresh seeds say close, not
-  equal.
+- **Against the oracle it falls short** (S2, **fail** on all three contents): by 0.011–0.057 at the
+  headline, by 0.13–0.20 at 20% flips, and by 0.05–0.08 against the oracle after replay.
 - **Replay does most of the optimising.** Replay from random addresses lands within 0.04 of replay
   after recall-guided encoding. The encoding's value is that the memory is organised from the first
-  item on (0.68 against 0.44 before any replay).
-- **Replay also improves the oracle:** 0.898, 0.866 and 0.819 against 0.888, 0.826 and 0.800.
-- **What is exact here.** The coefficients come from K, the ridge's own posterior precision,
-  maintained by recursive least squares. The network's Hebbian snap delivers the same choice for
-  most new items at an organised placement but only 50–66% at a random one, which is not enough to
-  organise with. The rule is the network's recall; running it through the network's own snap is
-  not yet solved.
+  item on: 0.68 against 0.44 before any replay.
+- **The rule's modules align only weakly with any factor** (NMI ≤ 0.48).
 
-## 3. Accuracy is silent about structure
+## 3. Filing for recall does not find the structure imagination needs
 
 For each value of one factor, one partner of another is never experienced with it. The memory is
 then asked three things:
 - a **gist** cue, the factors of a never-experienced combination alone: does it *construct* the
   combination, landing on an empty address whose read-out carries every factor?
-- a **recombined** event, those factors with new detail: is it *falsely recalled* the same way?
+- a **recombined** event, those factors with new detail: does it *complete* to the same constructed
+  state?
 - how well **familiarity** (the match of h₀ to the recalled state) and **recollection** (the match of
   the read-out to the cue) tell studied events from recombined ones.
 
 Three decoders read the same place activity:
 - the paper's **snap**;
-- **nearest**, the nearest of all 3,600 place codes by cosine, where every address is a valid state;
+- **nearest**, the nearest of all 3,600 place codes by cosine, where every address is a valid state.
+  It needs one unit per address, which the paper's scaffold does not have;
 - **stored**, the nearest stored code, where no empty state is valid.
 
-![Same recall, different imagination; the one event; the read-out peak](results/imagine.png)
+**A disclosure first.** E5's criteria were registered after E4 had run on the same seeds. By then
+the snap's 0.05 recall gap between the recall-filed and oracle-filed memories was known. I3's recall
+clause was registered on the nearest decoder, where that gap vanishes, and that choice was not
+independent of E4. Every number below is given for both decoders. Under the snap, four of E5's seven
+bars are missed:
+- I1 on 7 / 12 / 4 factors: 0.817, bar 0.9;
+- I3's recall clause: −0.046, bar ±0.02;
+- I5's false completion on 7 / 12 / 4 factors and sentences: 0.79 and 0.73, bar 0.8;
+- I6's recollection d′: 4.6 and 3.8, bar 5.
 
-Factored content, 10% flips, seeds 40–49 ([`bench/imagine.py`](bench/imagine.py),
+![Same recall, different imagination; the one mechanism; the read-out peak](results/imagine.png)
+
+Factored content, seeds 40–49; each cell is snap / nearest ([`bench/imagine.py`](bench/imagine.py),
 [`src/loci/imagine.py`](src/loci/imagine.py)):
 
-| filed by | decoder | recall | constructs | false recall | familiarity d′ | recollection d′ |
-|---|---|---|---|---|---|---|
-| random | snap | 0.430 | 0.001 | 0.002 | 1.9 | 1.5 |
-| random | nearest | 0.961 | 0.004 | 0.002 | 3.5 | 5.4 |
-| the true factors (oracle) | snap | 0.878 | 0.948 | 0.895 | 2.1 | 4.6 |
-| the true factors (oracle) | **nearest** | **0.991** | **0.999** | **0.983** | **3.1** | **10.2** |
-| the true factors (oracle) | stored | 0.991 | 0 | 0 | 7.5 | 10.9 |
-| itself, replay | nearest | **0.997** | **0.307** | 0.267 | 4.0 | 7.9 |
-| itself, annealed replay | nearest | 0.997 | 0.262 | 0.195 | 4.4 | 8.0 |
-| the true factors, then replay | nearest | 0.995 | 0.990 | 0.965 | 3.2 | 10.5 |
-| kNN on the stored patterns | | 1.000 | 0 | 0 | 25.1 | |
+| filed by | flips | recall | constructs | recombined events completed |
+|---|---|---|---|---|
+| random | 10% | 0.430 / 0.961 | 0.001 / 0.004 | 0.002 / 0.002 |
+| the true factors (oracle) | 10% | 0.878 / **0.991** | 0.948 / **0.999** | 0.895 / 0.983 |
+| the recall rule, replayed | 10% | 0.832 / **0.997** | 0.241 / **0.307** | 0.204 / 0.267 |
+| the recall rule, annealed replay | 10% | 0.841 / 0.997 | 0.190 / 0.262 | 0.153 / 0.195 |
+| the true factors, then replayed | 10% | 0.892 / 0.995 | 0.920 / 0.990 | 0.856 / 0.965 |
+| the true factors (oracle) | 20% | 0.700 / 0.836 | 0.940 / 0.996 | 0.909 / 0.992 |
+| the recall rule, replayed | 20% | 0.509 / 0.842 | 0.237 / 0.310 | 0.217 / 0.284 |
+| kNN on the stored patterns | 10% | 1.000 | 0 | 0 |
 
-What held, every criterion passing on fresh seeds:
-- **Construction needs structure** (I1). The oracle-filed memory constructs 0.999 of the
-  never-experienced combinations on factored content, 0.960 with 7 / 12 / 4 factors and 0.910 on
-  sentences. Random placement constructs none (≤ 0.004).
-- **Imagination is free for recall** (I2). Letting every tuple be a valid state costs the
-  oracle-filed memory 0.000–0.003 of recall. The larger cost of the paper's snap (0.878 against
-  0.991) belongs to deciding each module on its own, not to imagination. Under random placement the
-  snap costs 0.53–0.56 and constructs nothing.
-- **Accuracy is silent about structure** (I3). The self-filed memory recalls as well as the
-  oracle-filed one, but constructs 0.69–0.73 less. On 7 / 12 / 4 factors it constructs 0.233 against
-  0.960, and on sentences 0.105 against 0.910, while recalling better (0.977 against 0.938).
-  - Annealed replay aligned its modules with the factors on 0 of 30 runs.
-  - This is a failure of search, not of the objective. The error law strongly prefers the aligned
-    state (0.78 against 1.38 on factored content). But recall barely registers the difference:
-    0.991 against 0.997 with every state valid, and 0.888 against 0.839 through the paper's snap.
-    Replay from the memory's own encoding never gets there.
-- **Consolidating for recall erodes imagination** (I4). Replaying an aligned memory for recall
-  improves its recall and lowers its construction: by 0.10 on 7 / 12 / 4 factors (0.960 → 0.858)
-  and 0.04 on sentences.
-- **Imagination and false memory are one event** (I5). Over all 90 conditions, construction and
-  false recall correlate at r = 0.998. A recombined event *is* a gist cue at a lower signal-to-noise,
-  so a decoder that sees only place activity cannot construct one without being fooled by the other.
-- **Recollection rejects what familiarity accepts** (I6). Familiarity separates recombined events
-  from studied ones only weakly (d′ 3.1), less than half as well as when empty states are not valid
-  (7.5). Recollection separates them well (d′ 10.2), because it checks the cue's detail, which place
-  activity cannot see. That is the dual-process signature of recognition (Yonelinas 2002).
-- **A second interpolation peak** (I7). The read-out W_sh = S H⁺ interpolates exactly when the items
-  stored equal the place cells. There, construction collapses (0.003 at P = Nh = 800) while stored
-  recall stays perfect. A 1% ridge on the read-out restores it (0.98). It mirrors the cue-side peak
-  at P = Ns from round 1, and it is invisible in the paper's capacity curves.
+With the stored decoder, nothing constructs or completes, by definition. Its recall equals the
+nearest decoder's.
 
-**What is new here, and what is not.** Constructive memory is an old idea (Schacter & Addis 2007;
-Hassabis & Maguire 2007), and so are models of it:
-- REMERGE's recurrent similarity (Kumaran & McClelland 2012);
-- Spens & Burgess's replay-trained generative network (2024), in which imagination and distortion
-  both come from a separate cortical model;
-- attractor mixtures (Amit, Gutfreund & Sompolinsky 1985);
-- attractors for unseen feature combinations (Kalaj et al. 2025).
+What held:
+- **Construction needs structure** (I1). The oracle-filed memory constructs 0.999, 0.960 and 0.910
+  of never-experienced combinations (factored, 7 / 12 / 4, sentences; nearest). Through the snap it
+  is 0.948, 0.817 and 0.823. Random placement constructs none (≤ 0.004).
+- **Admitting every state costs an aligned memory no recall** (I2, nearest decoder: 0.000–0.003).
+  The snap's larger loss (0.878 against 0.991) comes from deciding each module on its own. Under
+  random placement that costs 0.53–0.59 and constructs nothing.
+- **Filing for recall does not find it** (I3).
+  - The recall-filed memory recalls as well (nearest) or 0.05 worse (snap), yet constructs
+    0.24–0.31 against 0.95–1.00.
+  - Counting only the held-out pair, not the third factor whose grouping the oracle is given, it is
+    0.55–0.61 against 1.00 (G4).
+  - On sentences it constructs 0.105 against 0.910 while recalling better (0.977 against 0.938).
+  - Annealed replay constructs no more (0.262, 0.250, 0.109).
+  - **This is a failure of search, not of the objective.** The error law strongly prefers the
+    aligned filing (0.78 against 1.38). Recall accuracy barely distinguishes the two, so it cannot
+    guide search there. Accuracy underdetermines structure (D'Amour et al. 2022).
+- **Replaying an aligned memory for recall lowers its construction** (I4): by 0.10 on 7 / 12 / 4
+  factors (0.960 → 0.858), 0.04 on sentences and 0.01 on factored content.
+  - In Spens & Burgess's model, replay trains a generative network, and the ability to construct
+    grows with it.
+  - Here, replay that serves recall erodes it. That is a prediction on which the two accounts
+    differ.
+- **Construction and completion of recombined events move together** (I5). Proposition I.5
+  predicts this ([`docs/THEORY.md`](docs/THEORY.md), 0.6).
+  - A recombined event is a gist cue at a lower signal-to-noise. So any decoder that reads place
+    activity alone completes the one whenever it constructs the other.
+  - Over 90 cells the correlation is r = 0.998. That is partly by definition: 31 of the cells are
+    exactly (0, 0), 30 of them by construction. Completion runs at 0.63–1.00 of construction (median 0.88).
+- **A recollection check separates imagining from remembering** (I6).
+  - Familiarity tells recombined events from studied ones less than half as well as when empty
+    states are not valid: d′ 3.1 against 7.5 (nearest).
+  - Recollection separates them almost perfectly (d′ 10.2), because it checks the cue's detail,
+    which place activity cannot see.
+  - Gating recall on the cue–read-out overlap, at a threshold that passes 95% of studied events,
+    flags every construction and every recombined completion as not experienced at 10% flips (G1,
+    exploratory, 3 seeds). At 20% flips 0.00–0.07 of completions leak.
+  - This is the recall-to-reject pattern (Rotello, Macmillan & Van Tassel 2000; Jones & Jacoby
+    2001). No ROC analysis was run.
+- **A second interpolation peak** (I7).
+  - The read-out W_sh = S H⁺ interpolates exactly when the items stored equal the place cells.
+    There, construction collapses (0.003 at P = Nh = 800), while the read-out at a stored item's own
+    address stays exact. A 1% ridge restores it (0.98).
+  - This is textbook double descent, in the read-out rather than the cue map (round 1). The paper's
+    capacity curves read only stored addresses, so they cannot show it.
 
-The claim here is narrower. In a grid-scaffold memory, a never-experienced combination is one of the
-memory's own designed, equally deep fixed points, a valid word of a distance-1 product code. So
-whatever decoding constructs it from a gist cue also recalls a recombined event as experienced.
-Placement and the set of states the decoder admits fix both rates together.
+**Placement in the literature.** Constructive memory is an old idea, and so are models of it:
+- the idea: Schacter & Addis 2007; Hassabis & Maguire 2007; Hassabis, Kumaran, Vann & Maguire 2007;
+  and Carpenter & Schacter 2017, who tested it;
+- REMERGE's recurrent similarity (Kumaran & McClelland 2012), which states the trade-off in so many
+  words;
+- the replay-trained generative network of Spens & Burgess (2024);
+- attractor mixtures (Amit, Gutfreund & Sompolinsky 1985) and attractors for unseen feature
+  combinations (Kalaj et al. 2025);
+- generation as failed recall (Pham et al. 2025);
+- indexing that scaffolds new states (Theves 2026).
 
-Two cautions:
-- **The nearest decoder is not native.** It needs one unit per address, which the paper's scaffold
-  does not have.
-- **The human evidence is mixed.** Hippocampal damage raises conjunction false alarms but lowers
-  DRM errors, and sleep's effect on false memory varies across studies. No claim is made about
-  either.
+That every phase tuple is an equally deep fixed point is the paper's own property (its Figs 2f and
+3h). The claim here is only about what follows from it once placement is aligned with the content:
+- construction then comes from the memory's own states, not from a separate generative network;
+- placement, and the set of states the decoder admits, fix construction and completion together;
+- filing for recall does not supply the alignment.
+
+The human evidence is mixed. Hippocampal damage raises conjunction false alarms (Reinitz, Lammers &
+Cochran 1992; Kroll et al. 1996) but lowers DRM errors, and sleep's effect on false memory varies
+across studies. No claim is made about either.
 
 ## Pre-registered criteria, round 2
 
 Seeds 40–49 (E4, E5) and 30–32 (E3), none touched by a pilot. Bars are paired bootstrap 95% intervals
 over seeds. [`bench/criteria.py`](bench/criteria.py) and [`bench/oos.py`](bench/oos.py) recompute every
-row, and the criteria code was committed before each set of results was read.
+row. Each criterion's text was committed to PREREG.md before its run. The scoring code was committed
+after each run had written its results and before they were read. Git cannot prove that second part,
+but the code's thresholds are PREREG's, verbatim.
 
-| | criterion | result |
-|---|---|---|
-| T1 | out of sample: mean error ≤ 0.02, ≥ 90% within 0.05 | pass: 0.009, 100% |
-| T2 | no condition family's mean error > 0.04 | pass: worst 0.029 (pseudo-inverse) |
-| T3 | on E4's rows: mean error ≤ 0.02 and worst ≤ 0.06 | **fail**: 0.012, worst 0.068 |
-| S1 | self-filing ≥ k-means + 0.05 on every content | pass: +0.051 to +0.145 |
-| S2 | self-filing within 0.03 of the oracle | **fail**: −0.011 [−0.036, 0.015], −0.049, −0.057 |
-| S3 | encoding alone ≥ random + 0.15 | pass: +0.21 to +0.26 |
-| I1 | construction: oracle ≥ 0.9 / 0.9 / 0.8, random ≤ 0.05 | pass: 0.999 / 0.960 / 0.910; ≤ 0.004 |
-| I2 | every state valid costs the aligned memory ≤ 0.01 of recall | pass: 0.000 to 0.003 |
-| I3 | self-filed: recall within 0.02, construction ≥ 0.4 lower | pass: +0.006 / +0.000; −0.69 / −0.73 |
-| I4 | replaying an aligned memory for recall lowers its construction | pass: −0.10 [−0.14, −0.07] |
-| I5 | r(construction, false recall) ≥ 0.9; oracle false recall ≥ 0.8 | pass: 0.998; 0.98 / 0.90 / 0.86 |
-| I6 | recollection d′ ≥ 5 while familiarity d′ ≤ 4 | pass: 10.2 / 10.3 and 3.1 / 3.8 |
-| I7 | construction ≤ 0.05 at P = Nh; ≥ 0.9 with a 1% read-out ridge | pass: 0.003; 0.982 |
+| | criterion (as registered) | result | under the paper's snap |
+|---|---|---|---|
+| T1 | out of sample: mean error ≤ 0.02, ≥ 90% within 0.05 | pass: 0.009, 100% | (the theory predicts the snap) |
+| T2 | no condition family's mean error > 0.04 | pass: worst 0.029 (pseudo-inverse) | |
+| T3 | on E4's rows: mean error ≤ 0.02 and worst ≤ 0.06 | **fail**: 0.012, worst 0.068 (sampling noise, G3) | |
+| S1 | the rule ≥ k-means + 0.05 on every content | pass: +0.051 to +0.145 | (measured through the snap) |
+| S2 | the rule within 0.03 of the oracle | **fail**: −0.049 [−0.081, −0.023], −0.011 [−0.036, 0.015], −0.057 [−0.083, −0.029] | |
+| S3 | encoding alone ≥ random + 0.15 | pass: +0.21 to +0.26 | |
+| I1 | construction: oracle ≥ 0.9 / 0.9 / 0.8, random ≤ 0.05 (nearest) | pass: 0.999 / 0.960 / 0.910; ≤ 0.004 | **miss** on cards: 0.817 |
+| I2 | every state valid costs the aligned memory ≤ 0.01 of recall | pass: 0.000 to 0.003 | (not applicable) |
+| I3 | recall-filed: recall within 0.02, construction ≥ 0.4 lower (nearest) | pass: +0.006 / +0.000; −0.69 / −0.73 | **miss** on recall: −0.046 |
+| I4 | replaying an aligned memory for recall lowers its construction | pass: −0.10 [−0.14, −0.07] | |
+| I5 | r(construction, completion) ≥ 0.9; oracle completion ≥ 0.8 (nearest) | pass: 0.998; 0.98 / 0.90 / 0.86 | **miss**: 0.79 / 0.73 on cards and sentences |
+| I6 | recollection d′ ≥ 5 while familiarity d′ ≤ 4 (nearest) | pass: 10.2 / 10.3 and 3.1 / 3.8 | **miss** on recollection: 4.6 / 3.8 |
+| I7 | construction ≤ 0.05 at P = Nh; ≥ 0.9 with a 1% read-out ridge | pass: 0.003; 0.982 | (measured through the snap) |
 
-Round 2 passed 11 of its 13 criteria; round 1 failed 8 of its 17. Every failure is reported where
-its number is.
+As registered, round 2 passed 11 of its 13 criteria. Under the paper's own snap, four of E5's seven
+would have missed. Round 1 failed 8 of its 17.
 
 ## Round 1: the cliff in the cue, and why placement matters
 
@@ -448,6 +512,18 @@ Found by an internal red team after the first version was published (2026-09-30)
 
 ## What did not survive
 
+- **"A memory that files itself."** The first round-2 write-up said so. The rule is computed from
+  the full precision matrix K, which is more state than the memory holds, and through the network's
+  own read-out it does not organise the memory (G2). It is a rule the error law implies, not yet
+  something the network does.
+- **"Accuracy is silent about structure."** Overstated. Through the paper's snap, the recall-filed
+  memory recalls worse than the oracle-filed one at 20% flips (by 0.10–0.19). At 10% flips the gap
+  is 0.05 on factored content, 0.03 on sentences, and none on 7 / 12 / 4 factors. The error law it
+  descends strongly prefers the aligned filing. What holds is narrower: recall barely distinguishes
+  the two, so it does not guide search there.
+- **"Imagination is paid for in false memory."** Only for decoders that read place activity alone.
+  A recollection check, which compares the recall with the cue, flags recombined completions as not
+  experienced (G1).
 - **"The price of imagination is recall."** The thesis as first written said that treating
   never-stored states as valid costs noisy recall. It costs nothing under aligned placement (I2).
   The apparent cost belonged to the paper's per-module snap. The price is false memory.
@@ -473,10 +549,14 @@ Found by an internal red team after the first version was published (2026-09-30)
 - From the critic's pilot, before any of this: balanced occupancy does not buy robustness by
   itself, and a wrong recall is a related stored memory only at chance (24% against 22%).
 
-Smaller things, measured and left in because changing them would change registered runs: the
-life-log has a few exact duplicate entries (≈ 1/P on every arm alike); at 400 place cells, 6 of 20
-scaffold seeds have one address out of 3,600 that is not a fixed point; and the random streams of
-content and cues across different seeds overlap (never within a paired comparison).
+Smaller things, measured and left in because changing them would change registered runs:
+- the life-log has a few exact duplicate entries (≈ 1/P on every arm alike);
+- at 400 place cells, 6 of 20 scaffold seeds have one address out of 3,600 that is not a fixed
+  point;
+- the random streams of content and cues across different seeds overlap, never within a paired
+  comparison;
+- in E4, the theory's Monte Carlo draws reuse the scaffold's own random stream and are shared
+  across items. Against independent draws its predictions move by at most 0.002.
 
 ## The upstream code
 
@@ -543,8 +623,17 @@ docs/                     DESIGN, PREREG (with amendments), THEORY (the derivati
   Human Behaviour*. doi:10.1038/s41562-023-01799-z.
 - Kumaran & McClelland (2012). Generalization through the recurrent interaction of episodic
   memories (REMERGE). *Psychological Review*. doi:10.1037/a0028681.
-- Schacter & Addis (2007), the constructive episodic simulation hypothesis; Hassabis & Maguire
-  (2007), scene construction; Yonelinas (2002), dual-process recognition.
+- **Constructive memory:** Schacter & Addis (2007), the constructive episodic simulation hypothesis;
+  Hassabis & Maguire (2007), scene construction; Hassabis, Kumaran, Vann & Maguire (2007), *PNAS*;
+  Carpenter & Schacter (2017).
+- **Conjunction errors and recall-to-reject:** Reinitz, Lammers & Cochran (1992); Kroll et al.
+  (1996); Rotello, Macmillan & Van Tassel (2000); Jones & Jacoby (2001).
+- **Generalisation and memory:** Banino, Koster, Hassabis & Kumaran (2016); McClelland (1995);
+  Theves (2026), *Trends in Cognitive Sciences*, doi:10.1016/j.tics.2026.09.002; Pham et al. (2025),
+  arXiv:2505.21777.
+- **Underspecification:** D'Amour et al. (2022), *JMLR*.
+- **Grid codes as error-correcting codes:** Fiete, Burak & Brookings (2008); Sreenivasan & Fiete
+  (2011).
 - Amit, Gutfreund & Sompolinsky (1985). Spin-glass models of neural networks.
   doi:10.1103/PhysRevA.32.1007. Kalaj et al. (2025), *Physica A*. doi:10.1016/j.physa.2025.130946.
 - Bach & Harchaoui (2007), DIFFRAC; Ye, Zhao & Wu (2007), discriminative k-means: the error law's

@@ -20,9 +20,10 @@ sampling, i.e. annealing.
 What is exact here and what is not:
 - the coefficients come from K, the ridge's own posterior precision, maintained by recursive least
   squares during encoding;
-- the network's Hebbian snap delivers the same choice for about 80% of items, not all of them;
-- the capacity caps assume the final number of items is known (`capacity="final"`). With
-  `capacity="growing"` they grow with the count so far.
+- the network's Hebbian snap delivers the same choice for 78-86% of new items in pilots
+  (docs/THEORY.md, C1), not all of them;
+- by default (`capacity="growing"`) the caps grow with the count so far, so the final number of
+  items is never used; `capacity="final"` caps by it instead.
 """
 
 from __future__ import annotations
@@ -40,7 +41,7 @@ def _broadcast(values: np.ndarray, module: int, sizes: tuple[int, ...]) -> np.nd
     return values.reshape(shape)
 
 
-def encode(patterns: np.ndarray, scaffold: Scaffold, alpha: float, capacity: str = "final",
+def encode(patterns: np.ndarray, scaffold: Scaffold, alpha: float, capacity: str = "growing",
            slack: float = 1.0) -> tuple[np.ndarray, np.ndarray]:
     """(addresses, precision K) for patterns (Ns x P) stored in arrival order, each at the free address
     its own recall prefers. No module phase takes more than ceil(slack * P / size) items, unless

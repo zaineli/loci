@@ -1,0 +1,12 @@
+factored, seeds [40, 41, 42], 10% flips: gist probes
+placement      decoder   empty  A&B, empty   A&B&C, empty (bench)      A      B      C
+oracle         nearest   1.000       1.000                  1.000  1.000  1.000  1.000
+oracle         snap      0.996       0.983                  0.971  0.996  0.987  0.987
+encode+replay  nearest   0.763       0.608                  0.413  0.683  0.921  0.679
+encode+replay  snap      0.771       0.550                  0.312  0.667  0.842  0.587
+cards, seeds [40, 41, 42], 10% flips: gist probes
+placement      decoder   empty  A&B, empty   A&B&C, empty (bench)      A      B      C
+oracle         nearest   1.000       1.000                  0.958  1.000  1.000  0.958
+oracle         snap      1.000       1.000                  0.826  1.000  1.000  0.826
+encode+replay  nearest   0.660       0.472                  0.285  0.653  0.812  0.646
+encode+replay  snap      0.694       0.431                  0.236  0.667  0.743  0.549

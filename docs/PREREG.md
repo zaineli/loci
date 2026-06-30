@@ -258,3 +258,21 @@ Placement, and the set of states the decoder admits, fix both rates together.
 - The human data are mixed. Hippocampal damage raises conjunction false alarms but lowers DRM
   errors, and sleep's effect on false memory is inconsistent across studies. So no claim about them
   is made from this model.
+
+### E5, disclosed after the run (2026-10-01)
+E5's criteria were written after E4 had run on the same seeds (40–49). By then E4 had shown that the
+recall-filed memory trails the oracle-filed one by 0.05 in recall through the paper's snap. I3's
+recall clause was registered on the nearest decoder, where that gap vanishes, and that choice was not
+independent of E4's result. Re-scored through the paper's snap, four of E5's seven criteria miss
+their bars:
+- I1 on cards: 0.817, bar 0.9;
+- I3's recall clause: −0.046, bar ±0.02;
+- I5's oracle completion on cards and the life-log: 0.79 and 0.73, bar 0.8;
+- I6's recollection d′: 4.6 and 3.8, bar 5.
+
+The README reports both decoders.
+
+The registered "reported" metric for encode + anneal also turned out to be uninformative. It counts
+runs where every module's NMI with its factor is ≥ 0.8, but module 2 is scored on fixed blocks of
+five phases, which replay does not preserve. The oracle after replay constructs 0.86–0.99 yet scores
+0.58–0.79 on that measure. Measured on modules 0 and 1 alone, 1 of 30 annealed runs aligned.

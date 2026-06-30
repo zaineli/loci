@@ -1,0 +1,4 @@
+four seed 47 P 400 flip 0.2 encode         E4 recall 0.480 (rebuilt 0.480) theory 0.548 (E4 0.548) | 20 fresh draws: mean 0.540 sd 0.022 -> theory error vs mean +0.007; E4 row error +0.068
+cards seed 48 P 400 flip 0.1 random         E4 recall 0.775 (rebuilt 0.775) theory 0.842 (E4 0.842) | 20 fresh draws: mean 0.822 sd 0.024 -> theory error vs mean +0.021; E4 row error +0.067
+cards seed 48 P 400 flip 0.2 encode         E4 recall 0.525 (rebuilt 0.525) theory 0.585 (E4 0.585) | 20 fresh draws: mean 0.576 sd 0.023 -> theory error vs mean +0.009; E4 row error +0.060
+four seed 42 P 400 flip 0.2 random+replay  E4 recall 0.667 (rebuilt 0.667) theory 0.726 (E4 0.726) | 20 fresh draws: mean 0.730 sd 0.015 -> theory error vs mean -0.004; E4 row error +0.059

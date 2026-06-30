@@ -1,0 +1,8 @@
+Ns 2000       random   hashed 0.455952 | frozen re-run 0.455952 | library src/loci/theory.py 0.454825
+Ns 2000       kmeans   hashed 0.725170 | frozen re-run 0.725170 | library src/loci/theory.py 0.726091
+Ns 2000       oracle   hashed 0.808452 | frozen re-run 0.808452 | library src/loci/theory.py 0.807175
+cards 7/12/4  sequential hashed 0.458934 | frozen re-run 0.458934 | library src/loci/theory.py 0.458541
+cards 7/12/4  random   hashed 0.460169 | frozen re-run 0.460169 | library src/loci/theory.py 0.460650
+cards 7/12/4  kmeans   hashed 0.733559 | frozen re-run 0.733559 | library src/loci/theory.py 0.732250
+cards 7/12/4  oracle   hashed 0.788588 | frozen re-run 0.788588 | library src/loci/theory.py 0.789841
+cards 7/12/4  error    hashed 0.661359 | frozen re-run 0.661359 | library src/loci/theory.py 0.663303

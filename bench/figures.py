@@ -131,7 +131,7 @@ def theory() -> None:
     ax = axes[1]
     ax.scatter([r["theory"] for r in e4], [r["recall"] for r in e4], s=5, color=INK, lw=0, alpha=0.5)
     errors = np.abs([r["theory"] - r["recall"] for r in e4])
-    ax.set_title("self-filing memories (E4): 1,240 rows, 5 kinds of content", fontsize=9.5)
+    ax.set_title("E4: 1,240 rows, 5 kinds of content (720 filed by the rule)", fontsize=9.5)
     ax.text(0.03, 0.97, f"mean |error| {errors.mean():.3f}\n{np.mean(errors <= 0.05):.1%} within 0.05",
             transform=ax.transAxes, va="top", fontsize=8.5, color=INK)
     for ax in axes:
@@ -181,8 +181,8 @@ def imagination() -> None:
         return float(np.mean([r[key] for r in rows if all(r[k] == v for k, v in match.items())]))
 
     ax = axes[0]
-    names = {"random": "random", "oracle": "oracle-filed", "encode+replay": "self-filed (replay)",
-             "encode+anneal": "self-filed (annealed)", "oracle+replay": "oracle-filed, then replayed"}
+    names = {"random": "random", "oracle": "oracle-filed", "encode+replay": "filed by the recall rule",
+             "encode+anneal": "... with annealed replay", "oracle+replay": "oracle-filed, then replayed"}
     offsets = {"random": (6, 4), "oracle": (-62, -12), "encode+replay": (6, 6), "encode+anneal": (6, -10),
                "oracle+replay": (-120, -2)}
     for name, label in names.items():
@@ -198,7 +198,8 @@ def imagination() -> None:
     ax.set_ylim(-0.03, 1.05)
     ax.set_xlabel("recall of studied events (10% flips)")
     ax.set_ylabel("never-experienced combinations constructed")
-    ax.set_title("same recall, different imagination\n(circles factored, squares cards)", fontsize=9.5)
+    ax.set_title("same recall, different imagination (nearest decoder)\ncircles factored, squares cards",
+                 fontsize=9.5)
 
     ax = axes[1]
     cells = collections.defaultdict(list)
@@ -209,14 +210,14 @@ def imagination() -> None:
     ax.plot([0, 1], [0, 1], color=MUTED, lw=0.7, ls=":", zorder=0)
     ax.scatter(points[:, 0], points[:, 1], s=14, color=INK, lw=0)
     ax.set_xlabel("construction (a gist cue lands on an empty state)")
-    ax.set_ylabel("false recall of a recombined new event")
-    ax.set_title(f"imagination and false memory are one event\n(90 cells, r = {np.corrcoef(points.T)[0, 1]:.3f})",
+    ax.set_ylabel("recombined events completed to it")
+    ax.set_title(f"construction and completion of recombined events\n(90 cells, r = {np.corrcoef(points.T)[0, 1]:.3f})",
                  fontsize=9.5)
     ax.set_aspect("equal")
 
     ax = axes[2]
     cells_nh = sorted({r["Nh"] for r in peak})
-    for ridge, color, dash, label in ((0.0, ACCENT, "-", "pseudo-inverse (the paper)"),
+    for ridge, color, dash, label in ((0.0, ACCENT, "-", "pseudo-inverse (paper)"),
                                       (0.01, INK, "--", "1% ridge")):
         y = [np.mean([r["construction"] for r in peak if r["Nh"] == n and r["readout_ridge"] == ridge
                       and r["decoder"] == "snap"]) for n in cells_nh]
@@ -226,8 +227,10 @@ def imagination() -> None:
     ax.set_ylabel("construction")
     ax.set_ylim(-0.03, 1.05)
     ax.set_title("a second interpolation peak, at P = Nh", fontsize=9.5)
-    ax.legend(frameon=False, fontsize=7.8, loc="lower left", bbox_to_anchor=(0.0, 0.22), title="read-out",
-              title_fontsize=7.8)
+    ax.legend(frameon=False, fontsize=7.8, loc="upper center", bbox_to_anchor=(0.5, -0.17), ncol=2,
+              title="read-out", title_fontsize=7.8)
+    ax.text(925, 0.52, "pseudo-inverse", fontsize=7.8, color=INK)
+    ax.text(1000, 0.92, "1% ridge", fontsize=7.8, color=INK)
     fig.tight_layout()
     fig.savefig(RESULTS / "imagine.png", dpi=160)
 

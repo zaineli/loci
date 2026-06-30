@@ -76,3 +76,8 @@ The full table and the worst 10 conditions are in `results.md`. The raw data is 
 From K, the placement and the scaffold alone, with nothing fitted, the theory predicts how often a noisy cue finds its own address, to within about 0.01. That holds for content it was not developed on (sentence embeddings, mismatched factor counts), scaffolds it was not developed on (other periods, a fourth module, half and double the place cells), other cue dimensions, a different kind of noise (masks), and new loads. It also ranks placements essentially perfectly (τ 0.99).
 
 The one regime it handles less well is the paper's own write rule, the pseudo-inverse, where it is optimistic by about 0.03.
+
+---
+*Erratum, 2026-10-01, from the round-2 code review: "9 of the worst 10 rows are pseudo-inverse
+rows" should read 8 of 10. Ranks 6 and 9 are Nh 800 / random and load 0.5 / random. Nothing
+else in this report changes. This file is not among the hashed protocol files.*
